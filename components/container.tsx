@@ -1,11 +1,33 @@
-import { ReactNode, FunctionComponent } from 'react'
+import { ReactNode, FunctionComponent } from "react";
+import styled from "styled-components";
 
 type Props = {
-  children?: ReactNode
-}
+  children?: ReactNode;
+};
+
+/**
+ * A container element.
+ * @note `90rem` is equivalent to `1440px`.
+ */
+const ContainerElement = styled.div(({ theme }) => ({
+  margin: "0 auto",
+  maxWidth: "100vw",
+  paddingLeft: "2rem",
+  paddingRight: "2rem",
+  [theme.breakpoints.medium]: {
+    maxWidth: "100vw",
+    paddingLeft: "4rem",
+    paddingRight: "4rem",
+  },
+  [theme.breakpoints.large]: {
+    maxWidth: "90rem",
+    paddingLeft: "5rem",
+    paddingRight: "5rem",
+  },
+}));
 
 const Container: FunctionComponent = ({ children }: Props) => {
-  return <div className="container mx-auto px-5">{children}</div>
-}
+  return <ContainerElement>{children}</ContainerElement>;
+};
 
-export default Container
+export default Container;

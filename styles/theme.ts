@@ -8,8 +8,15 @@ const breakpoints: DefaultTheme["breakpoints"] = {
 
 export const lightTheme: DefaultTheme = {
   background: "#ffffff",
-  hero: {
-    gradient: "linear-gradient(120deg, #000000 0%, #333333 100%);",
+  surface: {
+    primary: "#f1f1f1",
+    secondary: "#eeeeee",
+    tertiary: "#aaaaaa",
+  },
+  border: {
+    primary: "#f1f1f1",
+    secondary: "#eeeeee",
+    tertiary: "#aaaaaa",
   },
   palette: {
     primary: "#000000",
@@ -21,8 +28,15 @@ export const lightTheme: DefaultTheme = {
 
 export const darkTheme: DefaultTheme = {
   background: "#000000",
-  hero: {
-    gradient: "linear-gradient(120deg, #ffffff 0%, #999999 100%);",
+  surface: {
+    primary: "#212121",
+    secondary: "#303030",
+    tertiary: "#424242",
+  },
+  border: {
+    primary: "#212121",
+    secondary: "#303030",
+    tertiary: "#424242",
   },
   palette: {
     primary: "#ffffff",

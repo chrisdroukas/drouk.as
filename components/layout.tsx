@@ -1,8 +1,7 @@
-import Alert from "./alert";
 import Footer from "./footer";
 import Meta from "./meta";
 
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { preferredColorScheme } from "../hooks/usePreferredColorScheme";
 import { GlobalStyles } from "../styles/globalStyles";
 
@@ -11,15 +10,21 @@ type Props = {
   children: React.ReactNode;
 };
 
+/**
+ * The outermost layout container.
+ */
+const LayoutContainer = styled.div`
+  min-width: 320px;
+`;
+
 const Layout = ({ preview, children }: Props) => {
   return (
     <ThemeProvider theme={preferredColorScheme()}>
       <GlobalStyles />
       <Meta />
-      <div className="min-h-screen">
-        <Alert preview={preview} />
+      <LayoutContainer>
         <main>{children}</main>
-      </div>
+      </LayoutContainer>
       <Footer />
     </ThemeProvider>
   );

@@ -4,12 +4,24 @@ body {
   font-size: 14px;
   line-height: 1.25;
   font-weight: normal;
-  height: 100vh;
   margin: 0;
 }
 
-* {
+#__next {
+  min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
+::selection {
+  background: rgba(100, 100, 100, 0.5);
+}
+
+a {
+  color: inherit;
+}
 /* @import url("syntax.css"); */

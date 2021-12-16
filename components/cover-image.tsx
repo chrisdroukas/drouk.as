@@ -1,22 +1,28 @@
-import cn from 'classnames'
-import Link from 'next/link'
+import cn from "classnames";
+import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
-  title: string
-  src: string
-  slug?: string
-}
+  title: string;
+  src: string;
+  slug?: string;
+  height?: string;
+  width?: string;
+};
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, slug, height, width }: Props) => {
   const image = (
-    <img
+    <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn('shadow-small', {
-        'hover:shadow-medium transition-shadow duration-200': slug,
+      className={cn("shadow-sm", {
+        "hover:shadow-md transition-shadow duration-200": slug,
       })}
+      layout="responsive"
+      width={2000}
+      height={1000}
     />
-  )
+  );
   return (
     <div className="sm:mx-0">
       {slug ? (
@@ -27,7 +33,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
         image
       )}
     </div>
-  )
-}
+  );
+};
 
-export default CoverImage
+export default CoverImage;

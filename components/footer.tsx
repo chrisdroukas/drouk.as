@@ -1,32 +1,56 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import styled from "styled-components";
+import Container from "./container";
+
+const FooterContainer = styled.footer(({ theme }) => ({
+  position: "sticky",
+  top: "100vh",
+  paddingTop: "1rem",
+  paddingBottom: "1rem",
+  background: theme.surface.primary,
+  borderTopColor: theme.border.secondary,
+  borderTopStyle: "solid",
+  borderTopWidth: "1px",
+}));
+
+const FooterInnerContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const FooterGrid = styled.div`
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-column-gap: 1rem;
+`;
+
+const SiteTitle = styled.a`
+  font-weight: 700;
+  text-decoration: none;
+`;
 
 const Footer = () => {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
+    <FooterContainer>
       <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
+        <FooterInnerContainer>
+          <FooterGrid>
+            <SiteTitle href="">drouk.as</SiteTitle>
+            <a href="">Resume</a>
+            <a href="https://github.com/chrisdroukas">GitHub</a>
+            <a href="https://linkedin.com/in/chrisdroukas">LinkedIn</a>
+          </FooterGrid>
+          <FooterGrid>
             <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+              href={`https://github.com/vercel/next.js/tree/canary/examples/`}
               className="mx-3 font-bold hover:underline"
             >
-              View on GitHub
+              View Source
             </a>
-          </div>
-        </div>
+          </FooterGrid>
+        </FooterInnerContainer>
       </Container>
-    </footer>
-  )
-}
+    </FooterContainer>
+  );
+};
 
-export default Footer
+export default Footer;
