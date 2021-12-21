@@ -13,7 +13,7 @@ import {
   OmvDataSource,
 } from "@here/harp-omv-datasource";
 import { OmvTileDecoder } from "@here/harp-omv-datasource/index-worker";
-import { apiKey, theme } from "../run/config";
+import { apiKey, theme } from "../../components/run/config";
 
 /**
  * Async fetch `OmvTileDecoderService` inside a worker via ES Module CDN.
