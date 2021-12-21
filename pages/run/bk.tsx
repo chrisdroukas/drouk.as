@@ -4,18 +4,16 @@ import Layout from "../../components/layout";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 
+import { MapView, MapViewEventNames } from "@here/harp-mapview";
 import { GeoCoordinates } from "@here/harp-geoutils";
 import { GeoJsonDataProvider } from "@here/harp-geojson-datasource";
-import { MapView, MapViewEventNames } from "@here/harp-mapview";
 import {
   APIFormat,
   AuthenticationMethod,
   OmvDataSource,
 } from "@here/harp-omv-datasource";
+import { OmvTileDecoder } from "@here/harp-omv-datasource/index-worker";
 import { apiKey, theme } from "../run/config";
-
-const initialCoordinates = new GeoCoordinates(40.686581, -73.963711);
-const initialZoomLevel = 15;
 
 /**
  * Async fetch `OmvTileDecoderService` inside a worker via ES Module CDN.
@@ -56,6 +54,7 @@ const dataSource = new OmvDataSource({
   },
   apiFormat: APIFormat.XYZOMV,
   styleSetName: "tilezen",
+  decoder: new OmvTileDecoder(),
 });
 
 const geoJsonStyleSet = [
@@ -93,11 +92,8 @@ const RunBK = () => {
     const map = (mapRef.current = new MapView({
       theme,
       canvas: canvasRef.current,
-      target: initialCoordinates,
-      zoomLevel: initialZoomLevel,
-      decoderUrl: decoderURL(),
     }));
-    console.log(decoderURL);
+    // console.log(decoderURL);
 
     map.addDataSource(dataSource);
 
