@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
 import Container from "../../components/container";
 import Layout from "../../components/layout";
 import Head from "next/head";
@@ -17,20 +16,6 @@ import { apiKey, theme } from "../run/config";
 
 const initialCoordinates = new GeoCoordinates(40.686581, -73.963711);
 const initialZoomLevel = 15;
-
-const dynamicGeoJsonSource = dynamic(() => import("/routes/bk.json"), {
-  ssr: false,
-});
-
-const geoJsonDataProvider = new GeoJsonDataProvider(
-  "route",
-  new URL("/routes/bk.json", window.location.href)
-);
-
-const geoJsonDataSource = new OmvDataSource({
-  name: "route",
-  dataProvider: geoJsonDataProvider,
-});
 
 /**
  * Async fetch `OmvTileDecoderService` inside a worker via ES Module CDN.
@@ -115,6 +100,16 @@ const RunBK = () => {
     console.log(decoderURL);
 
     map.addDataSource(dataSource);
+
+    const geoJsonDataProvider = new GeoJsonDataProvider(
+      "route",
+      new URL("/routes/bk.json", window.location.href)
+    );
+
+    const geoJsonDataSource = new OmvDataSource({
+      name: "route",
+      dataProvider: geoJsonDataProvider,
+    });
 
     map.addDataSource(geoJsonDataSource);
     // .then(() => geoJsonDataSource.setStyleSet(geoJsonStyleSet));
