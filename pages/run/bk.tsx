@@ -7,6 +7,11 @@ import { usePreferredColorScheme } from "../../hooks/usePreferredColorScheme";
 import { getAllPosts } from "../../lib/api";
 import Intro from "../../components/run/intro";
 import Stories from "../../components/stories";
+import Post from "../../types/post";
+
+type Props = {
+  allPosts: Post[];
+};
 
 const MapElement = styled.div(({ theme }) => ({
   width: "100vw",
