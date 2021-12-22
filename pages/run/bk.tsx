@@ -238,7 +238,10 @@ const UseMapExample = () => {
         { title: "Finish" }
       );
 
-    map.showItems([start, finish], {});
+    map.showItems([start, finish], {
+      animate: true,
+      padding: new mapkit.Padding(64, 0, 192, 192),
+    });
 
     /**
      * Centers the map to the provided coordinate, with optional animation.
@@ -274,7 +277,23 @@ const UseMapExample = () => {
      */
     map.colorScheme = preferredMapColorScheme;
 
+    /**
+     * A Boolean value that determines whether the map displays points of interest.
+     * @see https://developer.apple.com/documentation/mapkitjs/mapkit/map/2973940-showspointsofinterest
+     */
     map.showsPointsOfInterest = false;
+
+    /**
+     * A Boolean value that determines whether the user may rotate the map using the compass control or a rotate gesture.
+     * @see https://developer.apple.com/documentation/mapkitjs/mapkit/map/2991321-isrotationenabled
+     */
+    map.isRotationEnabled = false;
+
+    /**
+     * A Boolean value that determines whether the user may scroll the map with a pointing device or with gestures on a touchscreen.
+     * @see https://developer.apple.com/documentation/mapkitjs/mapkit/map/2978329-isscrollenabled
+     */
+    map.isScrollEnabled = false;
   }
 
   return (

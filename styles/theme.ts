@@ -8,6 +8,7 @@ const breakpoints: DefaultTheme["breakpoints"] = {
 
 export const lightTheme: DefaultTheme = {
   background: "#ffffff",
+  shadow: "rgba(255,255,255,0.5)",
   surface: {
     primary: "#f1f1f1",
     secondary: "#eeeeee",
@@ -28,6 +29,7 @@ export const lightTheme: DefaultTheme = {
 
 export const darkTheme: DefaultTheme = {
   background: "#000000",
+  shadow: "rgba(0,0,0,0.5)",
   surface: {
     primary: "#212121",
     secondary: "#303030",
