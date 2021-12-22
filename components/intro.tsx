@@ -54,8 +54,8 @@ const Intro = () => {
   return (
     <Section>
       <Title>
-        <TitleLineFormatter>Chris Droukas is a&nbsp;</TitleLineFormatter>
-        <TitleLineFormatter>design tech&shy;nologist&nbsp;</TitleLineFormatter>
+        <TitleLineFormatter>Chris Droukas is a</TitleLineFormatter>
+        <TitleLineFormatter>design tech&shy;nologist</TitleLineFormatter>
         <TitleLineFormatter>in New York.</TitleLineFormatter>
       </Title>
       <Subtitle className="text-center md:text-left text-lg mt-5 md:pl-8">
