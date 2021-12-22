@@ -4,18 +4,11 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
-    "build:harp-gl-decoder": "webpack -p --config ./harp-gl-decoder.config.js",
     "serve": "next start",
     "start": "next",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@here/harp-datasource-protocol": "0.27.1",
-    "@here/harp-geojson-datasource": "0.27.1",
-    "@here/harp-map-theme": "0.27.1",
-    "@here/harp-mapview": "0.27.1",
-    "@here/harp-omv-datasource": "0.27.1",
-    "@here/harp-vectortile-datasource": "0.27.1",
     "classnames": "2.3.1",
     "date-fns": "2.27.0",
     "gray-matter": "4.0.3",
@@ -29,7 +22,6 @@
     "typescript": "4.5.4"
   },
   "devDependencies": {
-    "@here/harp-webpack-utils": "0.27.1",
     "@types/jest": "27.0.3",
     "@types/node": "^15.6.0",
     "@types/react": "17.0.37",
