@@ -18,10 +18,22 @@ const MapElement = styled.div(({ theme }) => ({
   maxWidth: "100vw",
   height: "100vh",
   maxHeight: "100vh",
-  position: "absolute",
+  position: "fixed",
   top: 0,
   left: 0,
   zIndex: -5,
+}));
+
+const MapScrim = styled.div(({ theme }) => ({
+  width: "100vw",
+  maxWidth: "100vw",
+  height: "100vh",
+  maxHeight: "100vh",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  zIndex: 1,
+  background: "rgba(0, 0, 0, 0.25)",
 }));
 
 const UseMapExample = () => {
@@ -298,6 +310,7 @@ const UseMapExample = () => {
 
   return (
     <MapElement>
+      <MapScrim />
       <Map {...mapProps} />
     </MapElement>
   );
