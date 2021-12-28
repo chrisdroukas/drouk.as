@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { lightTheme, darkTheme } from "../styles/theme";
+import { useMounted } from "./useMounted";
 
 export type Theme = "dark" | "light" | "none";
 
@@ -50,5 +51,22 @@ export const usePreferredColorScheme = () => {
  */
 export const preferredColorScheme = () => {
   const preferredColorScheme = usePreferredColorScheme();
-  return preferredColorScheme === "light" ? lightTheme : darkTheme;
+
+  /**
+   * This is a joy of SSR and React hydration.
+   *
+   * There's likely a cleaner way to do this, but we're checking if
+   * the element calling for a preferred color scheme has mounted yet.
+   *
+   * If it hasn't, we're stepping around a `className` mismatch by just
+   * returning a `lightTheme` and (in effect) immediately checking again.
+   * This mismatch otherwise causes numerous `styled-component` views
+   * to render without styles, or fail to adopt the correct style either
+   * on mount or on preferred color scheme change.
+   */
+  if (useMounted()) {
+    return preferredColorScheme === "light" ? lightTheme : darkTheme;
+  } else {
+    return lightTheme;
+  }
 };
