@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { lightTheme, darkTheme } from "../styles/theme";
-import { useMounted } from "./useMounted";
+import { mounted } from "./useMounted";
 
 export type Theme = "dark" | "light" | "none";
 
@@ -64,7 +64,7 @@ export const preferredColorScheme = () => {
    * to render without styles, or fail to adopt the correct style either
    * on mount or on preferred color scheme change.
    */
-  if (useMounted()) {
+  if (mounted()) {
     return preferredColorScheme === "light" ? lightTheme : darkTheme;
   } else {
     return lightTheme;

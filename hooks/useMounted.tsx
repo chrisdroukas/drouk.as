@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
  *
  * Useful for determining a theme and avoiding mistimed renderings, for example.
  */
-export const useMounted = () => {
+export const mounted = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {

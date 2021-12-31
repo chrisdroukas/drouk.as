@@ -36,7 +36,7 @@ const Index = ({ allPosts }: Props) => {
               excerpt={heroPost.excerpt}
             />
           )} */}
-          {stories && <Stories title={"What's New"} posts={stories} />}
+          {/* {stories && <Stories title={"What's New"} posts={stories} />} */}
         </Container>
       </Layout>
     </>

@@ -334,6 +334,7 @@ const RunBK = ({ allPosts }: Props) => {
         </MapkitProvider>
         <Container>
           <Intro />
+
           {/* {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -344,7 +345,7 @@ const RunBK = ({ allPosts }: Props) => {
               excerpt={heroPost.excerpt}
             />
           )} */}
-          {stories && <Stories title={"What's New"} posts={stories} />}
+          {/* {stories && <Stories title={"What's New"} posts={stories} />} */}
         </Container>
       </Layout>
     </>
