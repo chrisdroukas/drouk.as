@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
 const Section = styled.section(({ theme }) => ({
-  marginTop: "6rem",
-  marginBottom: "5rem",
-  [theme.breakpoints.medium]: {
-    marginTop: "10rem",
-    marginBottom: "5rem",
-  },
-  [theme.breakpoints.large]: {
-    marginTop: "12rem",
-    marginBottom: "5rem",
-  },
+  display: "flex",
+  flexDirection: "column",
+  height: "calc(100vh - 50px)",
+  justifyContent: "center",
+  // marginTop: "6rem",
+  // marginBottom: "5rem",
+  // [theme.breakpoints.medium]: {
+  //   marginTop: "10rem",
+  //   marginBottom: "5rem",
+  // },
+  // [theme.breakpoints.large]: {
+  //   marginTop: "12rem",
+  //   marginBottom: "5rem",
+  // },
 }));
 
 const Title = styled.h1(({ theme }) => ({

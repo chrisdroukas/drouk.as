@@ -8,6 +8,7 @@ import { getAllPosts } from "../../lib/api";
 import Intro from "../../components/run/intro";
 import Stories from "../../components/stories";
 import Post from "../../types/post";
+import Card from "../../components/card";
 
 type Props = {
   allPosts: Post[];
@@ -334,6 +335,7 @@ const RunBK = ({ allPosts }: Props) => {
         </MapkitProvider>
         <Container>
           <Intro />
+          <Card title="About">hello!</Card>
 
           {/* {heroPost && (
             <HeroPost

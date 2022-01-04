@@ -14,6 +14,7 @@ const ContainerElement = styled.div(({ theme }) => ({
   maxWidth: "100vw",
   paddingLeft: "2rem",
   paddingRight: "2rem",
+  display: "grid",
   [theme.breakpoints.medium]: {
     maxWidth: "100vw",
     paddingLeft: "4rem",

@@ -23,7 +23,7 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
-        <Alert />
+        {/* <Alert /> */}
         <Container>
           <Intro />
           {/* {heroPost && (

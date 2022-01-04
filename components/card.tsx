@@ -2,6 +2,7 @@ import { ReactNode, FunctionComponent } from "react";
 import styled from "styled-components";
 
 type Props = {
+  title?: string;
   children?: ReactNode;
 };
 
@@ -12,22 +13,27 @@ type Props = {
 const ContainerElement = styled.div(({ theme }) => ({
   margin: "0 auto",
   maxWidth: "100vw",
-  paddingLeft: "2rem",
-  paddingRight: "2rem",
-  [theme.breakpoints.medium]: {
-    maxWidth: "100vw",
-    paddingLeft: "4rem",
-    paddingRight: "4rem",
-  },
-  [theme.breakpoints.large]: {
-    maxWidth: "90rem",
-    paddingLeft: "5rem",
-    paddingRight: "5rem",
-  },
+  padding: "2rem",
+  borderRadius: "1rem",
+  boxShadow: `0px 0px 8px ${theme.shadow}`,
+  background: theme.surface.primary,
+  [theme.breakpoints.medium]: {},
+  [theme.breakpoints.large]: {},
 }));
 
-const Card: FunctionComponent = ({ children }: Props) => {
-  return <ContainerElement>{children}</ContainerElement>;
+const Card: FunctionComponent = ({ title, children }: Props) => {
+  const titleElement = title && (
+    <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+      {title}
+    </h2>
+  );
+
+  return (
+    <ContainerElement>
+      {titleElement}
+      {children}
+    </ContainerElement>
+  );
 };
 
 export default Card;

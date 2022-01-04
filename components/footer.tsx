@@ -35,18 +35,18 @@ const Footer = () => {
         <FooterInnerContainer>
           <FooterGrid>
             <SiteTitle href="">drouk.as</SiteTitle>
-            <a href="">Resume</a>
+            {/* <a href="">Resume</a> */}
             <a href="https://github.com/chrisdroukas">GitHub</a>
             <a href="https://linkedin.com/in/chrisdroukas">LinkedIn</a>
           </FooterGrid>
-          <FooterGrid>
+          {/* <FooterGrid>
             <a
               href={`https://github.com/vercel/next.js/tree/canary/examples/`}
               className="mx-3 font-bold hover:underline"
             >
               View Source
             </a>
-          </FooterGrid>
+          </FooterGrid> */}
         </FooterInnerContainer>
       </Container>
     </FooterContainer>
