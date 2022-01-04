@@ -2,8 +2,8 @@ import { ReactNode, FunctionComponent } from "react";
 import styled from "styled-components";
 
 type Props = {
-  title?: string;
   children?: ReactNode;
+  title?: string;
 };
 
 /**
@@ -21,7 +21,7 @@ const ContainerElement = styled.div(({ theme }) => ({
   [theme.breakpoints.large]: {},
 }));
 
-const Card: FunctionComponent = ({ title, children }: Props) => {
+const Card: FunctionComponent<Props> = ({ title, children }) => {
   const titleElement = title && (
     <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
       {title}
