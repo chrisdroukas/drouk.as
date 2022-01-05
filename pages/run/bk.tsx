@@ -4,15 +4,8 @@ import Head from "next/head";
 import styled from "styled-components";
 import { MapkitProvider, Map, useMap } from "react-mapkit";
 import { usePreferredColorScheme } from "../../hooks/usePreferredColorScheme";
-import { getAllPosts } from "../../lib/api";
 import Intro from "../../components/run/intro";
-import Stories from "../../components/stories";
-import Post from "../../types/post";
 import Card from "../../components/card";
-
-type Props = {
-  allPosts: Post[];
-};
 
 const MapElement = styled.div(({ theme }) => ({
   width: "100vw",
@@ -317,8 +310,7 @@ const UseMapExample = () => {
   );
 };
 
-const RunBK = ({ allPosts }: Props) => {
-  const stories = allPosts;
+const RunBK = () => {
   return (
     <>
       <Layout>
@@ -336,18 +328,6 @@ const RunBK = ({ allPosts }: Props) => {
         <Container>
           <Intro />
           <Card title="About">hello!</Card>
-
-          {/* {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )} */}
-          {/* {stories && <Stories title={"What's New"} posts={stories} />} */}
         </Container>
       </Layout>
     </>
@@ -355,18 +335,3 @@ const RunBK = ({ allPosts }: Props) => {
 };
 
 export default RunBK;
-
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "coverImage",
-    "excerpt",
-  ]);
-
-  return {
-    props: { allPosts },
-  };
-};

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../button";
 
 const Section = styled.section(({ theme }) => ({
   marginTop: "6rem",
@@ -37,7 +38,7 @@ const TitleLineFormatter = styled.span`
 const Subtitle = styled.p(({ theme }) => ({
   letterSpacing: "-0.1rem",
   marginTop: "0rem",
-  marginBottom: "0rem",
+  marginBottom: "2rem",
   fontWeight: 500,
   fontSize: "1.5rem",
   lineHeight: "normal",
@@ -66,6 +67,10 @@ const Intro = () => {
         adults and children with cancer the best treatment available today while
         developing tomorrow's cures through cutting-edge research.
       </Subtitle>
+      <Button
+        title="Donate"
+        url="http://danafarber.jimmyfund.org/goto/droukas"
+      />
     </Section>
   );
 };

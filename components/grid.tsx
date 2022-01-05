@@ -1,5 +1,5 @@
-import { ReactNode, FunctionComponent } from "react";
-import styled, { DefaultTheme } from "styled-components";
+import { ReactNode } from "react";
+import styled from "styled-components";
 
 type Props = {
   children?: ReactNode;

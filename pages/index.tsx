@@ -19,9 +19,9 @@ const Index = ({ allPosts }: Props) => {
   const stories = allPosts;
 
   const HDRBox = (
-    <video width="1" height="1" controls>
-      <source src="assets/video/white1.webm" type="video/webm" />
+    <video width="1" height="1" autoPlay loop muted>
       <source src="assets/video/white1.mp4" type="video/mp4" />
+      <source src="assets/video/white1.webm" type="video/webm" />
       <source src="assets/video/white2.mp4" type="video/mp4" />
     </video>
   );
