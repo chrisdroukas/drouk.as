@@ -23,6 +23,7 @@ const Title = styled.h1(({ theme }) => ({
   marginBottom: "2rem",
   fontSize: "3rem",
   lineHeight: 1,
+  wordBreak: "break-word",
   [theme.breakpoints.medium]: {
     fontSize: "4rem",
     lineHeight: 1,
@@ -69,21 +70,31 @@ const TitleAnimation = styled.span<AnimationProps>`
   animation-fill-mode: forwards;
 `;
 
+const Invisalign = styled.wbr`
+  display: none;
+`;
+
 const Intro = () => {
   return (
     <Section>
       <Title>
         <TitleLineFormatter>
           <TitleAnimation delay={"1s"}>Chris</TitleAnimation>
-          <wbr /> <TitleAnimation delay={"1.4s"}>Droukas</TitleAnimation>&nbsp;
-          <wbr />
+          <Invisalign /> <TitleAnimation delay={"1.4s"}>Droukas</TitleAnimation>
+          &nbsp;
+          <Invisalign />
         </TitleLineFormatter>
-        <TitleAnimation delay={"1.8s"}>is</TitleAnimation>&nbsp;
-        <TitleAnimation delay={"2s"}>a</TitleAnimation>&nbsp;
-        <TitleAnimation delay={"2.4s"}>design</TitleAnimation>&nbsp;
-        <TitleAnimation delay={"2.8s"}>tech&shy;nologist</TitleAnimation>&nbsp;
-        <TitleAnimation delay={"3.2s"}>in</TitleAnimation>&nbsp;
-        <TitleAnimation delay={"3.6s"}>New</TitleAnimation>&nbsp;
+        <TitleAnimation delay={"1.8s"}>is </TitleAnimation>
+        <Invisalign />
+        <TitleAnimation delay={"2s"}>a </TitleAnimation>
+        <Invisalign />
+        <TitleAnimation delay={"2.4s"}>design </TitleAnimation>
+        <Invisalign />
+        <TitleAnimation delay={"2.8s"}>tech&shy;nologist </TitleAnimation>
+        <Invisalign />
+        <TitleAnimation delay={"3.2s"}>in </TitleAnimation>
+        <Invisalign />
+        <TitleAnimation delay={"3.6s"}>New </TitleAnimation>
         <TitleAnimation delay={"4s"}>York.</TitleAnimation>
       </Title>
       <Subtitle className="text-center md:text-left text-lg mt-5 md:pl-8">
