@@ -17,6 +17,13 @@ const Index = ({ allPosts }: Props) => {
   // const heroPost = allPosts[0];
   // const morePosts = allPosts.slice(1);
   const stories = allPosts;
+
+  const HDRBox = (
+    <video width="1" height="1" controls>
+      <source src="assets/video/white1.mp4" type="video/mp4" />
+    </video>
+  );
+
   return (
     <>
       <Layout>
@@ -24,6 +31,7 @@ const Index = ({ allPosts }: Props) => {
           <title>Chris Droukas</title>
         </Head>
         {/* <Alert /> */}
+        {HDRBox}
         <Container>
           <Intro />
           {/* {heroPost && (

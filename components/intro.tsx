@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Section = styled.section(({ theme }) => ({
   display: "flex",
@@ -54,16 +54,37 @@ const Subtitle = styled.p(({ theme }) => ({
   },
 }));
 
+const TitleKeyframes = keyframes`
+  0% { filter: brightness(0.9); backdrop-filter: blur(0) }
+  100% { filter: brightness(10); backdrop-filter: blur(0) }
+`;
+
+type AnimationProps = {
+  delay: string;
+};
+
+const TitleAnimation = styled.span<AnimationProps>`
+  animation: ${TitleKeyframes} 2s linear;
+  animation-delay: ${(props) => props.delay};
+  animation-fill-mode: forwards;
+`;
+
 const Intro = () => {
   return (
     <Section>
       <Title>
         <TitleLineFormatter>
-          Chris
-          <wbr /> Droukas&nbsp;
+          <TitleAnimation delay={"1s"}>Chris</TitleAnimation>
+          <wbr /> <TitleAnimation delay={"1.4s"}>Droukas</TitleAnimation>&nbsp;
           <wbr />
         </TitleLineFormatter>
-        is&nbsp;a&nbsp;design tech&shy;nologist&nbsp; in New York.
+        <TitleAnimation delay={"1.8s"}>is</TitleAnimation>&nbsp;
+        <TitleAnimation delay={"2s"}>a</TitleAnimation>&nbsp;
+        <TitleAnimation delay={"2.4s"}>design</TitleAnimation>&nbsp;
+        <TitleAnimation delay={"2.8s"}>tech&shy;nologist</TitleAnimation>&nbsp;
+        <TitleAnimation delay={"3.2s"}>in</TitleAnimation>&nbsp;
+        <TitleAnimation delay={"3.6s"}>New</TitleAnimation>&nbsp;
+        <TitleAnimation delay={"4s"}>York.</TitleAnimation>
       </Title>
       <Subtitle className="text-center md:text-left text-lg mt-5 md:pl-8">
         Designing at Goldman Sachs for{" "}
