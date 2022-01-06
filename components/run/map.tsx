@@ -203,16 +203,15 @@ const route = [
   [-73.97063612937926, 40.66015590607582],
 ];
 
-// const startCoordinate = [40.719818880450106, -73.95346462726593];
-// const finishCoordinate = [40.66015590607582, -73.97063612937926];
+var routeCoordinates: any;
 var startCoordinate: any;
 var finishCoordinate: any;
 var overviewCoordinate: any;
 
-const initializeMap = (map: any, mapkit: any) => {
+const InitializeMap = (map: any, mapkit: any) => {
   const [initialized, setInitialized] = useState(false);
   if (map && !initialized) {
-    const routeCoordinates = route.map((coordinate) => {
+    routeCoordinates = route.map((coordinate) => {
       return new mapkit.Coordinate(coordinate[1], coordinate[0]);
     });
 
@@ -249,12 +248,12 @@ const initializeMap = (map: any, mapkit: any) => {
       });
 
     map.addOverlay(overviewCoordinate);
-    map.addAnnotations([start, finish]);
+    // map.addAnnotations([start, finish]);
 
-    // map.showItems([start, finish, routeLine], {
-    //   animate: true,
-    //   padding: new mapkit.Padding(64, 0, 192, 192),
-    // });
+    map.showItems([start, finish], {
+      animate: true,
+      padding: new mapkit.Padding(64, 0, 192, 192),
+    });
 
     /**
      * Centers the map to the provided coordinate, with optional animation.
@@ -306,17 +305,23 @@ const initializeMap = (map: any, mapkit: any) => {
   }
 };
 
-const mapShouldTransitionToRegion = (map: any, mapkit: any, region: any) => {
-  console.log(region);
+/**
+ * We can calculate an approximate route progression by rounding to the nearest integer as a function of "how far along are we" versus "how many datapoints have been provided".
+ *
+ * We need to round since `routeProgession` is passed as an array accessor to `routeCoordinates`.
+ */
+function routeProgression(progression: any, total: number) {
+  return Math.round((progression / 100) * total);
+}
 
+const mapShouldTransitionToRegion = (map: any, mapkit: any, region: any) => {
   if (map) {
-    if (region === "0") {
-      const span = new mapkit.CoordinateSpan(0.025, 0.025);
-      const focusRegion = new mapkit.CoordinateRegion(startCoordinate, span);
-      map.setRegionAnimated(focusRegion);
-    } else if (region === "100") {
-      const span = new mapkit.CoordinateSpan(0.025, 0.025);
-      const focusRegion = new mapkit.CoordinateRegion(finishCoordinate, span);
+    if (region !== "") {
+      const span = new mapkit.CoordinateSpan(0.07, 0.07);
+      const focusRegion = new mapkit.CoordinateRegion(
+        routeCoordinates[routeProgression(region, routeCoordinates.length - 1)],
+        span
+      );
       map.setRegionAnimated(focusRegion);
     } else {
       map.showItems([overviewCoordinate], {
@@ -336,7 +341,7 @@ const BrooklynHalfMap: FunctionComponent<Props> = ({ showMarker }: Props) => {
 
   const { map, mapkit, mapProps } = useMap();
 
-  initializeMap(map, mapkit);
+  InitializeMap(map, mapkit);
 
   /**
    * The map’s color scheme when displaying standard or muted standard map types.
