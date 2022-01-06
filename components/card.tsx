@@ -1,4 +1,4 @@
-import { ReactNode, FunctionComponent } from "react";
+import React, { ReactNode, FunctionComponent } from "react";
 import styled from "styled-components";
 
 type Props = {
@@ -21,19 +21,23 @@ const ContainerElement = styled.div(({ theme }) => ({
   [theme.breakpoints.large]: {},
 }));
 
-const Card: FunctionComponent<Props> = ({ title, children }) => {
-  const titleElement = title && (
-    <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-      {title}
-    </h2>
-  );
+// const Card2: React.FC<Props> = React.forwardRef<HTMLUListElement, Props>
 
-  return (
-    <ContainerElement>
-      {titleElement}
-      {children}
-    </ContainerElement>
-  );
-};
+const Card = React.forwardRef<HTMLDivElement, Props>(
+  ({ title, children }, ref) => {
+    const titleElement = title && (
+      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+        {title}
+      </h2>
+    );
+
+    return (
+      <ContainerElement ref={ref}>
+        {titleElement}
+        {children}
+      </ContainerElement>
+    );
+  }
+);
 
 export default Card;
