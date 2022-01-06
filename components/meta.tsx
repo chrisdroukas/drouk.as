@@ -1,19 +1,13 @@
 import Head from "next/head";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 
+/**
+ * Font loading has been relocated to Document for Next automatic optimizations.
+ * @see https://nextjs.org/docs/messages/no-page-custom-font
+ */
 const Meta = () => {
   return (
     <Head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="crossorigin"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

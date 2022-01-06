@@ -58,14 +58,14 @@ const Intro = () => {
     <Section>
       <Title>
         <TitleLineFormatter>
-          I'm running The Brooklyn Half and raising $2,500 in support of
+          I&apos;m running The Brooklyn Half and raising $2,500 in support of
           Dana-Farber Cancer Institute.
         </TitleLineFormatter>
       </Title>
       <Subtitle className="text-center md:text-left text-lg mt-5 md:pl-8">
         Since 1947, Dana-Farber Cancer Institute has been committed to providing
         adults and children with cancer the best treatment available today while
-        developing tomorrow's cures through cutting-edge research.
+        developing tomorrow&apos;s cures through cutting-edge research.
       </Subtitle>
       <Button
         title="Donate"

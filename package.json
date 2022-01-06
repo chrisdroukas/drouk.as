@@ -5,6 +5,7 @@
   "scripts": {
     "build": "next build",
     "serve": "next start",
+    "check": "next lint",
     "start": "next",
     "typecheck": "tsc"
   },

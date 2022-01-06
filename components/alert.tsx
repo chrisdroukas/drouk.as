@@ -1,5 +1,6 @@
 import Container from "./container";
 import styled from "styled-components";
+import Link from "next/link";
 import { EXAMPLE_PATH } from "../lib/constants";
 
 type Props = {
@@ -37,8 +38,9 @@ const Alert = ({ preview }: Props) => {
             </>
           ) : (
             <>
-              I'm running The Brooklyn Half and raising $2,500 in support of
-              Dana-Farber Cancer Institute. <a href="/run/bk">Learn more</a>
+              I&apos;m running The Brooklyn Half and raising $2,500 in support
+              of Dana-Farber Cancer Institute.{" "}
+              <Link href="/run/bk">Learn more</Link>
             </>
           )}
         </div>
