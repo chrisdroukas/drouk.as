@@ -2,7 +2,6 @@ import { useState } from "react";
 import Container from "../../components/container";
 import Layout from "../../components/layout";
 import Head from "next/head";
-import styled from "styled-components";
 import Intro from "../../components/run/intro";
 import Card from "../../components/card";
 import Grid from "../../components/grid";
@@ -46,31 +45,71 @@ const RunBK = () => {
           <Grid columns={1} rowGap="3rem">
             <Card
               ref={startingRef}
-              title="Why Dana-Farber Cancer Institute"
-              description="I'm running The Brooklyn Half in honor of my mom, Catherine
-              Harrington-Droukas, and to support the groundbreaking work Dana-Farber Cancer
-              Institute is doing to advance treatments for people battling
-              cancer."
+              title="Why I'm Running for Dana-Farber Cancer Institute"
+              description=""
             >
-              Dana-Farber focuses exclusively on cancer and related diseases,
-              and partners with two of the world&apos;s highest-ranked hospitals
-              to provide care for adult and pediatric patients.
+              <div>
+                <p style={{ marginTop: 0 }}>
+                  I&apos;m running The Brooklyn Half in honor of my mom,
+                  Catherine Harrington–Droukas, and to support the
+                  groundbreaking work Dana-Farber Cancer Institute is doing to
+                  advance treatments for people battling cancer.
+                </p>
+                <p style={{ marginTop: 0 }}>
+                  Dana-Farber focuses exclusively on cancer and related
+                  diseases, and partners with two of the world&apos;s
+                  highest-ranked hospitals to provide care for adult and
+                  pediatric patients. Dana-Farber has engaged in over 70 years
+                  of research discovery and innovation that have revolutionized
+                  cancer diagnosis and treatment.
+                </p>
+                <a
+                  href="https://www.dana-farber.org/"
+                  style={{ marginBottom: 0 }}
+                >
+                  Learn More About Dana-Farber
+                </a>
+              </div>
             </Card>
-            <Card
-              ref={overviewRef}
-              title="About The Brooklyn Half Marathon"
-              description="The Brooklyn Half Marathon begins in Williamsburg, follows along the East River past the Brooklyn bridges and ends in Prospect Park."
-            >
-              On April 24th, I&apos;ll join thousands of runners for a 13.1 mile
-              race through Brooklyn. On April 24th, I&apos;ll join thousands of
-              runners for a 13.1 mile race through Brooklyn.
+            <Card ref={overviewRef} title="About The Brooklyn Half Marathon">
+              <div>
+                <p style={{ marginTop: 0 }}>
+                  On April 24th, I&apos;ll join thousands of runners for a 13.1
+                  mile race through Brooklyn. On April 24th, I&apos;ll join
+                  thousands of runners for a 13.1 mile race through Brooklyn.
+                </p>
+                <p style={{ marginTop: 0 }}>
+                  The Brooklyn Half Marathon begins in Williamsburg, follows
+                  along the East River past the Brooklyn bridges and ends in
+                  Prospect Park.
+                </p>
+                <a
+                  href="https://www.thebrooklynmarathon.com/"
+                  style={{ marginBottom: 0 }}
+                >
+                  Learn More The Brooklyn Half
+                </a>
+              </div>
             </Card>
             <Card
               ref={startingRef}
               title="Training"
               description="Training statistics for a rolling 12-month period are provided by Strava."
             >
-              This is in view: {startingViewable.toString()}
+              <Grid columns={1}>
+                <Grid columns={1} rowGap="0rem" columnGap="0rem">
+                  <h2 style={{ margin: 0 }}>77</h2>
+                  <p style={{ margin: 0 }}>Total Runs</p>
+                </Grid>
+                <Grid columns={1} rowGap="0rem" columnGap="0rem">
+                  <h2 style={{ margin: 0 }}>522mi</h2>
+                  <p style={{ margin: 0 }}>Total Distance</p>
+                </Grid>
+                <Grid columns={1} rowGap="0rem" columnGap="0rem">
+                  <h2 style={{ margin: 0 }}>2:01:40</h2>
+                  <p style={{ margin: 0 }}>Best Half-Marathon</p>
+                </Grid>
+              </Grid>
             </Card>
           </Grid>
         </Container>

@@ -32,7 +32,7 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>Chris Droukas</title>
         </Head>
-        {/* <Alert /> */}
+        <Alert />
         {HDRBox}
         <Container>
           <Intro />

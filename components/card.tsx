@@ -23,6 +23,7 @@ const ContainerElement = styled.div(({ theme }) => ({
 }));
 
 const TitleElement = styled.h2(({ theme }) => ({
+  fontSize: "2rem",
   margin: 0,
 }));
 
