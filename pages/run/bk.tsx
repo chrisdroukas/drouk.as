@@ -33,6 +33,10 @@ const RunBK = () => {
       <Layout>
         <Head>
           <title>Brooklyn Half Marathon</title>
+          <meta
+            name="description"
+            content={`I'm running The Brooklyn Half Marathon and raising $2,000 in support of Dana-Farber Cancer Institute.`}
+          />
         </Head>
         <Header transparent />
         <MapkitProvider

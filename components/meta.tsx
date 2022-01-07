@@ -38,7 +38,7 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content={`Chris Droukas is a design technologist in New York.`}
       />
       <meta property="og:image" content="/og/image.png" />
     </Head>
