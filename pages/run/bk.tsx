@@ -75,8 +75,7 @@ const RunBK = () => {
               <div>
                 <p style={{ marginTop: 0 }}>
                   On April 24th, I&apos;ll join thousands of runners for a 13.1
-                  mile race through Brooklyn. On April 24th, I&apos;ll join
-                  thousands of runners for a 13.1 mile race through Brooklyn.
+                  mile race through Brooklyn.
                 </p>
                 <p style={{ marginTop: 0 }}>
                   The Brooklyn Half Marathon begins in Williamsburg, follows
@@ -87,7 +86,7 @@ const RunBK = () => {
                   href="https://www.thebrooklynmarathon.com/"
                   style={{ marginBottom: 0 }}
                 >
-                  Learn More The Brooklyn Half
+                  Learn More About The Brooklyn Half
                 </a>
               </div>
             </Card>
@@ -109,6 +108,12 @@ const RunBK = () => {
                   <h2 style={{ margin: 0 }}>2:01:40</h2>
                   <p style={{ margin: 0 }}>Best Half-Marathon</p>
                 </Grid>
+                <a
+                  href="http://strava.com/athletes/chrisdroukas/"
+                  style={{ marginBottom: 0 }}
+                >
+                  Follow Me on Strava
+                </a>
               </Grid>
             </Card>
           </Grid>
