@@ -68,7 +68,7 @@ const Intro = () => {
         developing tomorrow&apos;s cures through cutting-edge research.
       </Subtitle>
       <Button
-        title="Donate"
+        title="Support My Run"
         url="http://danafarber.jimmyfund.org/goto/droukas"
       />
     </Section>

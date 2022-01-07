@@ -1,9 +1,11 @@
 import React, { ReactNode, FunctionComponent } from "react";
+import Grid from "./grid";
 import styled from "styled-components";
 
 type Props = {
   children?: ReactNode;
   title?: string;
+  description?: string;
 };
 
 /**
@@ -11,9 +13,8 @@ type Props = {
  * @note `90rem` is equivalent to `1440px`.
  */
 const ContainerElement = styled.div(({ theme }) => ({
-  margin: "0 auto",
   maxWidth: "100vw",
-  padding: "2rem",
+  padding: "3rem 2rem",
   borderRadius: "1rem",
   boxShadow: `0px 0px 8px ${theme.shadow}`,
   background: theme.surface.primary,
@@ -21,20 +22,30 @@ const ContainerElement = styled.div(({ theme }) => ({
   [theme.breakpoints.large]: {},
 }));
 
-// const Card2: React.FC<Props> = React.forwardRef<HTMLUListElement, Props>
+const TitleElement = styled.h2(({ theme }) => ({
+  margin: 0,
+}));
+
+const DescriptionElement = styled.p(({ theme }) => ({
+  margin: 0,
+}));
 
 const Card = React.forwardRef<HTMLDivElement, Props>(
-  ({ title, children }, ref) => {
-    const titleElement = title && (
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        {title}
-      </h2>
+  ({ title, description, children }, ref) => {
+    const titleElement = title && <TitleElement>{title}</TitleElement>;
+    const descriptionElement = description && (
+      <DescriptionElement>{description}</DescriptionElement>
     );
 
     return (
       <ContainerElement ref={ref}>
-        {titleElement}
-        {children}
+        <Grid columns={2} columnGap="4rem">
+          <Grid columns={1}>
+            {titleElement}
+            {descriptionElement}
+          </Grid>
+          {children}
+        </Grid>
       </ContainerElement>
     );
   }

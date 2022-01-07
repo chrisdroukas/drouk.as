@@ -4,6 +4,7 @@ import Container from "./container";
 const FooterContainer = styled.footer(({ theme }) => ({
   position: "sticky",
   top: "100vh",
+  marginTop: "5rem",
   paddingTop: "1rem",
   paddingBottom: "1rem",
   background: theme.surface.primary,

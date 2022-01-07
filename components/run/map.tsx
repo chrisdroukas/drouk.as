@@ -250,7 +250,7 @@ const InitializeMap = (map: any, mapkit: any) => {
     map.addOverlay(overviewCoordinate);
     // map.addAnnotations([start, finish]);
 
-    map.showItems([start, finish], {
+    map.showItems([start, finish, overviewCoordinate], {
       animate: true,
       padding: new mapkit.Padding(64, 0, 192, 192),
     });
