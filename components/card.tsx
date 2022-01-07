@@ -1,4 +1,4 @@
-import React, { ReactNode, FunctionComponent } from "react";
+import React, { ReactNode } from "react";
 import Grid from "./grid";
 import styled from "styled-components";
 
@@ -16,7 +16,7 @@ const ContainerElement = styled.div(({ theme }) => ({
   maxWidth: "100vw",
   padding: "3rem 2rem",
   borderRadius: "1rem",
-  boxShadow: `0px 0px 8px ${theme.shadow}`,
+  boxShadow: `0px 20px 40px ${theme.shadow}`,
   background: theme.surface.primary,
   [theme.breakpoints.medium]: {},
   [theme.breakpoints.large]: {},
@@ -24,6 +24,7 @@ const ContainerElement = styled.div(({ theme }) => ({
 
 const TitleElement = styled.h2(({ theme }) => ({
   fontSize: "2rem",
+  lineHeight: "2.25rem",
   margin: 0,
 }));
 

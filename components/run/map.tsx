@@ -28,7 +28,7 @@ const MapScrim = styled.div(({ theme }) => ({
   top: 0,
   left: 0,
   zIndex: 1,
-  background: "rgba(0, 0, 0, 0.25)",
+  background: "rgba(0, 0, 0, 0.1)",
 }));
 
 const route = [
@@ -248,9 +248,8 @@ const InitializeMap = (map: any, mapkit: any) => {
       });
 
     map.addOverlay(overviewCoordinate);
-    // map.addAnnotations([start, finish]);
 
-    map.showItems([start, finish, overviewCoordinate], {
+    map.showItems([start, finish], {
       animate: true,
       padding: new mapkit.Padding(64, 0, 192, 192),
     });

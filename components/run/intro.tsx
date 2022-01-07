@@ -20,7 +20,6 @@ const Title = styled.h1(({ theme }) => ({
   marginBottom: "2rem",
   fontSize: "3rem",
   lineHeight: 1,
-  textShadow: `0px 0px 24px ${theme.shadow}`,
   [theme.breakpoints.medium]: {
     fontSize: "4rem",
     lineHeight: 1,
@@ -42,7 +41,6 @@ const Subtitle = styled.p(({ theme }) => ({
   fontWeight: 500,
   fontSize: "1.5rem",
   lineHeight: "normal",
-  textShadow: `0px 0px 24px ${theme.shadow}`,
   [theme.breakpoints.medium]: {
     fontSize: "2rem",
     lineHeight: "normal",

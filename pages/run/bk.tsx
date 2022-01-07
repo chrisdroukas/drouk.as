@@ -1,12 +1,14 @@
 import { useState } from "react";
+import Head from "next/head";
+import { useInView } from "react-intersection-observer";
+import { MapkitProvider } from "react-mapkit";
+import Header from "../../components/header";
 import Container from "../../components/container";
 import Layout from "../../components/layout";
-import Head from "next/head";
 import Intro from "../../components/run/intro";
 import Card from "../../components/card";
 import Grid from "../../components/grid";
-import { useInView } from "react-intersection-observer";
-import { MapkitProvider } from "react-mapkit";
+import Button from "../../components/button";
 import BrooklynHalfMap from "../../components/run/map";
 
 const RunBK = () => {
@@ -19,20 +21,20 @@ const RunBK = () => {
   });
   const [rangeval, setRangeval] = useState("");
 
+  const headerAccessory = (
+    <Button
+      title="Support My Run"
+      url="http://danafarber.jimmyfund.org/goto/droukas"
+    />
+  );
+
   return (
     <>
       <Layout>
         <Head>
           <title>Brooklyn Half Marathon</title>
         </Head>
-        {/* <input
-          style={{ width: "100%" }}
-          type="range"
-          className="custom-range"
-          min="0"
-          max="100"
-          onChange={(event) => setRangeval(event.target.value)}
-        /> */}
+        <Header transparent />
         <MapkitProvider
           tokenOrCallback={
             "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZCR0IyOFk2NkoifQ.eyJpYXQiOjE2MzkyNjAyODAuNjIxLCJpc3MiOiJMOVFVQVFYNDU4In0.4xnm0qTeziChuifWEv_h3dV8b_Bq4NFLZET4cxJNrBH-QYP_dT9t9u_Zb1cb9DrMTvo1OEa1XSSrWVv6baVzZA"
