@@ -38,7 +38,7 @@ const Alert = ({ preview }: Props) => {
             </>
           ) : (
             <>
-              I&apos;m running The Brooklyn Half and raising $2,500 in support
+              I&apos;m running The Brooklyn Half and raising $2,000 in support
               of Dana-Farber Cancer Institute.{" "}
               <Link href="/run/bk">Learn more</Link>
             </>

@@ -58,7 +58,7 @@ const Intro = () => {
     <Section>
       <Title>
         <TitleLineFormatter>
-          I&apos;m running The Brooklyn Half Marathon and raising $2,500 in
+          I&apos;m running The Brooklyn Half Marathon and raising $2,000 in
           support of Dana-Farber Cancer Institute.
         </TitleLineFormatter>
       </Title>
