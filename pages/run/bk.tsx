@@ -92,7 +92,7 @@ const RunBK = () => {
             </Card>
             <Card
               ref={startingRef}
-              title="Training"
+              title="Year In Review"
               description="Training statistics for a rolling 12-month period are provided by Strava."
             >
               <Grid columns={1}>
