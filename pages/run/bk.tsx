@@ -115,7 +115,7 @@ const RunBK = () => {
                   <p style={{ margin: 0 }}>Best Half-Marathon</p>
                 </Grid>
                 <a
-                  href="http://strava.com/athletes/chrisdroukas/"
+                  href="http://strava.com/athletes/droukas/"
                   style={{ marginBottom: 0 }}
                 >
                   Follow Me on Strava
