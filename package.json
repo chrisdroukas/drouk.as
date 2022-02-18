@@ -28,7 +28,7 @@
     "@types/node": "16.11.25",
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
-    "@types/styled-components": "5.1.22",
+    "@types/styled-components": "5.1.23",
     "autoprefixer": "10.4.2",
     "babel-plugin-styled-components": "2.0.2",
     "eslint": "8.9.0",
