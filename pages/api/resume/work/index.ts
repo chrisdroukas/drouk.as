@@ -1,12 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { Resume } from "../../schemas/resume";
+import type { Work } from "../../schemas/resume";
 import { data } from "../data";
 
 const WorkAPI = (
   request: NextApiRequest,
-  response: NextApiResponse<Resume>
+  response: NextApiResponse<Work[]>
 ) => {
-  response.status(200).json(data.work);
+  if (data.work) {
+    response.status(200).json(data.work);
+  }
 };
 
 export default WorkAPI;
