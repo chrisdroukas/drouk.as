@@ -35,6 +35,6 @@
     "babel-plugin-styled-components": "2.0.6",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
-    "postcss": "8.4.11"
+    "postcss": "8.4.12"
   }
 }
