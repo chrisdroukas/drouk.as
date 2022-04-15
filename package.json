@@ -17,7 +17,7 @@
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-intersection-observer": "8.33.1",
+    "react-intersection-observer": "8.34.0",
     "react-mapkit": "0.6.6",
     "remark": "13.0.0",
     "remark-html": "13.0.2",
