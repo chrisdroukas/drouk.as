@@ -26,7 +26,7 @@ export default function Index() {
           <p>{data.basics?.image}</p>
           <p>{data.basics?.email}</p>
           <p>{data.basics?.phone}</p>
-          <p>{data.basics?.url}</p>
+          <p>{data.basics?.url?.toString()}</p>
           <p>{data.basics?.summary}</p>
         </Container>
       </Layout>
@@ -36,4 +36,3 @@ export default function Index() {
     </>
   );
 }
-
