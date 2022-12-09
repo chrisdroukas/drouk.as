@@ -1,41 +1,106 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# drouk.as
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+Meet [drouk.as](https://drouk.as/), the world's most overengineered personal site.
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
+## About this Repository
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+[drouk.as](https://drouk.as/) is a monorepo backed by [Turborepo](https://turbo.build/repo) and [pnpm](https://pnpm.io).
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+### Apps and Packages
 
-## Preview
+This repository includes the following apps and packages:
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+#### `site`
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog-starter-typescript)
+A [Next.js 13](https://nextjs.org/) app powering the main [drouk.as](https://drouk.as/) site.
 
-## Deploy your own
+#### `Workshop`
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+A [Storybook 7](https://storybook.js.org/) deployment running on [Vite](https://vitejs.dev) for component development.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript&project-name=blog-starter-typescript&repository-name=blog-starter-typescript)
+#### `ui`
 
-## How to use
+A React component library consumed by all applications in the `apps` directory.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+#### `eslint-config-custom`
 
-```bash
-npx create-next-app --example blog-starter-typescript blog-starter-typescript-app
-# or
-yarn create next-app --example blog-starter-typescript blog-starter-typescript-app
+`eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`).
+
+#### `tsconfig`
+
+`tsconfig.json`s used throughout the monorepo.
+
+Each package is pure [TypeScript](https://www.typescriptlang.org/), and (where applicable) uses [SWC](https://swc.rs/) for super fast compilation and bundling.
+
+Really living in the future, here.
+
+### Utilities
+
+This repository contains the following utilities:
+
+- [TypeScript](https://www.typescriptlang.org/) for static type checking.
+- [ESLint](https://eslint.org/) for code linting.
+- [Prettier](https://prettier.io) for code formatting.
+
+### Installing Dependencies
+
+To install all project dependencies, run the following command:
+
+```sh
+pnpm install
 ```
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+To add dependencies to a package, run one of the following commands:
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+```sh
+# Saves to dependencies
+pnpm add <package>
 
-# Notes
+# Saves the next-tagged version to dependencies
+pnpm add <package>@next
 
-This blog-starter-typescript uses [Tailwind CSS](https://tailwindcss.com). To control the generated stylesheet's filesize, this example uses Tailwind CSS' v2.0 [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
+# Saves the specified version to dependencies
+pnpm add <package>@1.0.0
 
-[Tailwind CSS v2.0 no longer supports Node.js 8 or 10](https://tailwindcss.com/docs/upgrading-to-v2#upgrade-to-node-js-12-13-or-higher). To build your CSS you'll need to ensure you are running Node.js 12.13.0 or higher in both your local and CI environments.
+# Saves to devDependencies
+pnpm add -D <package>
+
+# Saves to optionalDependencies
+pnpm add -O <package>
+```
+
+Prefer specific (`1.7.3`) instead of approximate or compatible (` ~1.7.0` or `^1.7.0 `) versioning, and use [Renovate](https://docs.renovatebot.com/) to keep dependencies up-to-date.
+
+### Develop
+
+To develop all apps and packages, run the following command:
+
+```sh
+pnpm run dev
+```
+
+Alternatively, `cd` into individual packages and run this command for each package you want to run.
+
+### Build
+
+To build all apps and packages, run the following command:
+
+```sh
+pnpm run build
+```
+
+### Remote Caching
+
+This repository uses Turborepo's [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling shared build caches locally and in CI/CD pipelines.
+
+Remote Caching requires a [Vercel account](https://vercel.com/signup). Once created, authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview):
+
+```sh
+pnpm dlx turbo login
+```
+
+Next, link the repository to the Remote Cache by running the following command from the project root:
+
+```sh
+pnpm dlx turbo link
+```

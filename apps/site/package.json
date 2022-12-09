@@ -1,0 +1,33 @@
+{
+  "name": "site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 8000",
+    "lint": "next lint",
+    "start": "next start -p 8000"
+  },
+  "dependencies": {
+    "cookies-next": "2.1.1",
+    "next": "13.0.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@babel/core": "7.20.5",
+    "@emotion/react": "11.10.5",
+    "@emotion/server": "11.10.0",
+    "@mantine/core": "5.9.2",
+    "@mantine/hooks": "5.9.2",
+    "@mantine/next": "5.9.2",
+    "@types/node": "18.11.12",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.9",
+    "eslint": "8.29.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "4.9.4"
+  }
+}

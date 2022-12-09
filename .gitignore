@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+node_modules
 /.pnp
 .pnp.js
 
@@ -7,7 +7,7 @@
 /coverage
 
 # next.js
-/.next/
+.next/
 /out/
 
 # production
@@ -30,3 +30,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Visual Studio Code
+.vscode/
