@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NextApp, { AppProps, AppContext } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 import { ColorScheme } from "@mantine/core";
 import { useColorScheme } from "@mantine/hooks";
 import { getCookie, setCookie } from "cookies-next";
@@ -46,14 +47,17 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   };
 
   return (
-    <ThemeProvider
-      emotionCache={emotionCache}
-      colorScheme={colorScheme}
-      toggleColorScheme={toggleColorScheme}
-      toggleColorSchemeHotkey={ToggleColorScheme.key}
-    >
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <ThemeProvider
+        emotionCache={emotionCache}
+        colorScheme={colorScheme}
+        toggleColorScheme={toggleColorScheme}
+        toggleColorSchemeHotkey={ToggleColorScheme.key}
+      >
+        <Component {...pageProps} />
+      </ThemeProvider>
+      <Analytics />
+    </>
   );
 }
 
