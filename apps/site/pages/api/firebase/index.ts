@@ -1,5 +1,9 @@
 import * as firebase from "firebase-admin";
 
+/**
+ * Defines a Firebase Service Account certificate.
+ * This is used during initialization as a credential.
+ */
 const cert: firebase.ServiceAccount = {
   privateKey: process.env.FIREBASE_PRIVATE_KEY,
   clientEmail: process.env.FIREBASE_CLIENT_EMAIL,

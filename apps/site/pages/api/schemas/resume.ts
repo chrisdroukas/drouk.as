@@ -14,7 +14,9 @@ interface Occupation {
 
   /**
    * The end date of an occupation.
-   * @note If an end date is not provided, implementations should default to the current day.
+   *
+   * @note If an end date is not provided, implementations
+   * should default to the current day.
    */
   endDate?: Date;
 }

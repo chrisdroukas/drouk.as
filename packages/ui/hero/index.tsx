@@ -1,21 +1,14 @@
 import styled from "@emotion/styled";
-import {
-  createStyles,
-  useMantineTheme,
-  Container,
-  Text,
-  Button,
-  Group,
-} from "@mantine/core";
+import { createStyles, useMantineTheme, Container, Text } from "@mantine/core";
 
 const BREAKPOINT = "@media (max-width: 755px)";
 
 const Wrapper = styled.div`
-    position: relative;
-    box-sizing: border-box;
-    height: 100dvh;
-    display: flex;
-    align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
 `;
 
 const useStyles = createStyles((theme) => ({
