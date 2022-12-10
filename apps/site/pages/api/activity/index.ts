@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiResponse } from "next";
 import firebase from "../firebase";
-import { Activity } from "../schemas/activity";
+import { ActivityStats } from "../schemas/activity";
 
 export async function getStatistics() {
   const entries = await firebase.collection("access_tokens").get();
@@ -34,15 +34,12 @@ export async function getStatistics() {
       refresh_token: newRefreshToken,
     });
 
-  const statistics: Activity = await responseStatistics.json();
+  const statistics: ActivityStats = await responseStatistics.json();
 
   return statistics;
 }
 
-const StatisticsAPI = async (
-  request: NextApiRequest,
-  response: NextApiResponse<Activity>
-) => {
+const StatisticsAPI = async ({}, response: NextApiResponse<ActivityStats>) => {
   response.status(200).json(await await getStatistics());
 };
 
