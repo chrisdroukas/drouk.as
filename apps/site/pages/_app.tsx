@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextApp, { AppProps, AppContext } from "next/app";
 import { Analytics } from "@vercel/analytics/react";
 import { ColorScheme } from "@mantine/core";
@@ -21,6 +21,19 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
    * @see https://mantine.dev/guides/dark-theme/
    */
   const preferredColorScheme = useColorScheme();
+
+  /**
+   * If there's no colorScheme set by props, we're
+   * calling the setter here and establishing a cookie.
+   */
+  useEffect(() => {
+    if (!props.colorScheme) {
+      setColorScheme(preferredColorScheme);
+      setCookie(ColorSchemeCookie.name, preferredColorScheme, {
+        maxAge: ColorSchemeCookie.maxAge,
+      });
+    }
+  }, [preferredColorScheme, props.colorScheme]);
 
   /**
    * We're using either the color scheme from props
