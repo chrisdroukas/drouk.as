@@ -2,7 +2,15 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build",
+        "$FIREBASE_PRIVATE_KEY",
+        "$FIREBASE_CLIENT_EMAIL",
+        "$FIREBASE_PROJECT_ID",
+        "$STRAVA_CLIENT_ID",
+        "$STRAVA_CLIENT_SECRET",
+        "$STRAVA_TOKEN_DOCUMENT"
+      ],
       "outputs": ["dist/**", ".next/**", "storybook-static/**"]
     },
     "lint": {
