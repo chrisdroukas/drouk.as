@@ -1,3 +1,3 @@
-export * from "./Button";
-export * from "./theme-provider";
+export * from "./error-boundary";
 export * from "./hero";
+export * from "./theme-provider";
