@@ -3,7 +3,7 @@ import { Global } from "@mantine/core";
 export function ShikiTwoslash() {
   return (
     <Global
-      styles={(theme) => ({
+      styles={() => ({
         "pre.shiki": {
           overflowX: "auto",
         },
