@@ -4,7 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { ColorScheme } from "@mantine/core";
 import { useColorScheme } from "@mantine/hooks";
 import { getCookie, setCookie } from "cookies-next";
-import { ThemeProvider } from "ui";
+
+import { ThemeProvider, ShikiTwoslash } from "ui";
 
 import { emotionCache } from "../constants/emotion-cache";
 import { ColorSchemeCookie } from "../constants/cookies";
@@ -67,6 +68,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         toggleColorScheme={toggleColorScheme}
         toggleColorSchemeHotkey={ToggleColorScheme.key}
       >
+        <ShikiTwoslash />
         <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />
