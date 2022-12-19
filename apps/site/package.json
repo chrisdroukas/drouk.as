@@ -20,7 +20,7 @@
     "@babel/core": "7.20.5",
     "@emotion/react": "11.10.5",
     "@emotion/server": "11.10.0",
-    "@mantine/core": "5.9.4",
+    "@mantine/core": "5.9.5",
     "@mantine/hooks": "5.9.4",
     "@mantine/next": "5.9.4",
     "@types/node": "18.11.13",
