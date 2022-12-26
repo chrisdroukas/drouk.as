@@ -146,7 +146,7 @@ export function ShikiTwoslash() {
         },
         "pre .error-behind": {
           userSelect: "none",
-          visibility: "transparent",
+          visibility: "hidden", // TODO: Check this property?
           color: "#fee",
         },
       })}
