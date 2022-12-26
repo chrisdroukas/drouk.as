@@ -63,7 +63,7 @@ importers:
       '@storybook/addon-actions': 7.0.0-beta.3
       '@storybook/addon-essentials': 7.0.0-beta.3
       '@storybook/addon-links': 7.0.0-beta.3
-      '@storybook/builder-vite': 7.0.0-beta.3
+      '@storybook/builder-vite': 7.0.0-beta.15
       '@storybook/react-vite': 7.0.0-beta.3
       '@storybook/testing-library': 0.0.14-next.0
       '@types/react': 18.0.26
@@ -87,7 +87,7 @@ importers:
       '@storybook/addon-actions': 7.0.0-beta.3_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-essentials': 7.0.0-beta.3_o4scbtliisanygemawej7x2d6i
       '@storybook/addon-links': 7.0.0-beta.3_biqbaboplfbrettd7655fr4n2y
-      '@storybook/builder-vite': 7.0.0-beta.3_typescript@4.9.4
+      '@storybook/builder-vite': 7.0.0-beta.15_p2fwcaxbionflq6hjivvbcsv5a
       '@storybook/react-vite': 7.0.0-beta.3_o4scbtliisanygemawej7x2d6i
       '@storybook/testing-library': 0.0.14-next.0_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.26
@@ -3332,6 +3332,45 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/builder-vite/7.0.0-beta.15_p2fwcaxbionflq6hjivvbcsv5a:
+    resolution: {integrity: sha512-iAqOgx4IdtsHMvJ++jft4B0WT9BIq3SXkG9zcZyxFpQK46SoNlXDHajPQNimdkXElwkaTMP2eiKGQ237rCauCg==}
+    peerDependencies:
+      '@preact/preset-vite': '*'
+      typescript: '>= 4.3.x'
+      vite: ^3.0.0 || ^4.0.0
+      vite-plugin-glimmerx: '*'
+    peerDependenciesMeta:
+      '@preact/preset-vite':
+        optional: true
+      typescript:
+        optional: true
+      vite-plugin-glimmerx:
+        optional: true
+    dependencies:
+      '@storybook/client-logger': 7.0.0-beta.15
+      '@storybook/core-common': 7.0.0-beta.15
+      '@storybook/csf-plugin': 7.0.0-beta.15
+      '@storybook/mdx2-csf': 1.0.0-next.2
+      '@storybook/node-logger': 7.0.0-beta.15
+      '@storybook/preview': 7.0.0-beta.15
+      '@storybook/preview-api': 7.0.0-beta.15
+      '@storybook/types': 7.0.0-beta.15
+      browser-assert: 1.2.1
+      es-module-lexer: 0.9.3
+      express: 4.18.2
+      fs-extra: 9.1.0
+      glob: 7.2.3
+      glob-promise: 4.2.2_glob@7.2.3
+      magic-string: 0.26.7
+      rollup: 3.7.1
+      rollup-plugin-external-globals: 0.7.1_rollup@3.7.1
+      slash: 3.0.0
+      typescript: 4.9.4
+      vite: 4.0.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/builder-vite/7.0.0-beta.3_typescript@4.9.4:
     resolution: {integrity: sha512-q2yPARQS/FZX2+dEQMMRjSUyJH7NaXgz2Lrb//wHqsM+/2qJGgcYqOfKQVs6K5FnSOrPh6DPMdP40KPqHrNNeA==}
     peerDependencies:
@@ -3657,6 +3696,15 @@ packages:
       - utf-8-validate
     dev: true
 
+  /@storybook/csf-plugin/7.0.0-beta.15:
+    resolution: {integrity: sha512-70MzC/WB6c4pW+PVQVaeuMHRDy+y6vkZBKjDk/DF5YhVSsKOmpXsxlZC8EbDXQaoJtmJ+9dWnyM3t4bs0CC4ug==}
+    dependencies:
+      '@storybook/csf-tools': 7.0.0-beta.15
+      unplugin: 0.10.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/csf-plugin/7.0.0-beta.3:
     resolution: {integrity: sha512-pQQzxFJ59FG2jlk/D21uw9P6odD65UZPu4qtpueoABvIRUDjmaXmtkFnhndbFP4Oqt8vcda9AjYdn6tHuUj7DQ==}
     dependencies:
@@ -3840,6 +3888,10 @@ packages:
       util-deprecate: 1.0.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@storybook/preview/7.0.0-beta.15:
+    resolution: {integrity: sha512-KswtbWKTS5pbbS+MRPq1HwsO79qlP7YRSdXddlsXgRzmnS8Cklo4nKJ3ubRNfAb1XM8IBOEBbL8vojSLPeJzJA==}
     dev: true
 
   /@storybook/preview/7.0.0-beta.3:
