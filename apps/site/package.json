@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "cookies-next": "2.1.1",
-    "firebase-admin": "11.3.0",
+    "firebase-admin": "11.4.1",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
