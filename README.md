@@ -10,25 +10,13 @@ Meet [drouk.as](https://drouk.as/), the world's most overengineered personal sit
 
 This repository includes the following apps and packages:
 
-#### `site`
-
-A [Next.js 13](https://nextjs.org/) app powering the main [drouk.as](https://drouk.as/) site.
-
-#### `Workshop`
-
-A [Storybook 7](https://storybook.js.org/) deployment running on [Vite](https://vitejs.dev) for component development.
-
-#### `ui`
-
-A React component library consumed by all applications in the `apps` directory.
-
-#### `eslint-config-custom`
-
-`eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`).
-
-#### `tsconfig`
-
-`tsconfig.json`s used throughout the monorepo.
+| App / Package          | Contents                                                                                                                   |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `site`                 | A [Next.js 13](https://nextjs.org/) app powering the main [drouk.as](https://drouk.as/) site.                              |
+| `workshop`             | A [Storybook 7](https://storybook.js.org/) deployment running on [Vite](https://vitejs.dev) for component development.     |
+| `ui`                   | A React component library (based on [Mantine](https://mantine.dev/)) consumed by all applications in the `apps` directory. |
+| `eslint-config-custom` | `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`).                                      |
+| `tsconfig`             | `tsconfig.json`s used throughout the monorepo.                                                                             |
 
 Each package is pure [TypeScript](https://www.typescriptlang.org/), and (where applicable) uses [SWC](https://swc.rs/) for super fast compilation and bundling.
 
