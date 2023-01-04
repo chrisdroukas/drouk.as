@@ -28,6 +28,6 @@
     "tsconfig": "workspace:*",
     "storybook-addon-swc": "1.1.9",
     "typescript": "4.9.4",
-    "vite": "4.0.3"
+    "vite": "4.0.4"
   }
 }
