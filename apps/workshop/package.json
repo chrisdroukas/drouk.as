@@ -2,6 +2,7 @@
   "name": "workshop",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build-storybook": "storybook build",
@@ -25,8 +26,8 @@
     "eslint-config-custom": "workspace:*",
     "serve": "14.1.2",
     "storybook": "next",
-    "tsconfig": "workspace:*",
     "storybook-addon-swc": "1.1.9",
+    "tsconfig": "workspace:*",
     "typescript": "4.9.4",
     "vite": "4.0.4"
   }
