@@ -8,8 +8,8 @@
     "lint": "eslint *.ts*"
   },
   "devDependencies": {
-    "@emotion/styled": "11.10.5",
     "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
     "@mantine/core": "5.10.0",
     "@mantine/hooks": "5.10.0",
     "@types/react": "18.0.26",
