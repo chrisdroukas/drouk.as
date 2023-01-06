@@ -1,5 +1,7 @@
 # drouk.as
 
+<span class="badge-patreon"><a href="https://www.patreon.com/user?u=86015387" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-green.svg" alt="Patreon donate button" /></a></span>
+
 Meet [drouk.as](https://drouk.as/), the world's most overengineered personal site.
 
 ## About this Repository
