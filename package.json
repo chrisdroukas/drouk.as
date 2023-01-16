@@ -16,10 +16,10 @@
   "dependencies": {},
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
-    "prettier": "2.8.1",
-    "turbo": "1.6.3"
+    "prettier": "2.8.3",
+    "turbo": "1.7.0"
   },
-  "packageManager": "pnpm@7.22.0",
+  "packageManager": "pnpm@7.25.0",
   "engines": {
     "node": ">=18.0.0"
   }
