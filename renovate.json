@@ -1,3 +1,14 @@
 {
-  "extends": ["config:base"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", "schedule:daily", ":disableRateLimiting"],
+  "timezone": "America/New_York",
+  "packageRules": [
+    {
+      "matchPackagePrefixes": ["@types/"],
+      "automerge": true
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }

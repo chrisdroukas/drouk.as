@@ -2,6 +2,7 @@
   "name": "site",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "build": "next build",
     "dev": "next dev -p 8000",
@@ -22,18 +23,19 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@babel/core": "7.20.7",
+    "@babel/core": "7.20.12",
     "@emotion/react": "11.10.5",
     "@emotion/server": "11.10.0",
-    "@mantine/core": "5.9.5",
-    "@mantine/hooks": "5.9.5",
-    "@mantine/next": "5.9.5",
+    "@mantine/core": "5.10.0",
+    "@mantine/hooks": "5.10.0",
+    "@mantine/next": "5.10.0",
     "@mdx-js/mdx": "2.1.5",
+    "@tabler/icons": "1.119.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "@vercel/analytics": "0.1.6",
-    "eslint": "8.30.0",
+    "eslint": "8.31.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "4.9.4"
