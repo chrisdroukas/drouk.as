@@ -20,7 +20,7 @@ importers:
       '@mantine/core': 5.10.2
       '@mantine/hooks': 5.10.2
       '@mantine/next': 5.10.2
-      '@tabler/icons': 1.119.0
+      '@tabler/icons': 2.1.2
       '@types/node': 18.11.18
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
@@ -49,7 +49,7 @@ importers:
       '@mantine/core': 5.10.2_bgdfy3qhwgihjpd7hjoiv47mfe
       '@mantine/hooks': 5.10.2_react@18.2.0
       '@mantine/next': 5.10.2_qoprtljvsltba6pjuevay7hrvy
-      '@tabler/icons': 1.119.0_biqbaboplfbrettd7655fr4n2y
+      '@tabler/icons': 2.1.2
       '@types/node': 18.11.18
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
@@ -68,7 +68,7 @@ importers:
       '@storybook/builder-vite': 7.0.0-beta.35
       '@storybook/react-vite': 7.0.0-beta.35
       '@storybook/testing-library': 0.0.14-next.1
-      '@tabler/icons': 1.119.0
+      '@tabler/icons': 2.1.2
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       eslint-config-custom: workspace:*
@@ -93,7 +93,7 @@ importers:
       '@storybook/builder-vite': 7.0.0-beta.35_gl4qsmwzp7wy5uclz4tx77gbli
       '@storybook/react-vite': 7.0.0-beta.35_5gzpipz67vwba55m7upc5vvtsu
       '@storybook/testing-library': 0.0.14-next.1
-      '@tabler/icons': 1.119.0_biqbaboplfbrettd7655fr4n2y
+      '@tabler/icons': 2.1.2
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       eslint-config-custom: link:../../packages/eslint-config-custom
@@ -130,7 +130,7 @@ importers:
       '@emotion/styled': 11.10.5
       '@mantine/core': 5.10.2
       '@mantine/hooks': 5.10.2
-      '@tabler/icons': 1.119.0
+      '@tabler/icons': 2.1.2
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       eslint: 8.32.0
@@ -143,7 +143,7 @@ importers:
       '@emotion/styled': 11.10.5_jrh5enlbqfbnumycmktdqgd6se
       '@mantine/core': 5.10.2_s26zdbvtbqlwu5rw5pd3fj7ee4
       '@mantine/hooks': 5.10.2_react@18.2.0
-      '@tabler/icons': 1.119.0_react@18.2.0
+      '@tabler/icons': 2.1.2
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       eslint: 8.32.0
@@ -3682,33 +3682,8 @@ packages:
     dependencies:
       tslib: 2.4.1
 
-  /@tabler/icons/1.119.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-Fk3Qq4w2SXcTjc/n1cuL5bccPkylrOMo7cYpQIf/yw6zP76LQV9dtLcHQUjFiUnaYuswR645CnURIhlafyAh9g==}
-    peerDependencies:
-      react: ^16.x || 17.x || 18.x
-      react-dom: ^16.x || 17.x || 18.x
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: true
-
-  /@tabler/icons/1.119.0_react@18.2.0:
-    resolution: {integrity: sha512-Fk3Qq4w2SXcTjc/n1cuL5bccPkylrOMo7cYpQIf/yw6zP76LQV9dtLcHQUjFiUnaYuswR645CnURIhlafyAh9g==}
-    peerDependencies:
-      react: ^16.x || 17.x || 18.x
-      react-dom: ^16.x || 17.x || 18.x
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      react: 18.2.0
+  /@tabler/icons/2.1.2:
+    resolution: {integrity: sha512-+CPB+BSqVDP4+/d+cHSaGwG460C3sob7EJkQ+ZS8xV6bRER64OsCP92O7M+uYBhJFDWuf6poCeSETNZNcFa2nA==}
     dev: true
 
   /@testing-library/dom/8.20.0:
