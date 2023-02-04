@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { createStyles, useMantineTheme, Container, Text } from "@mantine/core";
-import { useDebug } from "../hooks";
 
 const BREAKPOINT = "@media (max-width: 755px)";
 
