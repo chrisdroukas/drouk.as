@@ -72,7 +72,14 @@ export const getStaticProps = async ({ params }) => {
      * Pass Remark and Rehype plugins.
      */
     mdxOptions: {
-      remarkPlugins: [[remarkShikiTwoslash, { theme: "min-light" }]],
+      /**
+       * We're using CSS Variables to handle theme support
+       * and using a single `css-variables` theme instead
+       * of passing theme values around from here.
+       *
+       * @see https://github.com/shikijs/shiki/blob/main/docs/themes.md
+       */
+      remarkPlugins: [[remarkShikiTwoslash, { theme: "css-variables" }]],
       rehypePlugins: [[rehypeRaw, { passThrough: nodeTypes }]],
     },
     scope: data,

@@ -3,7 +3,22 @@ import { Global } from "@mantine/core";
 export function ShikiTwoslash() {
   return (
     <Global
-      styles={() => ({
+      styles={(theme) => ({
+        ...(theme.colorScheme === "dark" && {
+          ":root": {
+            "--shiki-color-background": theme.colors.gray[9],
+            "--shiki-color-text": theme.colors.yellow[4],
+            "--shiki-token-constant": theme.colors.teal[4],
+            "--shiki-token-string": "#770000",
+            "--shiki-token-comment": theme.colors.green[5],
+            "--shiki-token-keyword": theme.colors.blue[5],
+            "--shiki-token-parameter": "#AA0000",
+            "--shiki-token-function": theme.colors.yellow[2],
+            "--shiki-token-string-expression": theme.colors.orange[5],
+            "--shiki-token-punctuation": "#DD0000",
+            "--shiki-token-link": "#EE0000",
+          },
+        }),
         "pre.shiki": {
           overflowX: "auto",
         },
