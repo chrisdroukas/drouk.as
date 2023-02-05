@@ -66,7 +66,7 @@ importers:
       '@storybook/addon-actions': 7.0.0-beta.40
       '@storybook/addon-essentials': 7.0.0-beta.40
       '@storybook/addon-links': 7.0.0-beta.40
-      '@storybook/builder-vite': 7.0.0-beta.40
+      '@storybook/builder-vite': 7.0.0-beta.43
       '@storybook/react': 7.0.0-beta.40
       '@storybook/react-vite': 7.0.0-beta.40
       '@storybook/testing-library': 0.0.14-next.1
@@ -94,7 +94,7 @@ importers:
       '@storybook/addon-actions': 7.0.0-beta.40_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-essentials': 7.0.0-beta.40_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-links': 7.0.0-beta.40_biqbaboplfbrettd7655fr4n2y
-      '@storybook/builder-vite': 7.0.0-beta.40_egung5nfepmolqa7uavvqho3gq
+      '@storybook/builder-vite': 7.0.0-beta.43_egung5nfepmolqa7uavvqho3gq
       '@storybook/react': 7.0.0-beta.40_ygqkwb4gg3aean7xjfdauovyqq
       '@storybook/react-vite': 7.0.0-beta.40_3rgppvbkzeavxpnueqngpbpqhu
       '@storybook/testing-library': 0.0.14-next.1
@@ -3148,6 +3148,46 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/builder-vite/7.0.0-beta.43_egung5nfepmolqa7uavvqho3gq:
+    resolution: {integrity: sha512-rCx+AKUr++HwUAqlD3doGhYebo3v/Tp5hRcrID0pXGBGF79+05DemYWD5Iy7fJtYoJg+d4MC5KuiMoQpBYT83w==}
+    peerDependencies:
+      '@preact/preset-vite': '*'
+      typescript: '>= 4.3.x'
+      vite: ^3.0.0 || ^4.0.0
+      vite-plugin-glimmerx: '*'
+    peerDependenciesMeta:
+      '@preact/preset-vite':
+        optional: true
+      typescript:
+        optional: true
+      vite-plugin-glimmerx:
+        optional: true
+    dependencies:
+      '@storybook/channel-postmessage': 7.0.0-beta.43
+      '@storybook/channel-websocket': 7.0.0-beta.43
+      '@storybook/client-logger': 7.0.0-beta.43
+      '@storybook/core-common': 7.0.0-beta.43
+      '@storybook/csf-plugin': 7.0.0-beta.43
+      '@storybook/mdx2-csf': 1.0.0-next.5
+      '@storybook/node-logger': 7.0.0-beta.43
+      '@storybook/preview': 7.0.0-beta.43
+      '@storybook/preview-api': 7.0.0-beta.43
+      '@storybook/types': 7.0.0-beta.43
+      browser-assert: 1.2.1
+      es-module-lexer: 0.9.3
+      express: 4.18.2
+      fs-extra: 11.1.0
+      glob: 8.1.0
+      glob-promise: 4.2.2_glob@8.1.0
+      magic-string: 0.27.0
+      rollup: 3.12.0
+      slash: 3.0.0
+      typescript: 4.9.5
+      vite: 4.0.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/channel-postmessage/7.0.0-beta.40:
     resolution: {integrity: sha512-RUjYUmLtZWgwXEE4MuvvkPlhU68PGVC8XhduHkDsIZyask7uumuuXjojsxgnRYTpyIrkOMpf2iuM5VeE0O0D3w==}
     dependencies:
@@ -3175,6 +3215,15 @@ packages:
     dependencies:
       '@storybook/channels': 7.0.0-beta.40
       '@storybook/client-logger': 7.0.0-beta.40
+      '@storybook/global': 5.0.0
+      telejson: 7.0.4
+    dev: true
+
+  /@storybook/channel-websocket/7.0.0-beta.43:
+    resolution: {integrity: sha512-n5avyOxh1jDIAxXkwl4CJ0yn6WeJtS9HUu9vPhdCaHN3VQDn32FqUh7Se4gls3rlwJKRfKbjY0OxmqcNTB1nbA==}
+    dependencies:
+      '@storybook/channels': 7.0.0-beta.43
+      '@storybook/client-logger': 7.0.0-beta.43
       '@storybook/global': 5.0.0
       telejson: 7.0.4
     dev: true
@@ -3498,6 +3547,15 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/csf-plugin/7.0.0-beta.43:
+    resolution: {integrity: sha512-plrZZP0sJ+qYaygDNuv130xVoRUC3mlbl4rsx+EHR9B2XZ0CRFg32DSXW/0k9uE5g449WACzSkbmLIVvT4RR+Q==}
+    dependencies:
+      '@storybook/csf-tools': 7.0.0-beta.43
+      unplugin: 0.10.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/csf-tools/7.0.0-beta.40:
     resolution: {integrity: sha512-6OKDIcJbndcHR0AUFlDE9LFUd5Rachrwa/JzuvYKV69KRBvzuGfL3xQfwXY7IT6V32XRGrxfLsrAn5JdUHzDNQ==}
     dependencies:
@@ -3678,6 +3736,10 @@ packages:
 
   /@storybook/preview/7.0.0-beta.40:
     resolution: {integrity: sha512-PBv/sgFASKDReSc1hkVQ02Q0qRNhN4tGp7VzMsu5JZUapFUaIF/qxcBbKIMIiZ0KNbfEFa0WSqpHkbuH6eC2iw==}
+    dev: true
+
+  /@storybook/preview/7.0.0-beta.43:
+    resolution: {integrity: sha512-JQlHPdNf4RTFb4+kD7uT2Toi0qSaEfJKSAHxOmNzaYIULueHYy8hTA3V5phPb1XSuKbD/+LedCrMsl9l4WAQlA==}
     dev: true
 
   /@storybook/react-vite/7.0.0-beta.40_3rgppvbkzeavxpnueqngpbpqhu:
