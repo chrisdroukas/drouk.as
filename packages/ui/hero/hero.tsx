@@ -81,6 +81,11 @@ export const Hero: FC<HeroProps> = (props: HeroProps) => {
   const { classes } = useStyles();
   const theme = useMantineTheme();
 
+  /**
+   * Logs lifecycle events and debug messages to the console.
+   *
+   * Debug must be `false` for production builds.
+   */
   useDebug(debug);
 
   return (
