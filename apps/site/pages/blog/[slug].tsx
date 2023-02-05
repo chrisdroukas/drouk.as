@@ -33,9 +33,7 @@ export default function PostPage({ source, frontMatter }) {
     <div>
       <header>
         <nav>
-          <Link href="/" legacyBehavior>
-            <a>👈 Go back home</a>
-          </Link>
+          <Link href="/">Home</Link>
         </nav>
       </header>
       <div className="post-header">

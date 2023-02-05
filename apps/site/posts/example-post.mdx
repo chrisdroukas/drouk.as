@@ -66,7 +66,7 @@ function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
 let a = createLabel("typescript");
 ```
 
-{/* <TestComponent name="next-mdx-remote" /> */}
+{/* <TestComponent name="next-mdx-remote" title={"hello"} body={"world"} /> */}
 
 The title and description are pulled from the MDX file and processed using `gray-matter`. Additionally, links are rendered using a custom component passed to `next-mdx-remote`.
 
