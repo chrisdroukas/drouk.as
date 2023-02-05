@@ -1,5 +1,5 @@
 import useTilg from "tilg";
-import { strings } from "../strings";
+import { Strings } from "../strings";
 
 /**
  * Logs lifecycle events and debug messages to the console.
@@ -12,9 +12,11 @@ import { strings } from "../strings";
  * @example
  * useDebug("foo", bar, [baz, qux])
  */
-export const useDebug = (...args: any[]) => {
-  if (process.env.NODE_ENV === "production") {
-    throw new Error(strings.debug.failure);
+export const useDebug = (enabled?: boolean, ...args: any[]) => {
+  if (enabled) {
+    if (process.env.NODE_ENV === "production") {
+      throw new Error(Strings.debug.failure);
+    }
+    return useTilg(...args);
   }
-  return useTilg(...args);
 };

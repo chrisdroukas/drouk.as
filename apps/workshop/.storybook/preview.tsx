@@ -3,8 +3,6 @@ import { useDarkMode } from "storybook-dark-mode";
 import { createEmotionCache } from "@mantine/core";
 import { ThemeProvider } from "ui";
 
-export const parameters = { layout: "fullscreen" };
-
 /**
  * We're using the `useDarkMode()` hook to set Mantine's dark
  * or light mode alongside the Storybook core UI as well.
@@ -23,3 +21,5 @@ function Preview(props: any) {
 export const decorators = [
   (renderStory: any) => <Preview>{renderStory()}</Preview>,
 ];
+
+export const parameters = { layout: "fullscreen" };
