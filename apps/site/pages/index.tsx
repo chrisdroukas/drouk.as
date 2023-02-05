@@ -1,9 +1,9 @@
-import { HeroTitle } from "ui";
+import { Hero, Strings } from "ui";
 
 export default function HomePage() {
   return (
     <>
-      <HeroTitle />
+      <Hero title={Strings.hero.title} body={Strings.hero.body} />
     </>
   );
 }

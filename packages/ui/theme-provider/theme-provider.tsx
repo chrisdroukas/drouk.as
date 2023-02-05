@@ -1,3 +1,4 @@
+import { FC } from "react";
 import {
   MantineProvider,
   ColorSchemeProvider,
@@ -6,7 +7,7 @@ import {
 } from "@mantine/core";
 import { useHotkeys } from "@mantine/hooks";
 
-interface IThemeProvider {
+interface ThemeProviderProps {
   /**
    * Content to render, typically an application
    * wrapper.
@@ -45,7 +46,9 @@ interface IThemeProvider {
  *
  * @see https://mantine.dev/theming/mantine-provider/
  */
-export const ThemeProvider: React.FC<IThemeProvider> = (props) => {
+export const ThemeProvider: FC<ThemeProviderProps> = (
+  props: ThemeProviderProps
+) => {
   const {
     children,
     emotionCache,
