@@ -11,15 +11,19 @@ import Head from "next/head";
 import Link from "next/link";
 import { PostFilePaths, PostsPath } from "../../mdx/mdx-paths";
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
+/**
+ * Custom components and renderers to pass to MDX.
+ *
+ * Since MDX documents aren't loaded by default, they have
+ * no knowledge of how to handle import statements. Instead,
+ * include components in scope here.
+ *
+ * This also works with dynamically-imported components, which
+ * is useful for conditionally loading components for specific
+ * routes.
+ */
 const components = {
   //   a: CustomLink,
-  // It also works with dynamically-imported components, which is especially
-  // useful for conditionally loading components for certain routes.
-  // See the notes in README.md for more details.
   TestComponent: dynamic(() => import("ui/hero").then((mod) => mod.Hero)),
   Head,
 };
@@ -66,7 +70,9 @@ export const getStaticProps = async ({ params }) => {
   const { content, data } = matter(source);
 
   const mdxSource = await serialize(content, {
-    // Optionally pass remark/rehype plugins
+    /**
+     * Pass Remark and Rehype plugins.
+     */
     mdxOptions: {
       remarkPlugins: [[remarkShikiTwoslash, { theme: "min-light" }]],
       rehypePlugins: [[rehypeRaw, { passThrough: nodeTypes }]],
@@ -84,9 +90,13 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const paths = PostFilePaths
-    // Remove file extensions for page paths
+    /**
+     * Remove file extensions (.mdx) for page paths.
+     */
     .map((path) => path.replace(/\.mdx?$/, ""))
-    // Map the path into the static paths object required by Next.js
+    /**
+     * Map the path into the static paths object required by Next.
+     */
     .map((slug) => ({ params: { slug } }));
 
   return {
