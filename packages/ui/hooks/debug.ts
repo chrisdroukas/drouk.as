@@ -13,10 +13,10 @@ import { Strings } from "../strings";
  * useDebug("foo", bar, [baz, qux])
  */
 export const useDebug = (enabled?: boolean, ...args: any[]) => {
-  if (process.env.NODE_ENV === "production") {
-    throw new Error(Strings.debug.failure);
-  }
   if (enabled) {
+    if (process.env.NODE_ENV === "production") {
+      throw new Error(Strings.debug.failure);
+    }
     return useTilg(...args);
   }
 };
