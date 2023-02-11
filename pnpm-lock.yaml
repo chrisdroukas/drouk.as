@@ -20,7 +20,7 @@ importers:
       '@mantine/core': 5.10.3
       '@mantine/hooks': 5.10.3
       '@mantine/next': 5.10.3
-      '@tabler/icons': 2.2.0
+      '@tabler/icons': 2.3.0
       '@types/node': 18.11.19
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
@@ -49,7 +49,7 @@ importers:
       '@mantine/core': 5.10.3_ylq7zkqz7uvrjy7wd5cseqyxu4
       '@mantine/hooks': 5.10.3_react@18.2.0
       '@mantine/next': 5.10.3_frkyvidol3cyjondljhrqtyp5u
-      '@tabler/icons': 2.2.0
+      '@tabler/icons': 2.3.0
       '@types/node': 18.11.19
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
@@ -70,7 +70,7 @@ importers:
       '@storybook/react': 7.0.0-beta.43
       '@storybook/react-vite': 7.0.0-beta.43
       '@storybook/testing-library': 0.0.14-next.1
-      '@tabler/icons': 2.2.0
+      '@tabler/icons': 2.3.0
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       eslint-config-custom: workspace:*
@@ -98,7 +98,7 @@ importers:
       '@storybook/react': 7.0.0-beta.43_ygqkwb4gg3aean7xjfdauovyqq
       '@storybook/react-vite': 7.0.0-beta.43_jpauyvbrjmqmlxhfgzv45zaizm
       '@storybook/testing-library': 0.0.14-next.1
-      '@tabler/icons': 2.2.0
+      '@tabler/icons': 2.3.0
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       eslint-config-custom: link:../../packages/eslint-config-custom
@@ -136,7 +136,7 @@ importers:
       '@emotion/styled': 11.10.5
       '@mantine/core': 5.10.3
       '@mantine/hooks': 5.10.3
-      '@tabler/icons': 2.2.0
+      '@tabler/icons': 2.3.0
       '@types/node': 18.11.19
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
@@ -151,7 +151,7 @@ importers:
       '@emotion/styled': 11.10.5_jrh5enlbqfbnumycmktdqgd6se
       '@mantine/core': 5.10.3_o4sbzscssxtr2j2caha7ctnrxu
       '@mantine/hooks': 5.10.3_react@18.2.0
-      '@tabler/icons': 2.2.0
+      '@tabler/icons': 2.3.0
       '@types/node': 18.11.19
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
@@ -4014,8 +4014,8 @@ packages:
     dependencies:
       tslib: 2.5.0
 
-  /@tabler/icons/2.2.0:
-    resolution: {integrity: sha512-s2mm+7JqmLObKdU89Dtiy+USmUpOlACsoXZZPykjAJZC4pK3wMYxLsclJxViWLeLTb6Bc0oga92V7R+9nrj1ZQ==}
+  /@tabler/icons/2.3.0:
+    resolution: {integrity: sha512-zYSgqYodvuuJPNl+Z5UaAP1adzONtCS923aKp7k6SuchrNOc8HE45epzI3ED0X2glYmFkd0Y/YXqPDhYi2p3Fw==}
     dev: true
 
   /@testing-library/dom/8.20.0:
