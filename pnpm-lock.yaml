@@ -6,11 +6,11 @@ importers:
     specifiers:
       eslint-config-custom: workspace:*
       prettier: 2.8.4
-      turbo: 1.7.4
+      turbo: 1.8.2
     devDependencies:
       eslint-config-custom: link:packages/eslint-config-custom
       prettier: 2.8.4
-      turbo: 1.7.4
+      turbo: 1.8.2
 
   apps/site:
     specifiers:
@@ -20,10 +20,10 @@ importers:
       '@mantine/core': 5.10.3
       '@mantine/hooks': 5.10.3
       '@mantine/next': 5.10.3
-      '@tabler/icons': 2.3.0
+      '@tabler/icons': 2.5.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       '@vercel/analytics': 0.1.8
       cookies-next: 2.1.1
       eslint: 8.34.0
@@ -49,10 +49,10 @@ importers:
       '@mantine/core': 5.10.3_fgulr5lwjg33k6x5zho5ihipbq
       '@mantine/hooks': 5.10.3_react@18.2.0
       '@mantine/next': 5.10.3_frkyvidol3cyjondljhrqtyp5u
-      '@tabler/icons': 2.3.0
+      '@tabler/icons': 2.5.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       '@vercel/analytics': 0.1.8_react@18.2.0
       eslint: 8.34.0
       eslint-config-custom: link:../../packages/eslint-config-custom
@@ -70,9 +70,9 @@ importers:
       '@storybook/react': 7.0.0-beta.46
       '@storybook/react-vite': 7.0.0-beta.46
       '@storybook/testing-library': 0.0.14-next.1
-      '@tabler/icons': 2.3.0
+      '@tabler/icons': 2.5.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint-config-custom: workspace:*
       react: 18.2.0
       react-dom: 18.2.0
@@ -98,9 +98,9 @@ importers:
       '@storybook/react': 7.0.0-beta.46_ygqkwb4gg3aean7xjfdauovyqq
       '@storybook/react-vite': 7.0.0-beta.46_jpauyvbrjmqmlxhfgzv45zaizm
       '@storybook/testing-library': 0.0.14-next.1
-      '@tabler/icons': 2.3.0
+      '@tabler/icons': 2.5.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint-config-custom: link:../../packages/eslint-config-custom
       serve: 14.2.0
       storybook: 7.0.0-beta.53
@@ -136,10 +136,10 @@ importers:
       '@emotion/styled': 11.10.5
       '@mantine/core': 5.10.3
       '@mantine/hooks': 5.10.3
-      '@tabler/icons': 2.3.0
+      '@tabler/icons': 2.5.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint: 8.34.0
       eslint-config-custom: workspace:*
       react: 18.2.0
@@ -151,10 +151,10 @@ importers:
       '@emotion/styled': 11.10.5_g6cddab2ma6w7rmdnelgn6dq2a
       '@mantine/core': 5.10.3_scvjfu4tnaw6whjkppudhyvtyi
       '@mantine/hooks': 5.10.3_react@18.2.0
-      '@tabler/icons': 2.3.0
+      '@tabler/icons': 2.5.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint: 8.34.0
       eslint-config-custom: link:../eslint-config-custom
       react: 18.2.0
@@ -4007,8 +4007,8 @@ packages:
     dependencies:
       tslib: 2.5.0
 
-  /@tabler/icons/2.3.0:
-    resolution: {integrity: sha512-zYSgqYodvuuJPNl+Z5UaAP1adzONtCS923aKp7k6SuchrNOc8HE45epzI3ED0X2glYmFkd0Y/YXqPDhYi2p3Fw==}
+  /@tabler/icons/2.5.0:
+    resolution: {integrity: sha512-gQceaW6itR2Wna2Kqcrxz3gm2cNxwg/DCgT17W1N9la4Iri1r9g681uO2LryDskGXfs71Trhd3CtrED/T6dzUQ==}
     dev: true
 
   /@testing-library/dom/8.20.0:
@@ -4263,8 +4263,8 @@ packages:
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
 
-  /@types/react-dom/18.0.10:
-    resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
+  /@types/react-dom/18.0.11:
+    resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
       '@types/react': 18.0.28
     dev: true
@@ -9956,65 +9956,65 @@ packages:
       typescript: 4.9.5
     dev: false
 
-  /turbo-darwin-64/1.7.4:
-    resolution: {integrity: sha512-ZyYrQlUl8K/mYN1e6R7bEhPPYjMakz0DYMaexkyD7TAijQtWmTSd4a+I7VknOYNEssnUZ/v41GU3gPV1JAzxxQ==}
+  /turbo-darwin-64/1.8.2:
+    resolution: {integrity: sha512-j77U0uOeppENexFsIvvzExADSqMBEeCHnm+6LSNQfaajHSrbUVSTsuD6ZMYHamT6bslc+ZZm21jdecWkwZFBbw==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64/1.7.4:
-    resolution: {integrity: sha512-CKIXg9uqp1a+Yeq/c4U0alPOqvwLUq5SBZf1PGYhGqJsfG0fRBtJfkUjHuBsuJIOGXg8rCmcGSWGIsIF6fqYuw==}
+  /turbo-darwin-arm64/1.8.2:
+    resolution: {integrity: sha512-1NoAvjlwt2wycsAFJouauy9epn9DptSMy6BoGqxJVc4jiibsLepp9qYc4f1/ln0zjd3FR1IvhGOiBfdpqMN7hg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64/1.7.4:
-    resolution: {integrity: sha512-RIUl4RUFFyzD2T024vL7509Ygwcw+SEa8NOwPfaN6TtJHK7RZV/SBP3fLNVOptG9WRLnOWX3OvsLMbiOqDLLyA==}
+  /turbo-linux-64/1.8.2:
+    resolution: {integrity: sha512-TcT3CRYnBYA46kLGGbGC2jDyCEAvMgVpUdpIZGTmod48EKpZaEfVgTkpa4GJde8W68yRFogPZjPVL3yJHFpXSA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64/1.7.4:
-    resolution: {integrity: sha512-Bg65F0AjYYYxqE6RPf2H5TIGuA/EyWMeGOATHVSZOWAbYcnG3Ly03GZii8AHnUi7ntWBdjwvXf/QbOS1ayNB6A==}
+  /turbo-linux-arm64/1.8.2:
+    resolution: {integrity: sha512-Mb9+KBy4YJzPMZ6WGoMzMVZ6EtueCSvOvgmNpVFgkwbtabfBuaBOvN+irtg4RRSWvJQTDTziLABieocEEXZImQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64/1.7.4:
-    resolution: {integrity: sha512-rTaV50XZ2BRxRHOHqt1UsWfeDmYLbn8UKE6g2D2ED+uW+kmnTvR9s01nmlGWd2sAuWcRYQyQ2V+O09VfKPKcQw==}
+  /turbo-windows-64/1.8.2:
+    resolution: {integrity: sha512-/+R5ikRrw2w2w38JtNPubGLIQHgUC70m783DI9aPgaM5c8P5D/Y0k6HgjuC/uXgiaz2h3R7p7YWlr+2/E0bqyA==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64/1.7.4:
-    resolution: {integrity: sha512-h8sxdKPvHTnWUPtwnYszFMmSO0P/iUUwmYY9n7iYThA71zSao28UeZ0H0Gw75cY3MPjvkjn2C4EBAUGPjuZJLw==}
+  /turbo-windows-arm64/1.8.2:
+    resolution: {integrity: sha512-s07viz5nXSx4kyiksuPM4FGLRkoaGMaw0BpwFjdRQsl1p+WclUN1IPdokVPKOmFpu5pNCVYlG/raP/mXAEzDCg==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo/1.7.4:
-    resolution: {integrity: sha512-8RLedDoUL0kkVKWEZ/RMM70BvKLyDFen06QuKKhYC2XNOfNKqFDqzIdcY/vGick869bNIWalChoy4O07k0HLsA==}
+  /turbo/1.8.2:
+    resolution: {integrity: sha512-G/uJx6bZK5RwTWHsRN/MP0MvXFznmCaL3MQXdSf+OG/q0o8GE7+yivyyWEplWI1Asc8AEN909A/wlIkoz2FKTg==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.7.4
-      turbo-darwin-arm64: 1.7.4
-      turbo-linux-64: 1.7.4
-      turbo-linux-arm64: 1.7.4
-      turbo-windows-64: 1.7.4
-      turbo-windows-arm64: 1.7.4
+      turbo-darwin-64: 1.8.2
+      turbo-darwin-arm64: 1.8.2
+      turbo-linux-64: 1.8.2
+      turbo-linux-arm64: 1.8.2
+      turbo-windows-64: 1.8.2
+      turbo-windows-arm64: 1.8.2
     dev: true
 
   /type-check/0.3.2:
