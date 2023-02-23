@@ -66,7 +66,7 @@ importers:
       '@storybook/addon-actions': 7.0.0-beta.46
       '@storybook/addon-essentials': 7.0.0-beta.46
       '@storybook/addon-links': 7.0.0-beta.46
-      '@storybook/builder-vite': 7.0.0-beta.46
+      '@storybook/builder-vite': 7.0.0-beta.53
       '@storybook/react': 7.0.0-beta.46
       '@storybook/react-vite': 7.0.0-beta.46
       '@storybook/testing-library': 0.0.14-next.1
@@ -94,7 +94,7 @@ importers:
       '@storybook/addon-actions': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-essentials': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-links': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
-      '@storybook/builder-vite': 7.0.0-beta.46_ggo5j25brebqqko7hdmvawpmuy
+      '@storybook/builder-vite': 7.0.0-beta.53_ggo5j25brebqqko7hdmvawpmuy
       '@storybook/react': 7.0.0-beta.46_ygqkwb4gg3aean7xjfdauovyqq
       '@storybook/react-vite': 7.0.0-beta.46_jpauyvbrjmqmlxhfgzv45zaizm
       '@storybook/testing-library': 0.0.14-next.1
@@ -3165,6 +3165,49 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/builder-vite/7.0.0-beta.53_ggo5j25brebqqko7hdmvawpmuy:
+    resolution: {integrity: sha512-TeW4wS9uvIqWrTW7BwUwtixmiR/cjaFcuM2iUO6ErdPd4K8xga/0rEopOpT1YWXNfxl9+Xnq04GwfZ2ZZq2WTA==}
+    peerDependencies:
+      '@preact/preset-vite': '*'
+      '@storybook/mdx1-csf': '>=1.0.0-next.1'
+      typescript: '>= 4.3.x'
+      vite: ^3.0.0 || ^4.0.0
+      vite-plugin-glimmerx: '*'
+    peerDependenciesMeta:
+      '@preact/preset-vite':
+        optional: true
+      '@storybook/mdx1-csf':
+        optional: true
+      typescript:
+        optional: true
+      vite-plugin-glimmerx:
+        optional: true
+    dependencies:
+      '@storybook/channel-postmessage': 7.0.0-beta.53
+      '@storybook/channel-websocket': 7.0.0-beta.53
+      '@storybook/client-logger': 7.0.0-beta.53
+      '@storybook/core-common': 7.0.0-beta.53
+      '@storybook/csf-plugin': 7.0.0-beta.53
+      '@storybook/mdx2-csf': 1.0.0-next.5
+      '@storybook/node-logger': 7.0.0-beta.53
+      '@storybook/preview': 7.0.0-beta.53
+      '@storybook/preview-api': 7.0.0-beta.53
+      '@storybook/types': 7.0.0-beta.53
+      browser-assert: 1.2.1
+      es-module-lexer: 0.9.3
+      express: 4.18.2
+      fs-extra: 11.1.0
+      glob: 8.1.0
+      glob-promise: 6.0.2_glob@8.1.0
+      magic-string: 0.27.0
+      rollup: 3.15.0
+      slash: 3.0.0
+      typescript: 4.9.5
+      vite: 4.1.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/channel-postmessage/7.0.0-beta.46:
     resolution: {integrity: sha512-bJ7/9J1vHrm4czBzB1gNV6N6eYVP2JQJjteMjyul1ujS6PhC243GB2PTlQDwrE9MuPGIP1Qv6dSgs9bMQeXNVg==}
     dependencies:
@@ -3192,6 +3235,15 @@ packages:
     dependencies:
       '@storybook/channels': 7.0.0-beta.46
       '@storybook/client-logger': 7.0.0-beta.46
+      '@storybook/global': 5.0.0
+      telejson: 7.0.4
+    dev: true
+
+  /@storybook/channel-websocket/7.0.0-beta.53:
+    resolution: {integrity: sha512-h6FBF6x5Gv7BDFcUpCcGrV5Szphy15WZziR+qU3yWfp3+xDyemqTc3dWQ/JKx/FuRizpftfBzS2TUEOhtv6QEQ==}
+    dependencies:
+      '@storybook/channels': 7.0.0-beta.53
+      '@storybook/client-logger': 7.0.0-beta.53
       '@storybook/global': 5.0.0
       telejson: 7.0.4
     dev: true
@@ -3481,6 +3533,13 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/csf-plugin/7.0.0-beta.53:
+    resolution: {integrity: sha512-gr/Dv3x69rKlaL5PTv6rv2cyf/gKRKMFvfhQtHgpcgRTcj9G7PTNCuyrFdX6iv+SPDRA2L7EfDbBIFepe4Na3Q==}
+    dependencies:
+      '@storybook/csf-tools': 7.0.0-beta.53
+      unplugin: 0.10.2
+    dev: true
+
   /@storybook/csf-tools/7.0.0-beta.46:
     resolution: {integrity: sha512-H7zXfL1wf/1jWi5MaFISt/taxE41fgpV/uLfi5CHcHLX9ZgeQs2B/2utpUgwvBsxiL+E/jKAt5cLeuZCIvglMg==}
     dependencies:
@@ -3652,6 +3711,10 @@ packages:
 
   /@storybook/preview/7.0.0-beta.46:
     resolution: {integrity: sha512-4k62e85sR6Cyl0O7ZeCct/pE0v+tjIjGhHDs9U0AZbfBJlSppazRAP51q6v1QdF2eWDgdRbn3oTQnW8rdCBeMg==}
+    dev: true
+
+  /@storybook/preview/7.0.0-beta.53:
+    resolution: {integrity: sha512-u/VwzBY6bRw8z40wKsGJBdKn5Tb7i5yGADXZgJLjLkRskVa/0gJT6WgTrKyIJLS7I1Ikr+yCqETBfCagvMuUQg==}
     dev: true
 
   /@storybook/react-vite/7.0.0-beta.46_jpauyvbrjmqmlxhfgzv45zaizm:
