@@ -23,7 +23,7 @@ importers:
       '@tabler/icons': 2.3.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       '@vercel/analytics': 0.1.8
       cookies-next: 2.1.1
       eslint: 8.34.0
@@ -52,7 +52,7 @@ importers:
       '@tabler/icons': 2.3.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       '@vercel/analytics': 0.1.8_react@18.2.0
       eslint: 8.34.0
       eslint-config-custom: link:../../packages/eslint-config-custom
@@ -72,7 +72,7 @@ importers:
       '@storybook/testing-library': 0.0.14-next.1
       '@tabler/icons': 2.3.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint-config-custom: workspace:*
       react: 18.2.0
       react-dom: 18.2.0
@@ -100,7 +100,7 @@ importers:
       '@storybook/testing-library': 0.0.14-next.1
       '@tabler/icons': 2.3.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint-config-custom: link:../../packages/eslint-config-custom
       serve: 14.2.0
       storybook: 7.0.0-beta.53
@@ -139,7 +139,7 @@ importers:
       '@tabler/icons': 2.3.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint: 8.34.0
       eslint-config-custom: workspace:*
       react: 18.2.0
@@ -154,7 +154,7 @@ importers:
       '@tabler/icons': 2.3.0
       '@types/node': 18.13.0
       '@types/react': 18.0.28
-      '@types/react-dom': 18.0.10
+      '@types/react-dom': 18.0.11
       eslint: 8.34.0
       eslint-config-custom: link:../eslint-config-custom
       react: 18.2.0
@@ -4263,8 +4263,8 @@ packages:
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
 
-  /@types/react-dom/18.0.10:
-    resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
+  /@types/react-dom/18.0.11:
+    resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
       '@types/react': 18.0.28
     dev: true
