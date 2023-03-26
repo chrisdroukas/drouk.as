@@ -5,11 +5,11 @@ importers:
   .:
     specifiers:
       eslint-config-custom: workspace:*
-      prettier: 2.8.4
+      prettier: 2.8.7
       turbo: 1.8.5
     devDependencies:
       eslint-config-custom: link:packages/eslint-config-custom
-      prettier: 2.8.4
+      prettier: 2.8.7
       turbo: 1.8.5
 
   apps/site:
@@ -3434,7 +3434,7 @@ packages:
       globby: 11.1.0
       jscodeshift: 0.14.0_@babel+preset-env@7.20.2
       leven: 3.1.0
-      prettier: 2.8.4
+      prettier: 2.8.7
       prompts: 2.4.2
       puppeteer-core: 2.1.1
       read-pkg-up: 7.0.1
@@ -3485,7 +3485,7 @@ packages:
       globby: 11.1.0
       jscodeshift: 0.14.0_@babel+preset-env@7.20.2
       lodash: 4.17.21
-      prettier: 2.8.4
+      prettier: 2.8.7
       recast: 0.23.1
     transitivePeerDependencies:
       - supports-color
@@ -8620,8 +8620,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  /prettier/2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
