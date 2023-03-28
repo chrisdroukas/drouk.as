@@ -14,8 +14,8 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@mantine/core": "6.0.1",
-    "@mantine/hooks": "6.0.1",
+    "@mantine/core": "6.0.5",
+    "@mantine/hooks": "6.0.5",
     "@storybook/addon-actions": "7.0.0-rc.8",
     "@storybook/addon-essentials": "7.0.0-rc.8",
     "@storybook/addon-links": "7.0.0-rc.8",
