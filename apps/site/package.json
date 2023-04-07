@@ -32,6 +32,6 @@
     "eslint": "8.35.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
-    "typescript": "5.0.2"
+    "typescript": "5.0.4"
   }
 }
