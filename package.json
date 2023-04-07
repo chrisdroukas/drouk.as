@@ -12,10 +12,11 @@
   "dependencies": {},
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
-    "prettier": "2.8.4",
-    "turbo": "1.8.2"
+    "prettier": "2.8.7",
+    "turbo": "1.8.8",
+    "typescript": "5.0.4"
   },
-  "packageManager": "pnpm@7.27.1",
+  "packageManager": "pnpm@8.1.1",
   "engines": {
     "node": ">=18.0.0"
   }

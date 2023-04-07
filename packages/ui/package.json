@@ -10,17 +10,17 @@
   "devDependencies": {
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
-    "@mantine/core": "5.10.4",
-    "@mantine/hooks": "5.10.4",
-    "@tabler/icons": "2.5.0",
-    "@types/node": "18.14.1",
-    "@types/react": "18.0.28",
+    "@mantine/core": "6.0.6",
+    "@mantine/hooks": "6.0.6",
+    "@tabler/icons": "2.14.0",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
-    "eslint": "8.34.0",
+    "eslint": "8.37.0",
     "eslint-config-custom": "workspace:*",
     "react": "18.2.0",
     "tilg": "0.1.1",
     "tsconfig": "workspace:*",
-    "typescript": "4.9.5"
+    "typescript": "5.0.4"
   }
 }
