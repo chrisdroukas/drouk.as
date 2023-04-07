@@ -13,7 +13,8 @@
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "2.8.7",
-    "turbo": "1.8.5"
+    "turbo": "1.8.8",
+    "typescript": "5.0.3"
   },
   "packageManager": "pnpm@7.30.3",
   "engines": {
