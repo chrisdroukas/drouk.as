@@ -12,9 +12,14 @@
   "dependencies": {
     "cookies-next": "2.1.1",
     "firebase-admin": "11.6.0",
+    "gray-matter": "4.0.3",
     "next": "13.3.0",
+    "next-mdx-remote": "4.4.1",
+    "next-remote-watch": "2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rehype-raw": "6.1.1",
+    "remark-shiki-twoslash": "3.1.2",
     "ui": "workspace:*"
   },
   "devDependencies": {
@@ -24,6 +29,7 @@
     "@mantine/core": "6.0.6",
     "@mantine/hooks": "6.0.6",
     "@mantine/next": "6.0.6",
+    "@mdx-js/mdx": "2.3.0",
     "@tabler/icons": "2.14.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
