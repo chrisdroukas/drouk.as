@@ -1,7 +1,6 @@
 import { StorybookConfig } from "@storybook/react-vite";
 import { mergeConfig } from "vite";
 import path from "path";
-
 const config: StorybookConfig = {
   stories: ["../stories/**/*.stories.mdx", "../stories/**/*.stories.tsx"],
   addons: [
@@ -10,10 +9,11 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "storybook-dark-mode",
   ],
-  framework: { name: "@storybook/react-vite", options: {} },
-  core: {
-    builder: "@storybook/builder-vite",
+  framework: {
+    name: "@storybook/react-vite",
+    options: {},
   },
+  core: {},
   async viteFinal(config) {
     return mergeConfig(config, {
       /**
@@ -22,7 +22,9 @@ const config: StorybookConfig = {
        * @see
        * https://github.com/storybookjs/storybook/issues/18920
        */
-      define: { "process.env": {} },
+      define: {
+        "process.env": {},
+      },
       resolve: {
         alias: [
           {
@@ -33,6 +35,8 @@ const config: StorybookConfig = {
       },
     });
   },
+  docs: {
+    autodocs: true,
+  },
 };
-
 export default config;
