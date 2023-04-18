@@ -60,8 +60,7 @@ export const ThemeProvider: FC<ThemeProviderProps> = (
   /**
    * If provided, assigns a global hotkey to toggle theme.
    */
-  toggleColorSchemeHotkey &&
-    useHotkeys([[toggleColorSchemeHotkey, () => toggleColorScheme()]]);
+  useHotkeys([[toggleColorSchemeHotkey, () => toggleColorScheme()]]);
 
   return (
     <ColorSchemeProvider

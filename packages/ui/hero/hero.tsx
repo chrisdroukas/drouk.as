@@ -16,13 +16,13 @@ export interface HeroProps extends BaseComponentProps {
   body: string;
 }
 
-const Wrapper = styled.div`
-  position: relative;
-  box-sizing: border-box;
-  height: 100dvh;
-  display: flex;
-  align-items: center;
-`;
+const Wrapper = styled.div({
+  position: "relative",
+  boxSizing: "border-box",
+  height: "100dvh",
+  display: "flex",
+  alignItems: "center",
+});
 
 const useStyles = createStyles((theme) => ({
   title: {
