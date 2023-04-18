@@ -28,7 +28,7 @@
     "eslint-config-custom": "workspace:*",
     "serve": "14.2.0",
     "storybook": "7.0.2",
-    "storybook-addon-swc": "1.1.9",
+    "storybook-addon-swc": "1.2.0",
     "storybook-dark-mode": "3.0.0",
     "tsconfig": "workspace:*",
     "typescript": "5.0.4",
