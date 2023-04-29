@@ -14,8 +14,8 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@mantine/core": "6.0.6",
-    "@mantine/hooks": "6.0.6",
+    "@mantine/core": "6.0.8",
+    "@mantine/hooks": "6.0.8",
     "@storybook/addon-actions": "7.0.2",
     "@storybook/addon-essentials": "7.0.2",
     "@storybook/addon-links": "7.0.2",
@@ -32,6 +32,6 @@
     "storybook-dark-mode": "3.0.0",
     "tsconfig": "workspace:*",
     "typescript": "5.0.4",
-    "vite": "4.2.1"
+    "vite": "4.2.2"
   }
 }

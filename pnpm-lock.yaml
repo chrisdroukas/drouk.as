@@ -63,14 +63,14 @@ importers:
         specifier: 11.10.0
         version: 11.10.0
       '@mantine/core':
-        specifier: 6.0.6
-        version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.0.8
+        version: 6.0.8(@emotion/react@11.10.6)(@mantine/hooks@6.0.8)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)
       '@mantine/hooks':
-        specifier: 6.0.6
-        version: 6.0.6(react@18.2.0)
+        specifier: 6.0.8
+        version: 6.0.8(react@18.2.0)
       '@mantine/next':
-        specifier: 6.0.6
-        version: 6.0.6(@emotion/react@11.10.6)(@emotion/server@11.10.0)(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.0.8
+        version: 6.0.8(@emotion/react@11.10.6)(@emotion/server@11.10.0)(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
       '@mdx-js/mdx':
         specifier: 2.3.0
         version: 2.3.0
@@ -115,11 +115,11 @@ importers:
         version: link:../../packages/ui
     devDependencies:
       '@mantine/core':
-        specifier: 6.0.6
-        version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.0.8
+        version: 6.0.8(@emotion/react@11.10.6)(@mantine/hooks@6.0.8)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)
       '@mantine/hooks':
-        specifier: 6.0.6
-        version: 6.0.6(react@18.2.0)
+        specifier: 6.0.8
+        version: 6.0.8(react@18.2.0)
       '@storybook/addon-actions':
         specifier: 7.0.2
         version: 7.0.2(react-dom@18.2.0)(react@18.2.0)
@@ -134,7 +134,7 @@ importers:
         version: 7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)
       '@storybook/react-vite':
         specifier: 7.0.2
-        version: 7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)(vite@4.2.1)
+        version: 7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)(vite@4.2.2)
       '@storybook/testing-library':
         specifier: 0.1.0
         version: 0.1.0
@@ -169,8 +169,8 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       vite:
-        specifier: 4.2.1
-        version: 4.2.1
+        specifier: 4.2.2
+        version: 4.2.2
 
   packages/eslint-config-custom:
     dependencies:
@@ -211,11 +211,11 @@ importers:
         specifier: 11.10.6
         version: 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.33)(react@18.2.0)
       '@mantine/core':
-        specifier: 6.0.6
-        version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.0.8
+        version: 6.0.8(@emotion/react@11.10.6)(@mantine/hooks@6.0.8)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)
       '@mantine/hooks':
-        specifier: 6.0.6
-        version: 6.0.6(react@18.2.0)
+        specifier: 6.0.8
+        version: 6.0.8(react@18.2.0)
       '@tabler/icons':
         specifier: 2.14.0
         version: 2.14.0
@@ -2466,7 +2466,7 @@ packages:
       '@types/yargs': 17.0.22
       chalk: 4.1.2
 
-  /@joshwooding/vite-plugin-react-docgen-typescript@0.2.1(typescript@5.0.4)(vite@4.2.1):
+  /@joshwooding/vite-plugin-react-docgen-typescript@0.2.1(typescript@5.0.4)(vite@4.2.2):
     resolution: {integrity: sha512-ou4ZJSXMMWHqGS4g8uNRbC5TiTWxAgQZiVucoUrOCWuPrTbkpJbmVyIi9jU72SBry7gQtuMEDp4YR8EEXAg7VQ==}
     peerDependencies:
       typescript: '>= 4.3.x'
@@ -2480,7 +2480,7 @@ packages:
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.0.4)
       typescript: 5.0.4
-      vite: 4.2.1
+      vite: 4.2.2
     dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -2536,17 +2536,17 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@mantine/core@6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-0DtwlNcHEb6d8/qtoYCFHc/at+8w1sg3TUWh+cdFFiykZqpRrXBRoGGfbElN5RHtQqAVg4BXC0jDSHpz6CjPHw==}
+  /@mantine/core@6.0.8(@emotion/react@11.10.6)(@mantine/hooks@6.0.8)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-jRVRgcZwKH2FKBUBch+NyFAJgEjU8DOzN5oqBIxR6xqQ2+ESV8dmSWLNxQGvFve7PR32DYuiXEDqzQ5YnwtDzQ==}
     peerDependencies:
-      '@mantine/hooks': 6.0.6
+      '@mantine/hooks': 6.0.8
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       '@floating-ui/react': 0.19.2(react-dom@18.2.0)(react@18.2.0)
-      '@mantine/hooks': 6.0.6(react@18.2.0)
-      '@mantine/styles': 6.0.6(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0)
-      '@mantine/utils': 6.0.6(react@18.2.0)
+      '@mantine/hooks': 6.0.8(react@18.2.0)
+      '@mantine/styles': 6.0.8(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0)
+      '@mantine/utils': 6.0.8(react@18.2.0)
       '@radix-ui/react-scroll-area': 1.0.2(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -2557,23 +2557,23 @@ packages:
       - '@types/react'
     dev: true
 
-  /@mantine/hooks@6.0.6(react@18.2.0):
-    resolution: {integrity: sha512-yGqGIZVgvL33XL+4UbP/BcvH/R5SKJYfrNcKIQY+SZ4y3CP05Q/p0BpjcLUJowKbD+xHaqXnMxE8yGf9KWAZig==}
+  /@mantine/hooks@6.0.8(react@18.2.0):
+    resolution: {integrity: sha512-9N4/v1Pt9EWY22MkyZfdMvoQuvLGKui7RqsS29b23Gz1xXR/DrkIAblvLWWu/xE/xYhIpdYfufpC1mF8Y3RfNg==}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
       react: 18.2.0
     dev: true
 
-  /@mantine/next@6.0.6(@emotion/react@11.10.6)(@emotion/server@11.10.0)(next@13.3.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-/ZUUPdgmWW5wxn5/lEuDqYzgBE7EJhP2y/cT9QoI2DyEf/drLc20Ccg4dHKv4d9UqH6jWWDXC5mSKArq9oTPhw==}
+  /@mantine/next@6.0.8(@emotion/react@11.10.6)(@emotion/server@11.10.0)(next@13.3.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-/wALz3EA84exqXpTWnyzA7nFwTctulZVtMu+SYvIdpqgUUH9yBAqoM0clArqgQuIOhg6BwQbUNWw3JGbmzikuQ==}
     peerDependencies:
       next: '*'
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@mantine/ssr': 6.0.6(@emotion/react@11.10.6)(@emotion/server@11.10.0)(react-dom@18.2.0)(react@18.2.0)
-      '@mantine/styles': 6.0.6(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0)
+      '@mantine/ssr': 6.0.8(@emotion/react@11.10.6)(@emotion/server@11.10.0)(react-dom@18.2.0)(react@18.2.0)
+      '@mantine/styles': 6.0.8(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0)
       next: 13.3.0(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -2582,8 +2582,8 @@ packages:
       - '@emotion/server'
     dev: true
 
-  /@mantine/ssr@6.0.6(@emotion/react@11.10.6)(@emotion/server@11.10.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-0XSkO6lKwf36LYB3vCIcaCALei4NsfZ3raK2wmpS7IOV5zF+c5EjoVxIxwd4p93GHR3D/0CW9whQrPHlcoOaOA==}
+  /@mantine/ssr@6.0.8(@emotion/react@11.10.6)(@emotion/server@11.10.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-0FUdX7C8z1jv7NLZELrHsbePAbdvT/6SamBmCofsBQMY5EbwJfHM10iBUBeQnRLsRLSxG/XtSz745W6Qiadv9A==}
     peerDependencies:
       '@emotion/react': '>=11.9.0'
       '@emotion/server': '>=11.4.0'
@@ -2592,14 +2592,14 @@ packages:
     dependencies:
       '@emotion/react': 11.10.6(@types/react@18.0.33)(react@18.2.0)
       '@emotion/server': 11.10.0
-      '@mantine/styles': 6.0.6(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0)
+      '@mantine/styles': 6.0.8(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0)
       html-react-parser: 1.4.12(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@mantine/styles@6.0.6(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-jNC4uTANTl3Z4B3H+oohJd9i7A542asn6UPUR+xMyjNk2guWSQcLUXe2x3VpL6G71ybNF7UQuZTEyar6OaKW3w==}
+  /@mantine/styles@6.0.8(@emotion/react@11.10.6)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-f5hsU1O+7wxSD9sTU85rKQ3fUmUDup/N+wkdOWmIA8EtNMopmY6wbfs4bh8T8LvyPzMFS7/MzwqXq3nRD9Hfyw==}
     peerDependencies:
       '@emotion/react': '>=11.9.0'
       react: '>=16.8.0'
@@ -2612,8 +2612,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@mantine/utils@6.0.6(react@18.2.0):
-    resolution: {integrity: sha512-Pd+ZTJ3maXb1zihZzHpo00XLwcKEg+ZGLPFG5vg/YafLDDWIhgV6snTFVKsPb2cunVjOwzbKcvlmCHXBe97mTQ==}
+  /@mantine/utils@6.0.8(react@18.2.0):
+    resolution: {integrity: sha512-G7omM5XjnGzXLiFU/r2yOJrixDFnY2pUkqD38cV9e/Qa6KFEErp4mNb+rhkSHafCnvfwBiNcdryZwEhJTtuC+Q==}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
@@ -3318,7 +3318,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/builder-vite@7.0.2(typescript@5.0.4)(vite@4.2.1):
+  /@storybook/builder-vite@7.0.2(typescript@5.0.4)(vite@4.2.2):
     resolution: {integrity: sha512-G6CD2Gf2zwzRslvNvqgz4FeADVEA9XA4Mw6+NM6Twc+Wy/Ah482dvHS9ApSgirtGyBKjOfdHn1xQT4Z+kzbJnw==}
     peerDependencies:
       '@preact/preset-vite': '*'
@@ -3357,7 +3357,7 @@ packages:
       remark-slug: 6.1.0
       rollup: 3.18.0
       typescript: 5.0.4
-      vite: 4.2.1
+      vite: 4.2.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3762,7 +3762,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@storybook/react-vite@7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)(vite@4.2.1):
+  /@storybook/react-vite@7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)(vite@4.2.2):
     resolution: {integrity: sha512-1bDrmGo6imxBzZKJJ+SEHPuDn474JY3Yatm0cPaNVtlYhbnbiTPa3PxhI4U3233l4Qsc6DXNLKvi++j/knXDCw==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -3770,17 +3770,17 @@ packages:
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
       vite: ^3.0.0 || ^4.0.0
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.2.1(typescript@5.0.4)(vite@4.2.1)
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.2.1(typescript@5.0.4)(vite@4.2.2)
       '@rollup/pluginutils': 4.2.1
-      '@storybook/builder-vite': 7.0.2(typescript@5.0.4)(vite@4.2.1)
+      '@storybook/builder-vite': 7.0.2(typescript@5.0.4)(vite@4.2.2)
       '@storybook/react': 7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)
-      '@vitejs/plugin-react': 3.1.0(vite@4.2.1)
+      '@vitejs/plugin-react': 3.1.0(vite@4.2.2)
       ast-types: 0.14.2
       magic-string: 0.27.0
       react: 18.2.0
       react-docgen: 6.0.0-alpha.3
       react-dom: 18.2.0(react@18.2.0)
-      vite: 4.2.1
+      vite: 4.2.2
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - '@storybook/mdx1-csf'
@@ -4521,7 +4521,7 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@vitejs/plugin-react@3.1.0(vite@4.2.1):
+  /@vitejs/plugin-react@3.1.0(vite@4.2.2):
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -4532,7 +4532,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6(@babel/core@7.21.4)
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.2.1
+      vite: 4.2.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9985,7 +9985,7 @@ packages:
     resolution: {integrity: sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.3.4
+      nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
@@ -12203,8 +12203,8 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite@4.2.1:
-    resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
+  /vite@4.2.2:
+    resolution: {integrity: sha512-PcNtT5HeDxb3QaSqFYkEum8f5sCVe0R3WK20qxgIvNBZPXU/Obxs/+ubBMeE7nLWeCo2LDzv+8hRYSlcaSehig==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -12230,7 +12230,7 @@ packages:
     dependencies:
       esbuild: 0.17.14
       postcss: 8.4.21
-      resolve: 1.22.1
+      resolve: 1.22.2
       rollup: 3.18.0
     optionalDependencies:
       fsevents: 2.3.2
