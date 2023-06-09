@@ -23,7 +23,7 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@babel/core": "7.21.4",
+    "@babel/core": "7.22.5",
     "@emotion/react": "11.10.6",
     "@emotion/server": "11.10.0",
     "@mantine/core": "6.0.6",
