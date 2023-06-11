@@ -13,10 +13,6 @@ coverage
 # production
 /build
 dist
-<<<<<<< HEAD
-coverage
-=======
->>>>>>> 81722c475af8dd37f7e1b44762d81e33fb08a63f
 
 # misc
 .DS_Store
