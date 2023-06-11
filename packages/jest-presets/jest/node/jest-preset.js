@@ -9,5 +9,6 @@ module.exports = {
     "<rootDir>/node_modules",
     "<rootDir>/dist",
   ],
+  setupFilesAfterEnv: ["../jest-presets/jest/node/jest-setup.js"],
   preset: "ts-jest",
 };

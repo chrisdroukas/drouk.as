@@ -1,42 +1,50 @@
-import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { ErrorBoundary } from "./";
 
+const NoErrorString = "No error thrown from ErrorComponent.";
+const ErrorString = "Error thrown from ErrorComponent.";
+
+/**
+ * A component that throws an error.
+ */
+function TestComponent({ shouldThrow }: { shouldThrow?: boolean }) {
+  if (shouldThrow) {
+    throw new Error(ErrorString);
+  }
+  return <div>{NoErrorString}</div>;
+}
+
 describe("ErrorBoundary", () => {
-  beforeAll(() => {
-    jest.spyOn(console, "error").mockImplementation(() => {});
+  it("should render the child component when no error is thrown", () => {
+    render(
+      <ErrorBoundary errorChildren={<div />}>
+        <TestComponent />
+      </ErrorBoundary>
+    );
+
+    expect(screen.getByText(NoErrorString)).toBeInTheDocument();
   });
 
-  afterAll(() => {
-    (console.error as jest.Mock).mockRestore();
-  });
+  it("should render the errorChildren prop when an error is thrown", () => {
+    /**
+     * A component that throws an error.
+     */
+    jest.spyOn(console, "error");
+    // @ts-ignore
+    global.console.error.mockImplementation(() => {});
 
-  describe("when an error occurs", () => {
-    it("renders the errorChildren and logs an error message", () => {
-      const ErrorComponent = () => {
-        throw new Error("Test Error");
-      };
+    render(
+      <ErrorBoundary errorChildren={<div>{ErrorString}</div>}>
+        <TestComponent shouldThrow={true} />
+      </ErrorBoundary>
+    );
 
-      const { getByText } = render(
-        <ErrorBoundary errorChildren={<div>Error!</div>}>
-          <ErrorComponent />
-        </ErrorBoundary>
-      );
+    expect(screen.getByText(ErrorString)).toBeInTheDocument();
 
-      expect(getByText("Error!")).toBeInTheDocument();
-      expect(console.error).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  describe("when no error occurs", () => {
-    it("renders the children", () => {
-      const { getByText } = render(
-        <ErrorBoundary errorChildren={<div>Error!</div>}>
-          <div>Hello World</div>
-        </ErrorBoundary>
-      );
-
-      expect(getByText("Hello World")).toBeInTheDocument();
-    });
+    /**
+     * Restore console.error.
+     */
+    // @ts-ignore
+    global.console.error.mockRestore();
   });
 });

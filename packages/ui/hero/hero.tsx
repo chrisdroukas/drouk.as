@@ -52,7 +52,7 @@ export const Hero: FC<HeroProps> = (props: HeroProps) => {
   const theme = useMantineTheme();
 
   /**
-   * Logs lifecycle events and debug messages to the console.
+   * Logs lifecycle events and dbug messages to the console.
    *
    * Debug must be `false` for production builds.
    */

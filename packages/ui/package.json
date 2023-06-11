@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "main": "./index.ts",
+  "main": "./dist/index.ts",
   "module": "./dist/index.mjs",
-  "types": "./index.ts",
+  "types": "./dist/index.ts",
+  "type": "module",
   "files": [
     "dist/**"
   ],
@@ -21,19 +22,19 @@
     "testEnvironment": "jsdom"
   },
   "devDependencies": {
-    "@emotion/react": "11.10.6",
-    "@emotion/styled": "11.10.6",
-    "@mantine/core": "6.0.8",
-    "@mantine/hooks": "6.0.8",
-    "@tabler/icons": "2.14.0",
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
+    "@mantine/core": "6.0.13",
+    "@mantine/hooks": "6.0.13",
+    "@tabler/icons": "2.22.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
-    "@types/jest": "29.5.0",
-    "@types/node": "18.15.11",
-    "@types/react": "18.0.33",
-    "@types/react-dom": "18.0.11",
-    "@types/testing-library__jest-dom": "5.14.5",
-    "eslint": "8.38.0",
+    "@types/jest": "29.5.2",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.9",
+    "@types/react-dom": "18.2.4",
+    "@types/testing-library__jest-dom": "5.14.6",
+    "eslint": "8.42.0",
     "eslint-config-custom": "workspace:*",
     "jest": "29.5.0",
     "jest-environment-jsdom": "29.5.0",
@@ -42,6 +43,6 @@
     "tilg": "0.1.1",
     "tsconfig": "workspace:*",
     "tsup": "6.7.0",
-    "typescript": "5.0.4"
+    "typescript": "5.1.3"
   }
 }
