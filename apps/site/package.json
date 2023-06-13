@@ -10,7 +10,7 @@
     "start": "next start -p 8000"
   },
   "dependencies": {
-    "cookies-next": "2.1.1",
+    "cookies-next": "2.1.2",
     "firebase-admin": "11.9.0",
     "gray-matter": "4.0.3",
     "next": "13.4.5",
