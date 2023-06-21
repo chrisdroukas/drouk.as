@@ -1,14 +1,24 @@
-import { FC } from "react";
-import { Navbar, ScrollArea } from "@mantine/core";
+import { FC, ReactNode } from "react";
+import {
+  AppShell,
+  Navbar,
+  // Header,
+  // Aside,
+  // Footer,
+  ScrollArea,
+} from "@mantine/core";
+
 import { BaseComponentProps } from "../base-component";
 import { useDebug } from "../hooks";
 
-export interface AppContainerProps extends BaseComponentProps {}
+export interface AppContainerProps extends BaseComponentProps {
+  children?: ReactNode;
+}
 
 export const AppContainer: FC<AppContainerProps> = (
   props: AppContainerProps
 ) => {
-  const { debug } = props;
+  const { children, debug } = props;
 
   /**
    * Logs lifecycle events and debug messages to the console.
@@ -18,14 +28,59 @@ export const AppContainer: FC<AppContainerProps> = (
   useDebug(debug);
 
   return (
-    <Navbar height={600} p="xs" width={{ base: 300 }}>
-      <Navbar.Section mt="xs">{/* Header with logo */}</Navbar.Section>
+    <AppShell>
+      <Navbar height={"100dvh"} p="xs" width={{ base: 260 }}>
+        <Navbar.Section>drouk.as/</Navbar.Section>
 
-      <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
-        {/* scrollable content here */}
-      </Navbar.Section>
-
-      <Navbar.Section>{/* Footer with user */}</Navbar.Section>
-    </Navbar>
+        <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+          <p>1</p>
+        </Navbar.Section>
+      </Navbar>
+      {children}
+    </AppShell>
   );
 };

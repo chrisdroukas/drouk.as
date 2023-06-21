@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "main": "./dist/index.ts",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "files": [
     "dist/**"
@@ -24,17 +24,17 @@
   "devDependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
-    "@mantine/core": "6.0.13",
-    "@mantine/hooks": "6.0.13",
+    "@mantine/core": "6.0.14",
+    "@mantine/hooks": "6.0.14",
     "@tabler/icons": "2.22.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.2",
-    "@types/node": "20.3.0",
-    "@types/react": "18.2.11",
-    "@types/react-dom": "18.2.4",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
     "@types/testing-library__jest-dom": "5.14.6",
-    "eslint": "8.42.0",
+    "eslint": "8.43.0",
     "eslint-config-custom": "workspace:*",
     "jest": "29.5.0",
     "jest-environment-jsdom": "29.5.0",
@@ -42,7 +42,7 @@
     "react": "18.2.0",
     "tilg": "0.1.1",
     "tsconfig": "workspace:*",
-    "tsup": "6.7.0",
+    "tsup": "7.0.0",
     "typescript": "5.1.3"
   }
 }

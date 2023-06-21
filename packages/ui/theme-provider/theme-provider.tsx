@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import {
   MantineProvider,
   ColorSchemeProvider,
@@ -12,7 +12,7 @@ interface ThemeProviderProps {
    * Content to render, typically an application
    * wrapper.
    */
-  children: React.ReactNode;
+  children: ReactNode;
 
   /**
    * To support SSR with a custom cache, the same
@@ -25,12 +25,12 @@ interface ThemeProviderProps {
   /**
    * A predefined color scheme.
    */
-  colorScheme?: ColorScheme;
+  colorScheme: ColorScheme;
 
   /**
    * Toggles the current color scheme.
    */
-  toggleColorScheme?(colorScheme?: ColorScheme): void;
+  toggleColorScheme(colorScheme?: ColorScheme): void;
 
   /**
    * A (global) hotkey to toggle the current color scheme.
@@ -60,7 +60,11 @@ export const ThemeProvider: FC<ThemeProviderProps> = (
   /**
    * If provided, assigns a global hotkey to toggle theme.
    */
-  useHotkeys([[toggleColorSchemeHotkey, () => toggleColorScheme()]]);
+  useHotkeys(
+    toggleColorSchemeHotkey
+      ? [[toggleColorSchemeHotkey, () => toggleColorScheme()]]
+      : []
+  );
 
   return (
     <ColorSchemeProvider

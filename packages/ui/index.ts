@@ -1,3 +1,4 @@
+export * from "./app-container";
 export * from "./base-component";
 export * from "./error-boundary";
 export * from "./global";

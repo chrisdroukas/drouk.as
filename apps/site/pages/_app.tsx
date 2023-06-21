@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import NextApp, { AppProps, AppContext } from "next/app";
 import { Analytics } from "@vercel/analytics/react";
 import { ColorScheme } from "@mantine/core";
@@ -60,7 +60,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   };
 
   return (
-    <>
+    <Fragment>
       <ThemeProvider
         emotionCache={emotionCache}
         colorScheme={colorScheme}
@@ -70,7 +70,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />
-    </>
+    </Fragment>
   );
 }
 
