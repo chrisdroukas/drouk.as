@@ -1,3 +1,5 @@
+const path = require("path");
+
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
@@ -5,14 +7,16 @@ const config = {
   transpilePackages: ["ui"],
   experimental: {
     appDir: true,
+    outputFileTracingIgnores: ["**swc+core**", "**esbuild**"],
     // outputFileTracingRoot: path.join(__dirname, "../../"),
-    outputFileTracingExcludes: {
-      "*": [
-        "./**/node_modules/@swc/core-linux-x64-gnu",
-        "./**/node_modules/@swc/core-linux-x64-musl",
-        "./**/node_modules/esbuild/linux",
-      ],
-    },
+    // outputFileTracingExcludes: {
+    //   "*": [
+    //     // prettier-ignore
+    //     'node_modules/@swc/core-linux-x64-gnu',
+    //     "node_modules/.pnpm/@swc+core-linux-x64-musl@1.3.62",
+    //     "node_modules/@esbuild/linux-x64",
+    //   ],
+    // },
   },
 };
 
