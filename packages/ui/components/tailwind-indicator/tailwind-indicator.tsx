@@ -1,8 +1,10 @@
+import { FC } from "react";
+
 /**
  * Displays the current viewport size in accordance with Tailwind.
  * @note This component will only render in non-production environments.
  */
-export function TailwindIndicator() {
+export const TailwindIndicator: FC = () => {
   /**
    * Return null in production environments.
    */
@@ -13,8 +15,6 @@ export function TailwindIndicator() {
   /**
    * Class definitions for each viewport size.
    */
-  const baseClasses =
-    "fixed bottom-5 left-5 z-50 flex items-center justify-center rounded-md bg-gray-800 p-3 font-mono text-xs text-white select-none";
   const breakpoints = [
     { breakpoint: "block sm:hidden", label: "XS" },
     { breakpoint: "hidden sm:block md:hidden", label: "SM" },
@@ -26,9 +26,15 @@ export function TailwindIndicator() {
 
   /**
    * Render a viewport size indicator.
+   * @note Hovering the viewport size indicator will hide it to
+   * reveal content beneath.
    */
   return (
-    <div className={baseClasses}>
+    <div
+      className={
+        "fixed bottom-5 left-5 z-50 flex items-center justify-center rounded-md bg-gray-800 p-3 font-mono text-xs text-white select-none transition ease-in-out delay-100 hover:opacity-0"
+      }
+    >
       {breakpoints.map(({ breakpoint, label }) => (
         <div key={label} className={breakpoint}>
           Viewport: {label}
@@ -36,4 +42,4 @@ export function TailwindIndicator() {
       ))}
     </div>
   );
-}
+};

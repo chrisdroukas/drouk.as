@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import Link from "next/link";
 
 import { SiteConfiguration, NavigationItem } from "@/types";
-import { classnames } from "@/library";
+import { classnames } from "@/library/utilities/classnames";
 import { useLockBody } from "@/library/hooks";
 import { Icons } from "@/components/icons";
 
@@ -12,11 +12,11 @@ interface MobileNavigationProps {
   children?: ReactNode;
 }
 
-export function MobileNavigation({
+export const MobileNavigation: FC<MobileNavigationProps> = ({
   configuration,
   navigationItems,
   children,
-}: MobileNavigationProps) {
+}) => {
   useLockBody();
 
   return (
@@ -48,4 +48,4 @@ export function MobileNavigation({
       </div>
     </div>
   );
-}
+};

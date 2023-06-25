@@ -4,6 +4,7 @@ import {
   Check,
   ChevronLeft,
   ChevronRight,
+  Code2,
   Command,
   CreditCard,
   File,
@@ -37,6 +38,7 @@ export const Icons = {
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
   close: X,
+  code: Code2,
   ellipsis: MoreVertical,
   gitHub: ({ ...props }: LucideProps) => (
     <svg

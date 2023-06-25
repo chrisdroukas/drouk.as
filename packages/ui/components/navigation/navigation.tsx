@@ -1,11 +1,11 @@
 "use client";
 
-import { ReactNode, useState, useCallback } from "react";
+import { FC, ReactNode, useState, useCallback } from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 import { SiteConfiguration, NavigationItem } from "@/types";
-import { classnames } from "@/library";
+import { classnames } from "@/library/utilities/classnames";
 import { buttonVariants } from "@/components/button";
 import { Icons } from "@/components/icons";
 import { MobileNavigation } from "./mobile-navigation";
@@ -16,18 +16,20 @@ interface NavigationProps {
   children?: ReactNode;
 }
 
-const NavigationItemComponent = ({
-  item,
-  isActive,
-}: {
+interface NavigationItemProps {
   item: NavigationItem;
   isActive: boolean;
+}
+
+const NavigationItemComponent: FC<NavigationItemProps> = ({
+  item,
+  isActive,
 }) => (
   <Link
     href={item.disabled ? "#" : item.href}
     className={classnames(
       "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
-      isActive ? "text-foreground" : "text-foreground/60",
+      isActive ? "text-foreground" : "text-muted-foreground",
       item.disabled && "cursor-not-allowed opacity-80"
     )}
   >
@@ -35,11 +37,11 @@ const NavigationItemComponent = ({
   </Link>
 );
 
-export function Navigation({
+export const Navigation: FC<NavigationProps> = ({
   configuration,
   navigationItems,
   children,
-}: NavigationProps) {
+}: NavigationProps) => {
   const segment = useSelectedLayoutSegment();
   const [showMobileNavigation, setShowMobileNavigation] =
     useState<boolean>(false);
@@ -54,7 +56,7 @@ export function Navigation({
   return (
     <div className="flex flex-1 justify-between select-none md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 sm:flex">
-        <span className="hidden font-bold sm:inline-block">
+        <span className="hidden font-extrabold tracking-tight sm:inline-block">
           {configuration.name}
         </span>
       </Link>
@@ -103,4 +105,4 @@ export function Navigation({
       )}
     </div>
   );
-}
+};

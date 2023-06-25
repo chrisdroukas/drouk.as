@@ -5,6 +5,7 @@
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": { "@/*": ["./*"] }
+    "paths": { "@/*": ["./*"] },
+    "plugins": [{ "name": "next" }]
   }
 }
