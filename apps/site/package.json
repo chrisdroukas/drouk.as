@@ -33,7 +33,7 @@
     "@mdx-js/mdx": "2.3.0",
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.9",
-    "@types/node": "20.3.1",
+    "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "@vercel/analytics": "1.0.1",
