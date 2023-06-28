@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Intro } from "ui/components/intro";
 import { Strings } from "ui/library/strings";
 
@@ -16,14 +17,21 @@ export default async function BlogPage() {
             About
           </h1>
           <p className="my-4 text-xl text-muted-foreground">
-            Chris Droukas is a design technologist and runner living in New
-            York.
+            Chris Droukas is a design technologist living in New York, currently
+            designing new experiences for{" "}
+            <Link className="droukas-link-underlined" href={""}>
+              Goldman Sachs
+            </Link>
+            .
           </p>
         </div>
       </div>
       <hr className="my-8" />
 
-      <p className="my-4 text-xl text-muted-foreground">Design excellence</p>
+      <p className="my-4 text-md text-muted-foreground">
+        I build innovative products with emerging new technologies and use
+        design to tell stories.
+      </p>
       <p className="my-4 text-xl text-muted-foreground">
         I began my career designing social newsreading applications for The
         Washington Post in an experimental technology division called Washington

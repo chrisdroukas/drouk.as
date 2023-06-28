@@ -76,3 +76,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .droukas-link-underlined {
+    @apply font-medium underline underline-offset-4;
+  }
+}

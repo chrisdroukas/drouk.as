@@ -12,7 +12,7 @@ const config = {
      * @todo
      * @see https://github.com/vercel/next.js/issues/42641
      */
-    outputFileTracingExcludes: ["**swc+core**", "**esbuild**"],
+    outputFileTracingExcludes: { "*": ["**swc+core**", "**esbuild**"] },
   },
 };
 
