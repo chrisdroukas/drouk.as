@@ -1,7 +1,4 @@
-interface Hotkey {
-  key: string;
-  description: string;
-}
+import { Hotkey } from "ui/types";
 
 export const ToggleColorScheme: Hotkey = {
   key: "mod+J",
