@@ -48,16 +48,16 @@ export const Navigation: FC<NavigationProps> = ({
   configuration,
   navigationItems,
   displayNavigationItems = true,
-  authenticationMode = AuthenticationMode.Login,
+  // authenticationMode = AuthenticationMode.Login,
   children,
 }: NavigationProps) => {
   const segment = useSelectedLayoutSegment();
-  const [showMobileNavigation, setShowMobileNavigation] =
-    useState<boolean>(false);
+  // const [showMobileNavigation, setShowMobileNavigation] =
+  //   useState<boolean>(false);
 
-  const toggleMobileNavigation = useCallback(() => {
-    setShowMobileNavigation((prevState) => !prevState);
-  }, []);
+  // const toggleMobileNavigation = useCallback(() => {
+  //   setShowMobileNavigation((prevState) => !prevState);
+  // }, []);
 
   const isItemActive = (item: NavigationItem) =>
     item.href.startsWith(`/${segment}`);
@@ -86,34 +86,31 @@ export const Navigation: FC<NavigationProps> = ({
         </div>
       ) : null}
 
-      <button
-        className="flex items-center space-x-2 sm:hidden"
-        onClick={toggleMobileNavigation}
-      >
-        {showMobileNavigation ? <Icons.close /> : <Icons.menu />}
+      <button className="flex items-center space-x-2 sm:hidden">
+        {/* {showMobileNavigation ? <Icons.close /> : <Icons.menu />} */}
         <span className="font-bold">{configuration.name}</span>
       </button>
 
       <nav>
         <Link
-          href="/login"
+          href="https://linkedin.com/in/chrisdroukas"
           className={classnames(
             buttonVariants({ variant: "secondary", size: "sm" }),
             "px-4"
           )}
         >
-          Login
+          LinkedIn
         </Link>
       </nav>
 
-      {showMobileNavigation && navigationItems && (
+      {/* {showMobileNavigation && navigationItems && (
         <MobileNavigation
           configuration={configuration}
           navigationItems={navigationItems}
         >
           {children}
         </MobileNavigation>
-      )}
+      )} */}
     </div>
   );
 };
