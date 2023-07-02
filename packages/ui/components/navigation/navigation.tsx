@@ -10,9 +10,16 @@ import { buttonVariants } from "@/components/button";
 import { Icons } from "@/components/icons";
 import { MobileNavigation } from "./mobile-navigation";
 
+enum AuthenticationMode {
+  Login,
+  Register,
+}
+
 interface NavigationProps {
   configuration: SiteConfiguration;
   navigationItems?: NavigationItem[];
+  displayNavigationItems?: boolean;
+  authenticationMode?: AuthenticationMode;
   children?: ReactNode;
 }
 
@@ -40,6 +47,8 @@ const NavigationItemComponent: FC<NavigationItemProps> = ({
 export const Navigation: FC<NavigationProps> = ({
   configuration,
   navigationItems,
+  displayNavigationItems = true,
+  authenticationMode = AuthenticationMode.Login,
   children,
 }: NavigationProps) => {
   const segment = useSelectedLayoutSegment();
@@ -61,19 +70,21 @@ export const Navigation: FC<NavigationProps> = ({
         </span>
       </Link>
 
-      <div className="hidden sm:flex md:gap-10">
-        {navigationItems?.length ? (
-          <nav className="hidden gap-6 sm:flex">
-            {navigationItems.map((item, index) => (
-              <NavigationItemComponent
-                key={index}
-                item={item}
-                isActive={isItemActive(item)}
-              />
-            ))}
-          </nav>
-        ) : null}
-      </div>
+      {displayNavigationItems ? (
+        <div className="hidden sm:flex md:gap-10">
+          {navigationItems?.length ? (
+            <nav className="hidden gap-6 sm:flex">
+              {navigationItems.map((item, index) => (
+                <NavigationItemComponent
+                  key={index}
+                  item={item}
+                  isActive={isItemActive(item)}
+                />
+              ))}
+            </nav>
+          ) : null}
+        </div>
+      ) : null}
 
       <button
         className="flex items-center space-x-2 sm:hidden"

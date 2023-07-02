@@ -1,11 +1,15 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  defineDocumentType,
+  makeSource,
+  defineComputedFields,
+} from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+const computedFields = defineComputedFields<"Post" | "Page" | "Author">({
   slug: {
     type: "string",
     resolve: (doc) => `/${doc._raw.flattenedPath}`,
@@ -14,7 +18,7 @@ const computedFields = {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
-};
+});
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -104,17 +108,17 @@ export default makeSource({
         rehypePrettyCode,
         {
           theme: "github-dark",
-          onVisitLine(node) {
+          onVisitLine(node: any) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
           },
-          onVisitHighlightedLine(node) {
+          onVisitHighlightedLine(node: any) {
             node.properties.className.push("line--highlighted");
           },
-          onVisitHighlightedWord(node) {
+          onVisitHighlightedWord(node: any) {
             node.properties.className = ["word--highlighted"];
           },
         },

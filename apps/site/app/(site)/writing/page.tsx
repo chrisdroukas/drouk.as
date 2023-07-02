@@ -34,6 +34,7 @@ export default async function BlogPage() {
         <div className="grid gap-10 sm:grid-cols-2">
           {posts.map((post, index) => (
             <Link
+              key={post._id}
               href={post.slug}
               className="group relative flex flex-col space-y-2"
             >

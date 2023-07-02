@@ -13,6 +13,7 @@ const config = {
      * @see https://github.com/vercel/next.js/issues/42641
      */
     outputFileTracingExcludes: { "*": ["**swc+core**", "**esbuild**"] },
+    serverComponentsExternalPackages: ["@prisma/client"],
   },
 };
 
