@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Intro } from "ui/components/intro";
-import { Strings } from "ui/library/strings";
+// import { Intro } from "ui/components/intro";
+// import { Strings } from "ui/library/strings";
 
 export default async function BlogPage() {
   //   const posts = allPosts
