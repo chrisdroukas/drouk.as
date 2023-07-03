@@ -12,7 +12,7 @@ coverage
 
 # Production
 /build
-/dist
+dist
 
 # Miscellaneous
 .DS_Store
