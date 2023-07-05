@@ -1,17 +1,17 @@
 # Dependencies
 node_modules
-/.pnp
+.pnp
 .pnp.js
 
 # Testing
-coverage
+/coverage
 
 # Next.js
-.next/
-/out/
+.next
+out
 
 # Production
-/build
+build
 dist
 
 # Miscellaneous
@@ -30,6 +30,12 @@ yarn-error.log*
 
 # Vercel
 .vercel
+
+# Turborepo
+.turbo
+
+# Storybook
+storybook-static
 
 # Runtime Data
 pids
