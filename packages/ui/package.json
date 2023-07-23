@@ -27,10 +27,10 @@
     "@radix-ui/react-toast": "1.1.4",
     "class-variance-authority": "0.7.0",
     "clsx": "2.0.0",
-    "contentlayer": "0.3.4",
+    "contentlayer": "0.3.1",
     "lucide-react": "0.263.0",
     "next": "13.4.12",
-    "next-contentlayer": "0.3.4",
+    "next-contentlayer": "0.3.1",
     "next-themes": "0.2.1",
     "tailwind-merge": "1.14.0",
     "tailwindcss-animate": "1.0.6"
