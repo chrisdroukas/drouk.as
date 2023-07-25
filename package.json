@@ -17,12 +17,12 @@
     "ui:add": "pnpm --filter ui ui:add"
   },
   "devDependencies": {
-    "@turbo/gen": "1.10.9",
+    "@turbo/gen": "1.10.11",
     "dotenv-cli": "7.2.1",
     "eslint": "8.45.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "3.0.0",
-    "turbo": "1.10.9",
+    "turbo": "1.10.11",
     "typescript": "5.1.6"
   },
   "packageManager": "pnpm@8.6.9",
