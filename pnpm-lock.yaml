@@ -299,8 +299,8 @@ importers:
         specifier: 0.2.1
         version: 0.2.1(next@13.4.8)(react-dom@18.2.0)(react@18.2.0)
       tailwind-merge:
-        specifier: 1.13.2
-        version: 1.13.2
+        specifier: 1.14.0
+        version: 1.14.0
       tailwindcss-animate:
         specifier: 1.0.6
         version: 1.0.6(tailwindcss@3.3.2)
@@ -15050,8 +15050,8 @@ packages:
       tslib: 2.6.0
     dev: false
 
-  /tailwind-merge@1.13.2:
-    resolution: {integrity: sha512-R2/nULkdg1VR/EL4RXg4dEohdoxNUJGLMnWIQnPKL+O9Twu7Cn3Rxi4dlXkDzZrEGtR+G+psSXFouWlpTyLhCQ==}
+  /tailwind-merge@1.14.0:
+    resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
     dev: false
 
   /tailwindcss-animate@1.0.6(tailwindcss@3.3.2):
