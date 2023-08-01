@@ -31,6 +31,10 @@ const config: StorybookConfig = {
             find: "ui",
             replacement: path.resolve(__dirname, "../../../packages/ui/"),
           },
+          {
+            find: "@",
+            replacement: path.resolve(__dirname, "../../../packages/ui/"),
+          },
         ],
       },
     });
