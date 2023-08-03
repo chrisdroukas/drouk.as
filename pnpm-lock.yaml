@@ -236,8 +236,8 @@ importers:
         specifier: 13.4.12
         version: 13.4.12(eslint@8.46.0)(typescript@5.1.6)
       eslint-config-prettier:
-        specifier: 8.9.0
-        version: 8.9.0(eslint@8.46.0)
+        specifier: 8.10.0
+        version: 8.10.0(eslint@8.46.0)
       eslint-config-turbo:
         specifier: 1.10.12
         version: 1.10.12(eslint@8.46.0)
@@ -4853,6 +4853,7 @@ packages:
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
+    requiresBuild: true
 
   /@tootallnate/quickjs-emscripten@0.23.0:
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
@@ -5601,6 +5602,7 @@ packages:
   /agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
+    requiresBuild: true
     dependencies:
       debug: 4.3.4
     transitivePeerDependencies:
@@ -7414,8 +7416,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-config-prettier@8.9.0(eslint@8.46.0):
-    resolution: {integrity: sha512-+sbni7NfVXnOpnRadUA8S28AUlsZt9GjgFvABIRL9Hkn8KqNzOp+7Lw4QWtrwn20KzU3wqu1QoOj2m+7rKRqkA==}
+  /eslint-config-prettier@8.10.0(eslint@8.46.0):
+    resolution: {integrity: sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
