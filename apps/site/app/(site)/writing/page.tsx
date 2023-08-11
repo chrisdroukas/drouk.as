@@ -53,9 +53,7 @@ export default async function BlogPage() {
                     />
                   </AspectRatio>
                 )}
-                <h2 className="font-heading text-2xl font-extrabold">
-                  {post.title}
-                </h2>
+                <h2 className="font-heading text-2xl">{post.title}</h2>
                 {post.description && (
                   <p className="text-muted-foreground">{post.description}</p>
                 )}
