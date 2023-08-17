@@ -1,6 +1,8 @@
 export const apiEnvironment = () => {
-  return (
-    `http://${process.env.NEXT_PUBLIC_BASE_URL}/api` ??
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
-  );
+  switch (process.env.VERCEL_ENV) {
+    case "development":
+      return `http://${process.env.NEXT_PUBLIC_BASE_URL}/api`;
+    default:
+      return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`;
+  }
 };
