@@ -1,7 +1,7 @@
 import type { Location } from "./common";
 
 export type Resume = {
-  basics?: Basics;
+  basics: Basics;
   work?: Work[];
   education?: Education[];
 };

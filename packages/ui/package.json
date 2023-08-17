@@ -17,7 +17,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "test": "jest",
     "ui:add": "pnpm dlx shadcn-ui@latest add",
-    "ui:init": "pnpm dlx shadcn-ui@latest init"
+    "ui:init": "pnpm dlx shadcn-ui@latest init",
+    "ui:diff": "pnpm dlx shadcn-ui@latest diff"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "1.0.3",

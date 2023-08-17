@@ -1,15 +1,19 @@
 "use client";
-import useSWR from "swr";
-
-const fetcher = async (...args: Parameters<typeof fetch>) => {
-  const res = await fetch(...args);
-  return res.json();
-};
+import { useResume } from "app/api/resume/use-resume";
 
 export function Resume() {
-  const { data, error, isLoading } = useSWR("/api/resume", fetcher);
+  const { resume, loading, error } = useResume();
 
   if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
-  return <div>hello {data.basics.name}!</div>;
+  if (loading) return <div>loading...</div>;
+
+  const renderWork = resume?.work?.map((item) => (
+    <div>
+      <p>{item.name}</p>
+      <p>{item.description}</p>
+      <p>{item.position}</p>
+    </div>
+  ));
+
+  return <div>{renderWork}</div>;
 }
