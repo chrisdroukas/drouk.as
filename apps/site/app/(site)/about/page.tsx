@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getResumeData } from "app/api/resume/route";
+import { getResumeData } from "app/api/resume/helpers";
 
 // import { Intro } from "ui/components/intro";
 // import { Strings } from "ui/library/strings";
