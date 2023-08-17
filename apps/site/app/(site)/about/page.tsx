@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { getResumeData } from "app/api/resume/route";
+
 // import { Intro } from "ui/components/intro";
 // import { Strings } from "ui/library/strings";
 
@@ -8,6 +10,8 @@ export default async function BlogPage() {
   //     .sort((a, b) => {
   //       return compareDesc(new Date(a.date), new Date(b.date));
   //     });
+
+  const data = await getResumeData();
 
   return (
     <div className="container max-w-5xl py-6 lg:py-10">
@@ -32,10 +36,8 @@ export default async function BlogPage() {
         I build innovative products with emerging new technologies and use
         design to tell stories.
       </p>
-      <p className="my-4 text-xl text-muted-foreground">
-        I began my career designing social newsreading applications for The
-        Washington Post in an experimental technology division called Washington
-        Post Labs.
+      <p className="my-4 text-md text-muted-foreground">
+        {JSON.stringify(data.basics)}
       </p>
       {/* {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">posts</div>
