@@ -17,8 +17,3 @@ beforeAll(() => {
 afterAll(() => {
   window.matchMedia = originalMatchMedia;
 });
-
-module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "node",
-};
