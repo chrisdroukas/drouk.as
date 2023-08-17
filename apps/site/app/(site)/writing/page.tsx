@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import Image from "next/image";
+import Link from "next/link";
 
-import { AspectRatio } from "ui/components/aspect-ratio";
+import { AspectRatio } from "ui/components/ui/aspect-ratio";
 // import { formatDate } from "@/lib/utils";
 
 export const metadata = {

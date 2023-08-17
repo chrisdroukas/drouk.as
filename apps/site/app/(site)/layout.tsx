@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
-import { Navigation } from "ui/components/navigation";
 import { Footer } from "ui/components/footer";
+import { Navigation } from "ui/components/navigation";
 
 import {
-  siteConfiguration,
   navigationConfiguration,
+  siteConfiguration,
 } from "../../configuration";
 
 interface SiteLayoutProps {
