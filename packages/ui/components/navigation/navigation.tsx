@@ -1,13 +1,13 @@
 "use client";
 
-import { FC, ReactNode, useState, useCallback } from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
+import { FC, ReactNode, useCallback, useState } from "react";
 
-import { SiteConfiguration, NavigationItem } from "@/types";
-import { classnames } from "@/library/utilities/classnames";
-import { buttonVariants } from "@/components/button";
 import { Icons } from "@/components/icons";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/library/utilities/classnames";
+import { NavigationItem, SiteConfiguration } from "@/types";
 import { MobileNavigation } from "./mobile-navigation";
 
 enum AuthenticationMode {
@@ -34,7 +34,7 @@ const NavigationItemComponent: FC<NavigationItemProps> = ({
 }) => (
   <Link
     href={item.disabled ? "#" : item.href}
-    className={classnames(
+    className={cn(
       "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
       isActive ? "text-foreground" : "text-muted-foreground",
       item.disabled && "cursor-not-allowed opacity-80"
@@ -97,7 +97,7 @@ export const Navigation: FC<NavigationProps> = ({
       <nav>
         <Link
           href="/login"
-          className={classnames(
+          className={cn(
             buttonVariants({ variant: "secondary", size: "sm" }),
             "px-4"
           )}

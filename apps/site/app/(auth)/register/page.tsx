@@ -1,7 +1,7 @@
 // import { Metadata } from "next";
 import Link from "next/link";
 
-import { classnames } from "ui/library/utilities/classnames";
+import { cn } from "ui/library/utilities/classnames";
 import { buttonVariants } from "ui/components/button";
 import { Icons } from "@/components/icons";
 import { AuthenticationForm } from "../../../components/authentication";
@@ -16,7 +16,7 @@ export default function RegisterPage() {
     <div className="container grid h-screen w-screen flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
       <Link
         href="/login"
-        className={classnames(
+        className={cn(
           buttonVariants({ variant: "ghost" }),
           "absolute right-4 top-4 md:right-8 md:top-8"
         )}

@@ -1,10 +1,10 @@
-import { FC, ReactNode } from "react";
 import Link from "next/link";
+import { FC, ReactNode } from "react";
 
-import { SiteConfiguration, NavigationItem } from "@/types";
-import { classnames } from "@/library/utilities/classnames";
-import { useLockBody } from "@/library/hooks";
 import { Icons } from "@/components/icons";
+import { useLockBody } from "@/library/hooks";
+import { cn } from "@/library/utilities/classnames";
+import { NavigationItem, SiteConfiguration } from "@/types";
 
 interface MobileNavigationProps {
   configuration: SiteConfiguration;
@@ -21,7 +21,7 @@ export const MobileNavigation: FC<MobileNavigationProps> = ({
 
   return (
     <div
-      className={classnames(
+      className={cn(
         "fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden"
       )}
     >
@@ -35,7 +35,7 @@ export const MobileNavigation: FC<MobileNavigationProps> = ({
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
-              className={classnames(
+              className={cn(
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}

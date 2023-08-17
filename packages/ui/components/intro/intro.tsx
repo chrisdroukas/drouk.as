@@ -1,15 +1,15 @@
-import { FC } from "react";
 import Link from "next/link";
+import { FC } from "react";
 import Balancer from "react-wrap-balancer";
 
-import { classnames } from "@/library/utilities/classnames";
-import { ButtonSize, ButtonVariant, buttonVariants } from "@/components/button";
+import { ButtonProps, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/library/utilities/classnames";
 
 interface IntroButton {
   href: string;
   label: string;
-  variant?: ButtonVariant;
-  size?: ButtonSize;
+  variant?: ButtonProps["variant"];
+  size?: ButtonProps["size"];
 }
 
 interface IntroProps {
@@ -34,7 +34,7 @@ export const Intro: FC<IntroProps> = ({ title, body, buttons }) => {
               <Link
                 key={index}
                 href={button.href}
-                className={classnames(
+                className={cn(
                   buttonVariants({ variant: button.variant, size: button.size })
                 )}
               >

@@ -1,10 +1,10 @@
-import { FC } from "react";
 import Link from "next/link";
+import { FC } from "react";
 import Balancer from "react-wrap-balancer";
 
-import { SiteConfiguration } from "@/types";
 import { Icons } from "@/components/icons";
 import { ThemeSelector } from "@/components/theme-selector";
+import { SiteConfiguration } from "@/types";
 
 interface FooterProps {
   configuration: SiteConfiguration;

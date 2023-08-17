@@ -1,16 +1,16 @@
 "use client";
 
-import { FC } from "react";
 import { useTheme } from "next-themes";
+import { FC } from "react";
 
-import { Button } from "@/components/button";
+import { Icons } from "@/components/icons";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/dropdown-menu";
-import { Icons } from "@/components/icons";
+} from "@/components/ui/dropdown-menu";
 
 export const ThemeSelector: FC = () => {
   const { setTheme } = useTheme();
