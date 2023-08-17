@@ -1,8 +1,5 @@
 import Link from "next/link";
-import { getResumeData } from "app/api/resume/helpers";
-
-// import { Intro } from "ui/components/intro";
-// import { Strings } from "ui/library/strings";
+import { Resume } from "./data";
 
 export default async function BlogPage() {
   //   const posts = allPosts
@@ -10,8 +7,6 @@ export default async function BlogPage() {
   //     .sort((a, b) => {
   //       return compareDesc(new Date(a.date), new Date(b.date));
   //     });
-
-  const data = await getResumeData();
 
   return (
     <div className="container max-w-5xl py-6 lg:py-10">
@@ -36,9 +31,8 @@ export default async function BlogPage() {
         I build innovative products with emerging new technologies and use
         design to tell stories.
       </p>
-      <p className="my-4 text-md text-muted-foreground">
-        {JSON.stringify(data.basics)}
-      </p>
+      <Resume />
+      <p className="my-4 text-md text-muted-foreground"></p>
       {/* {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">posts</div>
       ) : (
