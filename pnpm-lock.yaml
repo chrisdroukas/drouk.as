@@ -251,9 +251,12 @@ importers:
 
   packages/jest-presets:
     dependencies:
+      '@jest/globals':
+        specifier: 29.6.2
+        version: 29.6.2
       '@testing-library/jest-dom':
         specifier: 6.0.0
-        version: 6.0.0(@types/jest@29.5.3)(jest@29.6.2)
+        version: 6.0.0(@jest/globals@29.6.2)(jest@29.6.2)
       ts-jest:
         specifier: 29.1.1
         version: 29.1.1(@babel/core@7.22.10)(jest@29.6.2)(typescript@5.1.6)
@@ -5183,6 +5186,36 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
+  /@testing-library/jest-dom@6.0.0(@jest/globals@29.6.2)(jest@29.6.2):
+    resolution: {integrity: sha512-Ye2R3+/oM27jir8CzYPmuWdavTaKwNZcu0d22L9pO/vnOYE0wmrtpw79TQJa8H6gV8/i7yd+pLaqeLlA0rTMfg==}
+    engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
+    peerDependencies:
+      '@jest/globals': '>= 28'
+      '@types/jest': '>= 28'
+      jest: '>= 28'
+      vitest: '>= 0.32'
+    peerDependenciesMeta:
+      '@jest/globals':
+        optional: true
+      '@types/jest':
+        optional: true
+      jest:
+        optional: true
+      vitest:
+        optional: true
+    dependencies:
+      '@adobe/css-tools': 4.3.1
+      '@babel/runtime': 7.22.6
+      '@jest/globals': 29.6.2
+      aria-query: 5.3.0
+      chalk: 3.0.0
+      css.escape: 1.5.1
+      dom-accessibility-api: 0.5.16
+      jest: 29.6.2(@types/node@20.5.0)
+      lodash: 4.17.21
+      redent: 3.0.0
+    dev: false
+
   /@testing-library/jest-dom@6.0.0(@types/jest@29.5.3)(jest@29.6.2):
     resolution: {integrity: sha512-Ye2R3+/oM27jir8CzYPmuWdavTaKwNZcu0d22L9pO/vnOYE0wmrtpw79TQJa8H6gV8/i7yd+pLaqeLlA0rTMfg==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
@@ -5211,6 +5244,7 @@ packages:
       jest: 29.6.2(@types/node@20.5.0)
       lodash: 4.17.21
       redent: 3.0.0
+    dev: true
 
   /@testing-library/react@14.0.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-S04gSNJbYE30TlIMLTzv6QCTzt9AqIF5y6s6SzVFILNcNvbV/jU96GeiTPillGQo+Ny64M/5PV7klNYYgv5Dfg==}
@@ -5463,6 +5497,7 @@ packages:
     dependencies:
       expect: 29.6.2
       pretty-format: 29.6.2
+    dev: true
 
   /@types/js-yaml@4.0.5:
     resolution: {integrity: sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==}

@@ -4,6 +4,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "@jest/globals": "29.6.2",
     "@testing-library/jest-dom": "6.0.0",
     "ts-jest": "29.1.1"
   }
