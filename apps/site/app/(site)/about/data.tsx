@@ -7,8 +7,8 @@ export function Resume() {
   if (error) return <div>failed to load</div>;
   if (loading) return <div>loading...</div>;
 
-  const renderWork = resume?.work?.map((item) => (
-    <div>
+  const renderWork = resume?.work?.map((item, index) => (
+    <div key={item.id}>
       <p>{item.name}</p>
       <p>{item.description}</p>
       <p>{item.position}</p>
