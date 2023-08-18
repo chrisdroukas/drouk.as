@@ -8,9 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import "ui/styles/mdx.css";
 
-// import { env } from "@/env.mjs";
-// import { absoluteUrl, cn, formatDate } from "@/lib/utils";
-// import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "ui/components/icons";
 
 interface PostPageProps {
