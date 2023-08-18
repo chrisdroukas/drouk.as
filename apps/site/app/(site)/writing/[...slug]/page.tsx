@@ -97,7 +97,7 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <Link href="/blog">
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
+        <Icons.navigation.back className="mr-2 h-4 w-4" />
         See all posts
       </Link>
       <div>
@@ -154,7 +154,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
         <Link href="/blog">
-          <Icons.chevronLeft className="mr-2 h-4 w-4" />
+          <Icons.navigation.back className="mr-2 h-4 w-4" />
           See all posts
         </Link>
       </div>

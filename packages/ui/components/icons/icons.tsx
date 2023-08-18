@@ -1,8 +1,11 @@
 import { SVGAttributes } from "react";
 
 import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
   CodeIcon,
   Cross2Icon,
+  DotsHorizontalIcon,
   ExclamationTriangleIcon,
   GitHubLogoIcon,
   HamburgerMenuIcon,
@@ -25,7 +28,12 @@ export const Icons = {
   close: Cross2Icon,
   code: CodeIcon,
   gitHub: GitHubLogoIcon,
+  loading: DotsHorizontalIcon,
   menu: HamburgerMenuIcon,
+  navigation: {
+    back: ArrowLeftIcon,
+    forward: ArrowRightIcon,
+  },
   theme: { light: SunIcon, dark: MoonIcon, system: LaptopIcon },
   warning: ExclamationTriangleIcon,
 };
