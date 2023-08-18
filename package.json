@@ -14,7 +14,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "dotenv -- turbo run lint",
     "test": "dotenv -- turbo run test",
-    "ui:add": "pnpm --filter ui ui:add"
+    "ui:add": "pnpm --filter ui ui:add",
+    "ui:init": "pnpm --filter ui ui:init",
+    "ui:diff": "pnpm --filter ui ui:diff"
   },
   "devDependencies": {
     "@turbo/gen": "1.10.12",
