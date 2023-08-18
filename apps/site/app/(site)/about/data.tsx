@@ -11,6 +11,7 @@ export function Resume() {
 
   const renderWork = resume?.work?.map((item) => (
     <WorkCard
+      key={item.id}
       name={item.name}
       description={item.description}
       position={item.position}
