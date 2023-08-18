@@ -1,6 +1,5 @@
 "use client";
 
-import { Icons } from "@/components/icons";
 import { cn } from "@/library/utilities/classnames";
 import * as OverlayNavigationPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -27,7 +26,7 @@ const OverlayNavigationOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <OverlayNavigationPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 pt-14 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -38,11 +37,11 @@ OverlayNavigationOverlay.displayName =
   OverlayNavigationPrimitive.Overlay.displayName;
 
 const overlayNavigationVariants = cva(
-  "fixed z-50 gap-4 bg-background p-6 transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-200 data-[state=open]:duration-200",
+  "fixed gap-4 bg-background transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-200 data-[state=open]:duration-200",
   {
     variants: {
       side: {
-        top: "inset-x-0 p-8 top-0 border-b data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+        top: "inset-x-0 top-14 border-b data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
       },
     },
     defaultVariants: {
@@ -65,14 +64,10 @@ const OverlayNavigationContent = React.forwardRef<
     <OverlayNavigationOverlay />
     <OverlayNavigationPrimitive.Content
       ref={ref}
-      className={cn(overlayNavigationVariants({ side }), className)}
+      className={cn(overlayNavigationVariants({ side }))}
       {...props}
     >
       {children}
-      <OverlayNavigationPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <Icons.close className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-      </OverlayNavigationPrimitive.Close>
     </OverlayNavigationPrimitive.Content>
   </OverlayNavigationPortal>
 ));

@@ -1,21 +1,3 @@
-/**
- * @desc The 'useBreakpoint()' hook is used to get the current
- *       screen breakpoint based on the TailwindCSS config.
- *
- * @usage
- *    import { useBreakpoint } from "@/hooks/useBreakpoint";
- *
- *    const { isAboveSm, isBelowSm, sm } = useBreakpoint("sm");
- *    console.log({ isAboveSm, isBelowSm, sm });
- *
- *    const { isAboveMd } = useBreakpoint("md");
- *    const { isAboveLg } = useBreakpoint("lg");
- *    const { isAbove2Xl } = useBreakpoint("2xl");
- *    console.log({ isAboveMd, isAboveLg, isAbove2Xl });
- *
- * @see https://stackoverflow.com/a/76630444/6543935
- * @requirements npm install react-responsive
- */
 import { useMediaQuery } from "react-responsive";
 import resolveConfig from "tailwindcss/resolveConfig";
 import { Config, ScreensConfig } from "tailwindcss/types/config";

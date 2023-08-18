@@ -1,7 +1,5 @@
-// import { Metadata } from "next";
 import Link from "next/link";
 
-import { Icons } from "@/components/icons";
 import { buttonVariants } from "ui/components/ui/button";
 import { cn } from "ui/library/utilities/classnames";
 import { AuthenticationForm } from "../../../components/authentication";

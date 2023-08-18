@@ -1,5 +1,7 @@
 "use client";
+
 import { useResume } from "app/api/resume/use-resume";
+import { WorkCard } from "ui/components/cards/work-card";
 
 export function Resume() {
   const { resume, loading, error } = useResume();
@@ -8,12 +10,13 @@ export function Resume() {
   if (loading) return <div>loading...</div>;
 
   const renderWork = resume?.work?.map((item) => (
-    <div key={item.id}>
-      <p>{item.name}</p>
-      <p>{item.description}</p>
-      <p>{item.position}</p>
-    </div>
+    <WorkCard
+      name={item.name}
+      description={item.description}
+      position={item.position}
+      url={item.url}
+    />
   ));
 
-  return <div>{renderWork}</div>;
+  return <div className="grid gap-4">{renderWork}</div>;
 }
