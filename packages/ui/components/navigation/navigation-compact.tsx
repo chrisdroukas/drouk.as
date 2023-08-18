@@ -96,6 +96,7 @@ export const NavigationCompact: FC<NavigationCompactProps> = ({
 
   const renderMenuAction = (
     <Button
+      key={"navigation-menu-action"}
       variant="outline"
       size="sm"
       className="h-8 w-8 px-0"
@@ -105,7 +106,9 @@ export const NavigationCompact: FC<NavigationCompactProps> = ({
     </Button>
   );
 
-  const renderLogo = <Logo title={configuration.name} />;
+  const renderLogo = (
+    <Logo key={"navigation-logo"} title={configuration.name} />
+  );
 
   // const renderAuth = <Auth />;
 

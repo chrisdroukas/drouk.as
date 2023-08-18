@@ -44,7 +44,9 @@ export const NavigationRegular: FC<NavigationProps> = ({
   const isItemActive = (item: NavigationItem) =>
     item.href.startsWith(`/${segment}`);
 
-  const renderLogo = <Logo title={configuration.name} />;
+  const renderLogo = (
+    <Logo key={"navigation-logo"} title={configuration.name} />
+  );
 
   const renderNavigationItems = displayNavigationItems
     ? navigationItems?.map((item, index) => (
