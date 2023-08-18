@@ -9,8 +9,8 @@ export default function Page() {
         body={Strings.intro.body}
         buttons={[
           {
-            href: Strings.configuration.navigation.work.href,
-            label: `View ${Strings.configuration.navigation.work.title}`,
+            href: Strings.configuration.navigation.about.href,
+            label: `${Strings.configuration.navigation.about.title}`,
             variant: "default",
             size: "lg",
           },

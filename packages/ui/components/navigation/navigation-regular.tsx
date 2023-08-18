@@ -56,12 +56,12 @@ export const NavigationRegular: FC<NavigationProps> = ({
       ))
     : null;
 
-  const renderAuth = <Auth />;
+  // const renderAuth = <Auth />;
 
   return (
     <NavigationBar
       leadingItems={[renderLogo]}
-      trailingItems={[renderNavigationItems, renderAuth]}
+      trailingItems={[renderNavigationItems]}
     />
   );
 };

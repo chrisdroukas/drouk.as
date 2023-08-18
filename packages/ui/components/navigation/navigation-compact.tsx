@@ -107,14 +107,11 @@ export const NavigationCompact: FC<NavigationCompactProps> = ({
 
   const renderLogo = <Logo title={configuration.name} />;
 
-  const renderAuth = <Auth />;
+  // const renderAuth = <Auth />;
 
   return (
     <>
-      <NavigationBar
-        leadingItems={[renderMenuAction, renderLogo]}
-        trailingItems={[renderAuth]}
-      />
+      <NavigationBar leadingItems={[renderMenuAction, renderLogo]} />
       <NavigationCompactDialog
         open={showCompactMenu}
         onOpenChange={toggleCompactMenu}

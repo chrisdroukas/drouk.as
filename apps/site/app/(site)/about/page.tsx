@@ -27,10 +27,10 @@ export default async function BlogPage() {
       </div>
       <hr className="my-8" />
 
-      <p className="my-4 text-md text-muted-foreground">
+      {/* <p className="my-4 text-md text-muted-foreground">
         I build innovative products with emerging new technologies and use
         design to tell stories.
-      </p>
+      </p> */}
       <Resume />
       <p className="my-4 text-md text-muted-foreground"></p>
       {/* {posts?.length ? (
