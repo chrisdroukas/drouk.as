@@ -1,12 +1,12 @@
-// import { Strings } from "ui/library/strings";
+import { Strings } from "ui/library/strings";
 import { NavigationConfiguration } from "ui/types";
 
 export const navigationConfiguration: NavigationConfiguration = {
   navigationItems: [
-    // {
-    //   title: Strings.configuration.navigation.about.title,
-    //   href: Strings.configuration.navigation.about.href,
-    // },
+    {
+      title: Strings.configuration.navigation.about.title,
+      href: Strings.configuration.navigation.about.href,
+    },
     // {
     //   title: Strings.configuration.navigation.work.title,
     //   href: Strings.configuration.navigation.work.href,

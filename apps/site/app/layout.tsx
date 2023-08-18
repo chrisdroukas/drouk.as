@@ -5,7 +5,7 @@ import "ui/styles/globals.css";
 import { Analytics } from "ui/components/analytics";
 import { TailwindIndicator } from "ui/components/tailwind-indicator";
 import { ThemeProvider } from "ui/components/theme-provider";
-import { classnames } from "ui/library/utilities/classnames";
+import { cn } from "ui/library/utilities/classnames";
 
 import { getFontVariables } from "../components/fonts";
 
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   const { fontSansVariable, fontHeadingVariable } = getFontVariables();
 
   // Define classes for body
-  const bodyClasses = classnames(
+  const bodyClasses = cn(
     "min-h-screen bg-background font-sans antialiased",
     fontSansVariable,
     fontHeadingVariable

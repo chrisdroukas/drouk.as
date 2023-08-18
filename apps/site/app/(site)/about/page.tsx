@@ -1,6 +1,5 @@
 import Link from "next/link";
-// import { Intro } from "ui/components/intro";
-// import { Strings } from "ui/library/strings";
+import { Resume } from "./data";
 
 export default async function BlogPage() {
   //   const posts = allPosts
@@ -28,15 +27,12 @@ export default async function BlogPage() {
       </div>
       <hr className="my-8" />
 
-      <p className="my-4 text-md text-muted-foreground">
+      {/* <p className="my-4 text-md text-muted-foreground">
         I build innovative products with emerging new technologies and use
         design to tell stories.
-      </p>
-      <p className="my-4 text-xl text-muted-foreground">
-        I began my career designing social newsreading applications for The
-        Washington Post in an experimental technology division called Washington
-        Post Labs.
-      </p>
+      </p> */}
+      <Resume />
+      <p className="my-4 text-md text-muted-foreground"></p>
       {/* {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">posts</div>
       ) : (

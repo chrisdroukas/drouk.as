@@ -1,16 +1,13 @@
-import { notFound } from "next/navigation";
 import { allAuthors, allPosts } from "contentlayer/generated";
+import { notFound } from "next/navigation";
 
 import { Mdx } from "ui/components/mdx";
 
-import "ui/styles/mdx.css";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import "ui/styles/mdx.css";
 
-// import { env } from "@/env.mjs";
-// import { absoluteUrl, cn, formatDate } from "@/lib/utils";
-// import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "ui/components/icons";
 
 interface PostPageProps {
@@ -96,19 +93,19 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
-      <Link href="/blog">
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
+      <Link href="/writing">
+        <Icons.navigation.back className="mr-2 h-4 w-4" />
         See all posts
       </Link>
       <div>
-        {post.date && (
+        {/* {post.date && (
           <time
             dateTime={post.date}
             className="block text-sm text-muted-foreground"
           >
             Published on DATE
           </time>
-        )}
+        )} */}
         <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
           {post.title}
         </h1>
@@ -153,8 +150,8 @@ export default async function PostPage({ params }: PostPageProps) {
       <Mdx code={post.body.code} />
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
-        <Link href="/blog">
-          <Icons.chevronLeft className="mr-2 h-4 w-4" />
+        <Link href="/writing">
+          <Icons.navigation.back className="mr-2 h-4 w-4" />
           See all posts
         </Link>
       </div>

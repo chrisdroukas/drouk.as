@@ -1,8 +1,8 @@
-import { classnames } from "./classnames";
+import { cn } from "./classnames";
 
 describe("classnames", () => {
   it("should correctly merge classnames", () => {
-    const classes = classnames("bg-red-500", "hover:bg-blue-500", [
+    const classes = cn("bg-red-500", "hover:bg-blue-500", [
       "md:bg-green-500",
       "md:hover:bg-yellow-500",
     ]);
@@ -15,7 +15,7 @@ describe("classnames", () => {
 
   it("should correctly merge classnames with falsy values", () => {
     const condition = false;
-    const classes = classnames("bg-red-500", condition && "hover:bg-blue-500", [
+    const classes = cn("bg-red-500", condition && "hover:bg-blue-500", [
       "md:bg-green-500",
       condition && "md:hover:bg-yellow-500",
     ]);

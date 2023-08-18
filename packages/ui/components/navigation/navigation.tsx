@@ -1,116 +1,67 @@
 "use client";
 
-import { FC, ReactNode, useState, useCallback } from "react";
-import Link from "next/link";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { FC, useState, useLayoutEffect } from "react";
 
-import { SiteConfiguration, NavigationItem } from "@/types";
-import { classnames } from "@/library/utilities/classnames";
-import { buttonVariants } from "@/components/button";
-import { Icons } from "@/components/icons";
-import { MobileNavigation } from "./mobile-navigation";
+import { NavigationCompact } from "@/components/navigation/navigation-compact";
+
+import { useBreakpoint } from "@/library/hooks";
+
+import { NavigationItem, SiteConfiguration } from "@/types";
+import { NavigationRegular } from "./navigation-regular";
+
+export enum UIMode {
+  Regular,
+  Compact,
+}
 
 enum AuthenticationMode {
   Login,
   Register,
 }
 
-interface NavigationProps {
+export interface NavigationProps {
   configuration: SiteConfiguration;
   navigationItems?: NavigationItem[];
   displayNavigationItems?: boolean;
   authenticationMode?: AuthenticationMode;
-  children?: ReactNode;
 }
-
-interface NavigationItemProps {
-  item: NavigationItem;
-  isActive: boolean;
-}
-
-const NavigationItemComponent: FC<NavigationItemProps> = ({
-  item,
-  isActive,
-}) => (
-  <Link
-    href={item.disabled ? "#" : item.href}
-    className={classnames(
-      "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
-      isActive ? "text-foreground" : "text-muted-foreground",
-      item.disabled && "cursor-not-allowed opacity-80"
-    )}
-  >
-    {item.title}
-  </Link>
-);
 
 export const Navigation: FC<NavigationProps> = ({
   configuration,
   navigationItems,
   displayNavigationItems = true,
-  // authenticationMode = AuthenticationMode.Login,
-  children,
 }: NavigationProps) => {
-  const segment = useSelectedLayoutSegment();
-  // const [showMobileNavigation, setShowMobileNavigation] =
-  //   useState<boolean>(false);
+  const { isAboveSm } = useBreakpoint("sm");
 
-  // const toggleMobileNavigation = useCallback(() => {
-  //   setShowMobileNavigation((prevState) => !prevState);
-  // }, []);
+  const [navigationUIMode, setNavigationUIMode] = useState<UIMode>(
+    UIMode.Regular
+  );
 
-  const isItemActive = (item: NavigationItem) =>
-    item.href.startsWith(`/${segment}`);
+  useLayoutEffect(() => {
+    if (isAboveSm) {
+      setNavigationUIMode(UIMode.Regular);
+    } else {
+      setNavigationUIMode(UIMode.Compact);
+    }
+  }, [isAboveSm]);
 
-  return (
-    <div className="flex flex-1 justify-between select-none md:gap-10">
-      <Link href="/" className="hidden items-center space-x-2 sm:flex">
-        <span className="hidden font-extrabold tracking-tight sm:inline-block">
-          {configuration.name}
-        </span>
-      </Link>
-
-      {displayNavigationItems ? (
-        <div className="hidden sm:flex md:gap-10">
-          {navigationItems?.length ? (
-            <nav className="hidden gap-6 sm:flex">
-              {navigationItems.map((item, index) => (
-                <NavigationItemComponent
-                  key={index}
-                  item={item}
-                  isActive={isItemActive(item)}
-                />
-              ))}
-            </nav>
-          ) : null}
-        </div>
-      ) : null}
-
-      <button className="flex items-center space-x-2 sm:hidden">
-        {/* {showMobileNavigation ? <Icons.close /> : <Icons.menu />} */}
-        <span className="font-bold">{configuration.name}</span>
-      </button>
-
-      <nav>
-        <Link
-          href="https://linkedin.com/in/chrisdroukas"
-          className={classnames(
-            buttonVariants({ variant: "secondary", size: "sm" }),
-            "px-4"
-          )}
-        >
-          LinkedIn
-        </Link>
-      </nav>
-
-      {/* {showMobileNavigation && navigationItems && (
-        <MobileNavigation
+  switch (navigationUIMode) {
+    case UIMode.Regular: {
+      return (
+        <NavigationRegular
+          configuration={configuration}
+          displayNavigationItems={displayNavigationItems}
+          navigationItems={navigationItems}
+        />
+      );
+    }
+    case UIMode.Compact: {
+      return (
+        <NavigationCompact
           configuration={configuration}
           navigationItems={navigationItems}
-        >
-          {children}
-        </MobileNavigation>
-      )} */}
-    </div>
-  );
+        />
+      );
+    }
+  }
 };

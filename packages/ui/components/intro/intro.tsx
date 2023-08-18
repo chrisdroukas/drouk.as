@@ -1,15 +1,15 @@
-import { FC } from "react";
 import Link from "next/link";
+import { FC } from "react";
 import Balancer from "react-wrap-balancer";
 
-import { classnames } from "@/library/utilities/classnames";
-import { ButtonSize, ButtonVariant, buttonVariants } from "@/components/button";
+import { ButtonProps, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/library/utilities/classnames";
 
 interface IntroButton {
   href: string;
   label: string;
-  variant?: ButtonVariant;
-  size?: ButtonSize;
+  variant?: ButtonProps["variant"];
+  size?: ButtonProps["size"];
 }
 
 interface IntroProps {
@@ -20,8 +20,8 @@ interface IntroProps {
 
 export const Intro: FC<IntroProps> = ({ title, body, buttons }) => {
   return (
-    <section className="flex flex-1 items-center justify-center">
-      <div className="container flex flex-1 max-w-[64rem] flex-col items-center gap-4 text-center">
+    <section className="space-y-6 pb-8 pt-24 select-none md:pt-48 cursor-default">
+      <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center ">
         <h1 className="font-heading tracking-tight text-5xl sm:text-6xl md:text-7xl">
           <Balancer>{title}</Balancer>
         </h1>
@@ -34,7 +34,7 @@ export const Intro: FC<IntroProps> = ({ title, body, buttons }) => {
               <Link
                 key={index}
                 href={button.href}
-                className={classnames(
+                className={cn(
                   buttonVariants({ variant: button.variant, size: button.size })
                 )}
               >

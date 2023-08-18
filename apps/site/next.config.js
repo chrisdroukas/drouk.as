@@ -4,7 +4,6 @@ const config = {
   swcMinify: true,
   transpilePackages: ["ui"],
   experimental: {
-    appDir: true,
     /**
      * SWC and ESBuild are being included in output incorrectly
      * due to some odd bundling behavior from Storybook in

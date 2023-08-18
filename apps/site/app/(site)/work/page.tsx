@@ -16,19 +16,12 @@ export default async function BlogPage() {
             Work
           </h1>
           <p className="my-4 text-xl text-muted-foreground">
-            Chris Droukas is a design technologist and runner living in New
-            York.
+            A selected collection of projects I've worked on.
           </p>
         </div>
       </div>
       <hr className="my-8" />
 
-      <p className="my-4 text-xl text-muted-foreground">Design excellence</p>
-      <p className="my-4 text-xl text-muted-foreground">
-        I began my career designing social newsreading applications for The
-        Washington Post in an experimental technology division called Washington
-        Post Labs.
-      </p>
       {/* {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">posts</div>
       ) : (

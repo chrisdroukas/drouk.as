@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import Image from "next/image";
+import Link from "next/link";
 
-import { AspectRatio } from "ui/components/aspect-ratio";
+import { AspectRatio } from "ui/components/ui/aspect-ratio";
 // import { formatDate } from "@/lib/utils";
 
 export const metadata = {
@@ -53,9 +53,7 @@ export default async function BlogPage() {
                     />
                   </AspectRatio>
                 )}
-                <h2 className="font-heading text-2xl font-extrabold">
-                  {post.title}
-                </h2>
+                <h2 className="font-heading text-2xl">{post.title}</h2>
                 {post.description && (
                   <p className="text-muted-foreground">{post.description}</p>
                 )}

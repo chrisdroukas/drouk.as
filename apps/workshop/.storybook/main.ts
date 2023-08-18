@@ -2,7 +2,7 @@ import { StorybookConfig } from "@storybook/react-vite";
 import { mergeConfig } from "vite";
 import path from "path";
 const config: StorybookConfig = {
-  stories: [" ../stories/**/*.stories.tsx"],
+  stories: ["../stories/**/*.stories.tsx"],
   addons: [
     "storybook-addon-swc",
     "@storybook/addon-links",

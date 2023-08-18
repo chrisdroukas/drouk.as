@@ -1,6 +1,6 @@
+import { SiteConfiguration } from "@/types";
 import { render, screen } from "@testing-library/react";
 import { Footer } from "./footer";
-import { SiteConfiguration } from "@/types";
 
 const mockConfiguration: SiteConfiguration = {
   name: "Test Site",

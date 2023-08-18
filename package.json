@@ -3,18 +3,24 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "dotenv -- turbo run build",
-    "clean": "dotenv -- turbo run clean",
+    "clean": "dotenv -- turbo run clean && rm -rf node_modules",
     "dev": "dotenv -- turbo run dev --no-cache --continue",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "dotenv -- turbo run lint",
     "test": "dotenv -- turbo run test",
-    "ui:add": "pnpm --filter ui ui:add"
+    "ui:add": "pnpm --filter ui ui:add",
+    "ui:init": "pnpm --filter ui ui:init",
+    "ui:diff": "pnpm --filter ui ui:diff"
   },
   "devDependencies": {
     "@turbo/gen": "1.10.12",
-    "dotenv-cli": "7.2.1",
+    "dotenv-cli": "7.3.0",
     "eslint": "8.47.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "3.0.2",

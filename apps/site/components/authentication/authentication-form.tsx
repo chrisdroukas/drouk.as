@@ -1,18 +1,18 @@
 "use client";
 
-import { useState, HTMLAttributes } from "react";
-import { useSearchParams } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
+import { HTMLAttributes, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { classnames } from "ui/library/utilities/classnames";
-import { buttonVariants } from "ui/components/button";
-import { Input } from "ui/components/input";
-import { Label } from "ui/components/label";
-import { toast } from "ui/components/toast/use-toast";
 import { Icons } from "ui/components/icons";
+import { buttonVariants } from "ui/components/ui/button";
+import { Input } from "ui/components/ui/input";
+import { Label } from "ui/components/ui/label";
+import { toast } from "ui/components/ui/use-toast";
+import { cn } from "ui/library/utilities/classnames";
 
 import { userAuthSchema } from "../../library/validation/auth";
 
@@ -61,7 +61,7 @@ export function AuthenticationForm({
   }
 
   return (
-    <div className={classnames("grid gap-6", className)} {...props}>
+    <div className={cn("grid gap-6", className)} {...props}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-2">
           <div className="grid gap-1">
@@ -84,9 +84,9 @@ export function AuthenticationForm({
               </p>
             )}
           </div>
-          <button className={classnames(buttonVariants())} disabled={isLoading}>
+          <button className={cn(buttonVariants())} disabled={isLoading}>
             {isLoading && (
-              <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+              <Icons.loading className="mr-2 h-4 w-4 animate-spin" />
             )}
             Sign In with Email
           </button>
@@ -104,7 +104,7 @@ export function AuthenticationForm({
       </div>
       <button
         type="button"
-        className={classnames(buttonVariants({ variant: "outline" }))}
+        className={cn(buttonVariants({ variant: "outline" }))}
         onClick={() => {
           setIsGitHubLoading(true);
           signIn("github");
@@ -112,7 +112,7 @@ export function AuthenticationForm({
         disabled={isLoading || isGitHubLoading}
       >
         {isGitHubLoading ? (
-          <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+          <Icons.loading className="mr-2 h-4 w-4 animate-spin" />
         ) : (
           <Icons.gitHub className="mr-2 h-4 w-4" />
         )}{" "}
