@@ -5,10 +5,10 @@ import { useSelectedLayoutSegment } from "next/navigation";
 import { FC, ReactNode, useCallback, useState } from "react";
 
 import { Icons } from "@/components/icons";
+import { MobileNavigationDialog } from "@/components/navigation/mobile-navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/library/utilities/classnames";
 import { NavigationItem, SiteConfiguration } from "@/types";
-import { MobileNavigation } from "./mobile-navigation";
 
 enum AuthenticationMode {
   Login,
@@ -106,13 +106,15 @@ export const Navigation: FC<NavigationProps> = ({
         </Link>
       </nav>
 
-      {showMobileNavigation && navigationItems && (
-        <MobileNavigation
+      {navigationItems && (
+        <MobileNavigationDialog
+          open={showMobileNavigation}
+          onOpenChange={toggleMobileNavigation}
           configuration={configuration}
           navigationItems={navigationItems}
         >
           {children}
-        </MobileNavigation>
+        </MobileNavigationDialog>
       )}
     </div>
   );

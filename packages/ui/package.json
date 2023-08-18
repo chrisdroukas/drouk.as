@@ -17,8 +17,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "test": "jest",
     "ui:add": "pnpm dlx shadcn-ui@latest add",
-    "ui:init": "pnpm dlx shadcn-ui@latest init",
-    "ui:diff": "pnpm dlx shadcn-ui@latest diff"
+    "ui:diff": "pnpm dlx shadcn-ui@latest diff",
+    "ui:init": "pnpm dlx shadcn-ui@latest init"
   },
   "dependencies": {
     "@hookform/resolvers": "3.2.0",
@@ -83,6 +83,7 @@
     "jest-presets": "workspace:*",
     "postcss": "8.4.28",
     "react": "18.2.0",
+    "react-responsive": "9.0.2",
     "react-wrap-balancer": "1.1.0",
     "tailwindcss": "3.3.3",
     "tilg": "0.1.1",
