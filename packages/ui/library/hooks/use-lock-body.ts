@@ -4,16 +4,26 @@ import { useLayoutEffect } from "react";
 
 export function useLockBody(lock?: boolean) {
   useLayoutEffect(() => {
-    let originalStyle: string;
+    let overflow: string;
 
     if (lock) {
-      originalStyle = window.getComputedStyle(document.body).overflow;
+      /*
+       * Save the original value of the overflow style.
+       */
+      overflow = window.getComputedStyle(document.body).overflow;
+
+      /*
+       * Set the overflow style to "hidden" to prevent scrolling on the page.
+       */
       document.body.style.overflow = "hidden";
     }
 
     return () => {
       if (lock) {
-        document.body.style.overflow = originalStyle;
+        /*
+         * Restore the original value of the overflow style on unmount.
+         */
+        document.body.style.overflow = overflow;
       }
     };
   }, [lock]);
