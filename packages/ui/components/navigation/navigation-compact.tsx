@@ -13,7 +13,7 @@ import {
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 
-import { useBreakpoint, useLockBody } from "@/library/hooks";
+import { useBreakpoint } from "@/library/hooks";
 
 import { DialogProps } from "@radix-ui/react-dialog";
 
@@ -28,8 +28,6 @@ const NavigationCompactDialog = ({
   onOpenChange,
   ...props
 }: NavigationCompactProps) => {
-  useLockBody();
-
   const handleOnOpenChange = () => {
     if (onOpenChange) {
       onOpenChange(false);

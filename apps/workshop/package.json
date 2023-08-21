@@ -23,7 +23,7 @@
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "eslint-config-custom": "workspace:*",
-    "serve": "14.2.0",
+    "serve": "14.2.1",
     "storybook": "7.3.2",
     "storybook-addon-swc": "1.2.0",
     "storybook-dark-mode": "3.0.1",
