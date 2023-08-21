@@ -2,12 +2,19 @@
 
 import { useLayoutEffect } from "react";
 
-export function useLockBody() {
-  useLayoutEffect((): (() => void) => {
-    const originalStyle: string = window.getComputedStyle(
-      document.body
-    ).overflow;
-    document.body.style.overflow = "hidden";
-    return () => (document.body.style.overflow = originalStyle);
-  }, []);
+export function useLockBody(lock?: boolean) {
+  useLayoutEffect(() => {
+    let originalStyle: string;
+
+    if (lock) {
+      originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      if (lock) {
+        document.body.style.overflow = originalStyle;
+      }
+    };
+  }, [lock]);
 }
