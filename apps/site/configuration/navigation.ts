@@ -11,10 +11,10 @@ export const navigationConfiguration: NavigationConfiguration = {
     //   title: Strings.configuration.navigation.work.title,
     //   href: Strings.configuration.navigation.work.href,
     // },
-    // {
-    //   title: Strings.configuration.navigation.writing.title,
-    //   href: Strings.configuration.navigation.writing.href,
-    // },
+    {
+      title: Strings.configuration.navigation.writing.title,
+      href: Strings.configuration.navigation.writing.href,
+    },
     // {
     //   title: Strings.configuration.navigation.running.title,
     //   href: Strings.configuration.navigation.running.href,
