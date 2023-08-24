@@ -30,7 +30,7 @@ export default async function BlogPage() {
         living in New York. I'm currently leading design at Goldman Sachs on{" "}
         <Link
           className="droukas-link-underlined"
-          href={"https://developer.gs.com/discover/plottool-pr"}
+          href={"https://developer.gs.com/discover/plottool-pro"}
         >
           PlotTool Pro
         </Link>
