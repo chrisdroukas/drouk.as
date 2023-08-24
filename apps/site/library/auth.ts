@@ -1,6 +1,6 @@
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { NextAuthOptions } from "next-auth";
-import EmailProvider from "next-auth/providers/email";
+import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import { Client } from "postmark";
 
@@ -8,6 +8,25 @@ import { siteConfiguration } from "../configuration/site";
 import { db } from "../library/db";
 
 const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN!);
+
+// import NextAuth, { NextAuthOptions } from "next-auth";
+// import { PrismaAdapter } from "@next-auth/prisma-adapter";
+// import prisma from "@/lib/prisma";
+// import GoogleProvider from "next-auth/providers/google";
+
+// export const authOptions: NextAuthOptions = {
+//   adapter: PrismaAdapter(prisma),
+//   providers: [
+//     GoogleProvider({
+//       clientId: process.env.GOOGLE_CLIENT_ID as string,
+//       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+//     }),
+//   ],
+// };
+
+// const handler = NextAuth(authOptions);
+
+// export { handler as GET, handler as POST };
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
@@ -22,49 +41,9 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GITHUB_CLIENT_ID!,
       clientSecret: process.env.GITHUB_CLIENT_SECRET!,
     }),
-    EmailProvider({
-      from: process.env.SMTP_FROM,
-      sendVerificationRequest: async ({ identifier, url, provider }) => {
-        const user = await db.user.findUnique({
-          where: {
-            email: identifier,
-          },
-          select: {
-            emailVerified: true,
-          },
-        });
-
-        const templateId = user?.emailVerified
-          ? process.env.POSTMARK_SIGN_IN_TEMPLATE
-          : process.env.POSTMARK_ACTIVATION_TEMPLATE;
-        if (!templateId) {
-          throw new Error("Missing template ID.");
-        }
-
-        const result = await postmarkClient.sendEmailWithTemplate({
-          TemplateId: parseInt(templateId),
-          To: identifier,
-          From: provider.from as string,
-          TemplateModel: {
-            action_url: url,
-            product_name: siteConfiguration.name,
-          },
-          Headers: [
-            {
-              /**
-               * Prevent Gmail from threading emails.
-               * @see https://stackoverflow.com/q/23434110/1313761
-               */
-              Name: "X-Entity-Ref-ID",
-              Value: new Date().getTime() + "",
-            },
-          ],
-        });
-
-        if (result.ErrorCode) {
-          throw new Error(result.Message);
-        }
-      },
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
   callbacks: {
