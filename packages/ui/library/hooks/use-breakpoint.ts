@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import resolveConfig from "tailwindcss/resolveConfig";
 import { Config, ScreensConfig } from "tailwindcss/types/config";
 
-import * as tailwindConfig from "tailwind.config";
+import tailwindConfig from "../../tailwind.config.js";
 
 const fullConfig = resolveConfig(tailwindConfig as unknown as Config);
 
@@ -18,11 +18,13 @@ type BreakpointKey = keyof ScreensConfig;
 
 export function useBreakpoint<K extends string>(breakpointKey: K) {
   const breakpointValue = breakpoints[breakpointKey as BreakpointKey];
+
   const bool = useMediaQuery({
     query: `(max-width: ${breakpointValue})`,
   });
+
   const capitalizedKey =
-    breakpointKey[0].toUpperCase() + breakpointKey.substring(1);
+    breakpointKey?.[0]?.toUpperCase() + breakpointKey?.substring(1);
 
   type KeyAbove = `isAbove${Capitalize<K>}`;
   type KeyBelow = `isBelow${Capitalize<K>}`;
