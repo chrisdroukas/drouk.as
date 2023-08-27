@@ -47,7 +47,7 @@
     "@types/react-dom": "18.2.7",
     "@vercel/analytics": "1.0.2",
     "autoprefixer": "10.4.15",
-    "eslint": "8.47.0",
+    "eslint": "8.48.0",
     "eslint-config-custom": "workspace:*",
     "postcss": "8.4.28",
     "rehype": "12.0.1",
