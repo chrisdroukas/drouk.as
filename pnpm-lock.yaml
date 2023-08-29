@@ -368,8 +368,8 @@ importers:
         specifier: 2.30.0
         version: 2.30.0
       lucide-react:
-        specifier: 0.269.0
-        version: 0.269.0(react@18.2.0)
+        specifier: 0.271.0
+        version: 0.271.0(react@18.2.0)
       next:
         specifier: 13.4.19
         version: 13.4.19(@babel/core@7.22.11)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
@@ -11767,8 +11767,8 @@ packages:
       lru-cache: 4.0.2
     dev: false
 
-  /lucide-react@0.269.0(react@18.2.0):
-    resolution: {integrity: sha512-+ViEb/2eJJt43/CtxpTfvqu/8gzK49cSUdeuqRuFYiZmX9AvwfumtETM4plhXHymfHb6/mVbHg9uIlc13y+uew==}
+  /lucide-react@0.271.0(react@18.2.0):
+    resolution: {integrity: sha512-oc3/6m7gg/5E9FsX0F7t7DOuBiafsLTwg5/f0hJUJYePbmLmCXpZj1OESilmaUSwXGztawV7V12ZXBfAb8wRAA==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -15433,6 +15433,7 @@ packages:
 
   /tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+    requiresBuild: true
 
   /tr46@1.0.1:
     resolution: {integrity: sha512-dTpowEjclQ7Kgx5SdBkqRzVhERQXov8/l9Ft9dVM9fmg0W0KQSVaXX9T4i6twCPNtYiZM53lpSSUAwJbFPOHxA==}
@@ -16262,6 +16263,7 @@ packages:
 
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+    requiresBuild: true
 
   /webidl-conversions@4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
