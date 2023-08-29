@@ -16,7 +16,7 @@
     "concurrently": "8.2.1",
     "contentlayer": "0.3.4",
     "cookies-next": "3.0.0",
-    "@hookform/resolvers": "3.3.0",
+    "@hookform/resolvers": "3.3.1",
     "date-fns": "2.30.0",
     "firebase-admin": "11.10.1",
     "gray-matter": "4.0.3",
