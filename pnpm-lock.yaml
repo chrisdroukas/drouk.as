@@ -142,8 +142,8 @@ importers:
         specifier: 5.2.0
         version: 5.2.0
       rehype:
-        specifier: 13.0.0
-        version: 13.0.0
+        specifier: 13.0.1
+        version: 13.0.1
       rehype-autolink-headings:
         specifier: 6.1.1
         version: 6.1.1
@@ -14322,8 +14322,8 @@ packages:
       unified: 10.1.2
     dev: false
 
-  /rehype@13.0.0:
-    resolution: {integrity: sha512-oKDh5mN59cKd8Fu/V8pomLcodHIlCGNnbIieQUSUTzUxEQYZ6vUcwcGTk8lcxvByeVgMcHAzLOI16rkM99dcXA==}
+  /rehype@13.0.1:
+    resolution: {integrity: sha512-AcSLS2mItY+0fYu9xKxOu1LhUZeBZZBx8//5HKzF+0XP+eP8+6a5MXn2+DW2kfXR6Dtp1FEXMVrjyKAcvcU8vg==}
     dependencies:
       '@types/hast': 3.0.0
       rehype-parse: 9.0.0
