@@ -71,7 +71,7 @@
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.4",
     "@types/mdx": "2.0.7",
-    "@types/node": "20.5.7",
+    "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@vercel/analytics": "1.0.2",
