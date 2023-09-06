@@ -21,13 +21,13 @@
   "devDependencies": {
     "@turbo/gen": "1.10.13",
     "dotenv-cli": "7.3.0",
-    "eslint": "8.47.0",
+    "eslint": "8.48.0",
     "eslint-config-custom": "workspace:*",
-    "prettier": "3.0.2",
+    "prettier": "3.0.3",
     "turbo": "1.10.13",
     "typescript": "5.2.2"
   },
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.7.4",
   "engines": {
     "node": ">=18.17.0"
   }
