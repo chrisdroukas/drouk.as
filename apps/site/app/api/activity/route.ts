@@ -4,8 +4,12 @@ import { ActivityStats } from "../schemas/activity";
 
 export async function GET() {
   const entries = await firebase.collection("access_tokens").get();
+  
+  const refresh_token = entries.docs.map(doc => doc.data()).find(data => 'refresh_token' in data)?.refresh_token;
 
-  let [{ refresh_token }] = entries.docs.map((entry) => entry.data());
+  if (!refresh_token) {
+    throw new Error("refresh_token not found");
+  }
 
   const responseToken = await fetch(
     `https://www.strava.com/api/v3/oauth/token?client_id=${process.env.STRAVA_CLIENT_ID}&client_secret=${process.env.STRAVA_CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${refresh_token}`,
