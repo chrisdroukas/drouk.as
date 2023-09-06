@@ -18,11 +18,13 @@ type BreakpointKey = keyof ScreensConfig;
 
 export function useBreakpoint<K extends string>(breakpointKey: K) {
   const breakpointValue = breakpoints[breakpointKey as BreakpointKey];
+
   const bool = useMediaQuery({
     query: `(max-width: ${breakpointValue})`,
   });
+
   const capitalizedKey =
-    breakpointKey[0].toUpperCase() + breakpointKey.substring(1);
+    breakpointKey?.[0]?.toUpperCase() + breakpointKey?.substring(1);
 
   type KeyAbove = `isAbove${Capitalize<K>}`;
   type KeyBelow = `isBelow${Capitalize<K>}`;
