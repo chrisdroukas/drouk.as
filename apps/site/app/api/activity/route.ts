@@ -1,44 +1,92 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import firebase from "../firebase";
 import { ActivityStats } from "../schemas/activity";
 
-export async function GET() {
-  const entries = await firebase.collection("access_tokens").get();
-  
-  const refresh_token = entries.docs.map(doc => doc.data()).find(data => 'refresh_token' in data)?.refresh_token;
+const AccessTokensSchema = z.object({
+  refresh_token: z.string(),
+  access_token: z.string(),
+});
 
-  if (!refresh_token) {
-    throw new Error("refresh_token not found");
+/**
+ * Asynchronous GET function to handle request.
+ */
+export async function GET() {
+  /**
+   * Fetch all documents from "access_tokens" collection.
+   */
+  const querySnapshot = await firebase.collection("access_tokens").get();
+
+  /**
+   * Check if QuerySnapshot contains any documents.
+   */
+  if (querySnapshot.empty) {
+    throw new Error("There are no documents in this QuerySnapshot.");
   }
 
-  const responseToken = await fetch(
-    `https://www.strava.com/api/v3/oauth/token?client_id=${process.env.STRAVA_CLIENT_ID}&client_secret=${process.env.STRAVA_CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${refresh_token}`,
-    {
-      method: "POST",
+  try {
+    /**
+     * Validate the first document data against Zod schema.
+     */
+    const parsedData = AccessTokensSchema.parse(querySnapshot.docs[0]?.data());
+    const refresh_token = parsedData.refresh_token;
+
+    /**
+     * Fetch a new token using the refresh token.
+     */
+    const responseToken = await fetch(
+      `https://www.strava.com/api/v3/oauth/token?client_id=${process.env.STRAVA_CLIENT_ID}&client_secret=${process.env.STRAVA_CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${refresh_token}`,
+      {
+        method: "POST",
+      }
+    );
+
+    /**
+     * Parse the new token data.
+     */
+    const { access_token: newToken, refresh_token: newRefreshToken } =
+      await responseToken.json();
+
+    /**
+     * Fetch the statistics for the athlete.
+     */
+    const responseStatistics = await fetch(
+      "https://www.strava.com/api/v3/athletes/76396568/stats",
+      {
+        headers: {
+          Authorization: `Bearer ${newToken}`,
+        },
+      }
+    );
+
+    /**
+     * Update the access_tokens collection with the new tokens.
+     */
+    await firebase
+      .collection("access_tokens")
+      .doc(process.env.STRAVA_TOKEN_DOCUMENT!)
+      .update({
+        access_token: newToken,
+        refresh_token: newRefreshToken,
+      });
+
+    /**
+     * Parse the statistics data.
+     */
+    const statistics: ActivityStats = await responseStatistics.json();
+
+    /**
+     * Return the statistics as JSON.
+     */
+    return NextResponse.json({ statistics });
+  } catch (error) {
+    /**
+     * Error handling for validation failures and other exceptions.
+     */
+    if (error instanceof Error) {
+      throw new Error(`Data validation failed: ${error.message}`);
+    } else {
+      throw new Error("An unknown error occurred.");
     }
-  );
-
-  const { access_token: newToken, refresh_token: newRefreshToken } =
-    await responseToken.json();
-
-  const responseStatistics = await fetch(
-    "https://www.strava.com/api/v3/athletes/76396568/stats",
-    {
-      headers: {
-        Authorization: `Bearer ${newToken}`,
-      },
-    }
-  );
-
-  firebase
-    .collection("access_tokens")
-    .doc(process.env.STRAVA_TOKEN_DOCUMENT!)
-    .update({
-      access_token: newToken,
-      refresh_token: newRefreshToken,
-    });
-
-  const statistics: ActivityStats = await responseStatistics.json();
-
-  return NextResponse.json({ statistics });
+  }
 }

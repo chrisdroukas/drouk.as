@@ -5,7 +5,7 @@ import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
 import { HTMLAttributes, useState } from "react";
 import { useForm } from "react-hook-form";
-import * as z from "zod";
+import { z } from "zod";
 
 import { Icons } from "ui/components/icons";
 import { buttonVariants } from "ui/components/ui/button";
