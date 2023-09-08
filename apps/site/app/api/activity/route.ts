@@ -1,9 +1,12 @@
+import { kv } from "@vercel/kv";
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import firebase from "../firebase";
 import { ActivityStats } from "../schemas/activity";
 
-const AccessTokensSchema = z.object({
+/**
+ * Token validation schema.
+ */
+const TokensSchema = z.object({
   refresh_token: z.string(),
   access_token: z.string(),
 });
@@ -13,67 +16,64 @@ const AccessTokensSchema = z.object({
  */
 export async function GET() {
   /**
-   * Fetch all documents from "access_tokens" collection.
+   * Retrieve refresh_token from Vercel KV.
    */
-  const querySnapshot = await firebase.collection("access_tokens").get();
+  const refresh_token = await kv.hget("strava", "refresh_token");
 
   /**
-   * Check if QuerySnapshot contains any documents.
+   * Fetch the new tokens from the Strava API.
    */
-  if (querySnapshot.empty) {
-    throw new Error("There are no documents in this QuerySnapshot.");
-  }
+  const responseToken = await fetch(
+    `https://www.strava.com/api/v3/oauth/token?client_id=${process.env.STRAVA_CLIENT_ID}&client_secret=${process.env.STRAVA_CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${refresh_token}`,
+    {
+      method: "POST",
+    }
+  );
 
   try {
     /**
-     * Validate the first document data against Zod schema.
+     * Parse the JSON response to get the tokens.
      */
-    const parsedData = AccessTokensSchema.parse(querySnapshot.docs[0]?.data());
-    const refresh_token = parsedData.refresh_token;
+    const tokens = await responseToken.json();
 
     /**
-     * Fetch a new token using the refresh token.
+     * Validate and cast the JSON to the
+     * expected schema.
      */
-    const responseToken = await fetch(
-      `https://www.strava.com/api/v3/oauth/token?client_id=${process.env.STRAVA_CLIENT_ID}&client_secret=${process.env.STRAVA_CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${refresh_token}`,
-      {
-        method: "POST",
-      }
-    );
+    const { access_token: accessToken, refresh_token: refreshToken } =
+      TokensSchema.parse(tokens);
 
     /**
-     * Parse the new token data.
+     * Save the new tokens to Vercel KV.
      */
-    const { access_token: newToken, refresh_token: newRefreshToken } =
-      await responseToken.json();
+    await kv.hset("strava", {
+      refresh_token: refreshToken,
+      access_token: accessToken,
+    });
 
     /**
-     * Fetch the statistics for the athlete.
+     * Fetch the athlete statistics
+     * from the Strava API.
      */
     const responseStatistics = await fetch(
       "https://www.strava.com/api/v3/athletes/76396568/stats",
       {
         headers: {
-          Authorization: `Bearer ${newToken}`,
+          Authorization: `Bearer ${accessToken}`,
         },
       }
     );
 
     /**
-     * Update the access_tokens collection with the new tokens.
+     * Convert the raw API response to JSON.
      */
-    await firebase
-      .collection("access_tokens")
-      .doc(process.env.STRAVA_TOKEN_DOCUMENT!)
-      .update({
-        access_token: newToken,
-        refresh_token: newRefreshToken,
-      });
+    const statisticsJSON = await responseStatistics.json();
 
     /**
-     * Parse the statistics data.
+     * Validate and cast the JSON to
+     * the ActivityStats type.
      */
-    const statistics: ActivityStats = await responseStatistics.json();
+    const statistics = ActivityStats.parse(statisticsJSON);
 
     /**
      * Return the statistics as JSON.
