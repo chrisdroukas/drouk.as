@@ -12,6 +12,8 @@ interface SiteLayoutProps {
   children: ReactNode;
 }
 
+export const runtime = "edge";
+
 export default async function SiteLayout({ children }: SiteLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
