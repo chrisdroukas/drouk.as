@@ -12,6 +12,8 @@ interface AuthLayoutProps {
   children: ReactNode;
 }
 
+export const runtime = "edge";
+
 export default async function SiteLayout({ children }: AuthLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">

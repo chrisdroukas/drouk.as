@@ -1,7 +1,7 @@
 import { Intro } from "ui/components/intro";
 import { Strings } from "ui/library/strings";
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <Intro

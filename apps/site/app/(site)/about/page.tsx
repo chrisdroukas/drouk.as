@@ -1,7 +1,12 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { Resume } from "./data";
 
-export default async function BlogPage() {
+export const metadata: Metadata = {
+  title: "About",
+};
+
+export default async function About() {
   //   const posts = allPosts
   //     .filter((post) => post.published)
   //     .sort((a, b) => {

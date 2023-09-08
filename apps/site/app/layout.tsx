@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Metadata } from "next";
 
 import "ui/styles/globals.css";
 
@@ -8,13 +9,44 @@ import { ThemeProvider } from "ui/components/theme-provider";
 import { cn } from "ui/library/utilities/classnames";
 
 import { getFontVariables } from "../components/fonts";
+import { siteConfiguration } from "../configuration/site";
 
 interface RootLayoutProps {
   children: ReactNode;
 }
 
+export const metadata: Metadata = {
+  title: {
+    default: siteConfiguration.name,
+    template: `%s - ${siteConfiguration.name}`,
+  },
+  description: siteConfiguration.description,
+  keywords: siteConfiguration.keywords,
+  authors: [
+    {
+      name: siteConfiguration.author.name,
+      url: siteConfiguration.author.url,
+    },
+  ],
+  creator: siteConfiguration.creator,
+  metadataBase: new URL(siteConfiguration.links.url),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfiguration.links.url,
+    title: siteConfiguration.name,
+    description: siteConfiguration.description,
+    siteName: siteConfiguration.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfiguration.name,
+    description: siteConfiguration.description,
+  },
+};
+
 // The RootLayout component acts as the base layout of the application
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
   // Set up fonts
   const { fontSansVariable, fontHeadingVariable } = getFontVariables();
 

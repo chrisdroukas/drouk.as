@@ -6,6 +6,12 @@ export const Strings = {
   configuration: {
     name: "drouk.as/",
     description: "Chris Droukas is a Design Technologist in New York.",
+    keywords: ["Chris Droukas", "Design Technologist"],
+    author: {
+      name: "Chris Droukas",
+      url: "https://drouk.as",
+    },
+    creator: "Chris Droukas",
     ogImage: "https://drouk.as/images/og-image.png",
     links: {
       url: "https://drouk.as",

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import Image from "next/image";
@@ -6,11 +7,12 @@ import Link from "next/link";
 import { AspectRatio } from "ui/components/ui/aspect-ratio";
 // import { formatDate } from "@/lib/utils";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Writing",
+  description: "Here's a look at what I've been up to lately.",
 };
 
-export default async function BlogPage() {
+export default async function Writing() {
   const posts = allPosts
     .filter((post) => post.published)
     .sort((a, b) => {
