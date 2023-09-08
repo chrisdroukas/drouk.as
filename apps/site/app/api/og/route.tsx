@@ -1,12 +1,6 @@
 import { ImageResponse, NextRequest } from "next/server";
 
-const calSans = fetch(
-  new URL("/assets/fonts/CalSans-SemiBold.ttf", import.meta.url)
-).then((res) => res.arrayBuffer());
-
 export async function GET(request: NextRequest) {
-  const calSansData = await calSans;
-
   try {
     const { searchParams } = new URL(request.url);
 
@@ -26,12 +20,6 @@ export async function GET(request: NextRequest) {
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: "Cal Sans",
-            data: calSansData,
-          },
-        ],
       }
     );
   } catch (e: any) {
