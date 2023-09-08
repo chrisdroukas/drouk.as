@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import { FC } from "react";
 import {
   Card,
@@ -15,7 +15,7 @@ interface WorkCardProps {
   name?: string;
   description?: string;
   position?: string;
-  url?: URL;
+  url?: LinkProps["href"];
 }
 
 export const WorkCard: FC<WorkCardProps> = ({

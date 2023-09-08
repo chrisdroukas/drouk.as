@@ -71,9 +71,14 @@ export async function GET() {
       });
 
     /**
-     * Parse the statistics data.
+     * Convert the raw API response to JSON.
      */
-    const statistics: ActivityStats = await responseStatistics.json();
+    const statisticsJSON = await responseStatistics.json();
+
+    /**
+     * Validate and cast the JSON to the ActivityStats type using Zod.
+     */
+    const statistics = ActivityStats.parse(statisticsJSON);
 
     /**
      * Return the statistics as JSON.
