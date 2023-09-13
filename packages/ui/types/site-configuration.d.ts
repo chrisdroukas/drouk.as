@@ -4,7 +4,6 @@ export type SiteConfiguration = {
   name: string;
   description: string;
   keywords: string | string[];
-  ogImage: string;
   author: {
     name: string;
     url: string | URL;

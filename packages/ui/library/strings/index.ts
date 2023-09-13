@@ -12,7 +12,6 @@ export const Strings = {
       url: "https://drouk.as",
     },
     creator: "Chris Droukas",
-    ogImage: "https://drouk.as/images/og-image.png",
     links: {
       url: "https://drouk.as",
       twitter: "https://twitter.com/chrisdroukas",

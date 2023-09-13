@@ -10,7 +10,6 @@ export const siteConfiguration: SiteConfiguration = {
     url: Strings.configuration.author.url,
   },
   creator: Strings.configuration.creator,
-  ogImage: Strings.configuration.ogImage,
   links: {
     url: Strings.configuration.links.url,
     twitter: Strings.configuration.links.twitter,
