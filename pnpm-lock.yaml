@@ -75,8 +75,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(next@13.4.19)
       postmark:
-        specifier: 3.0.19
-        version: 3.0.19
+        specifier: 3.1.1
+        version: 3.1.1
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -12837,8 +12837,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /postmark@3.0.19:
-    resolution: {integrity: sha512-ujO8OnL1P60qXCwqLrsQqB4aGHaxrvYP3+wCLilUthKmAv9q88nMFHw5VganNljPmzurrVwvyczQc3AUijP2aw==}
+  /postmark@3.1.1:
+    resolution: {integrity: sha512-4u+vfMulRnuEUdhqf0gDTXYU2WAEUp484gp8iDhwa3G0Ur25gmve7nI/gBk5SikqZUe6+uP3o0osAYdFpkbcdA==}
     dependencies:
       axios: 0.25.0
     transitivePeerDependencies:
