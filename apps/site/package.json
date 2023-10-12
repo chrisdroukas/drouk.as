@@ -37,7 +37,7 @@
     "zod": "3.22.2"
   },
   "devDependencies": {
-    "@babel/core": "7.22.17",
+    "@babel/core": "7.23.2",
     "@mdx-js/mdx": "2.3.0",
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.10",
