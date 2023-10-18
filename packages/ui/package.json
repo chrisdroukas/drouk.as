@@ -57,8 +57,8 @@
     "next": "13.4.19",
     "next-contentlayer": "0.3.4",
     "next-themes": "0.2.1",
-    "react-day-picker": "8.8.1",
-    "react-hook-form": "7.46.1",
+    "react-day-picker": "8.9.1",
+    "react-hook-form": "7.47.0",
     "tailwind-merge": "1.14.0",
     "tailwindcss-animate": "1.0.7",
     "zod": "3.22.2"
