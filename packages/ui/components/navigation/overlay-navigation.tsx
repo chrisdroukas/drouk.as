@@ -11,14 +11,7 @@ const OverlayNavigationTrigger = OverlayNavigationPrimitive.Trigger;
 
 const OverlayNavigationClose = OverlayNavigationPrimitive.Close;
 
-const OverlayNavigationPortal = ({
-  className,
-  ...props
-}: OverlayNavigationPrimitive.DialogPortalProps) => (
-  <OverlayNavigationPrimitive.Portal className={cn(className)} {...props} />
-);
-OverlayNavigationPortal.displayName =
-  OverlayNavigationPrimitive.Portal.displayName;
+const OverlayNavigationPortal = OverlayNavigationPrimitive.Portal;
 
 const OverlayNavigationOverlay = React.forwardRef<
   React.ElementRef<typeof OverlayNavigationPrimitive.Overlay>,

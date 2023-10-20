@@ -5,23 +5,23 @@
   "packageRules": [
     {
       "matchPackagePrefixes": ["@types/"],
-      "groupName": "@types Updates"
+      "groupName": "@types"
     },
     {
       "matchPackagePatterns": ["^next"],
-      "groupName": "Next.js Updates"
+      "groupName": "Next.js"
     },
     {
       "matchPackagePatterns": ["^react"],
-      "groupName": "React Updates"
+      "groupName": "React"
     },
     {
       "matchPackagePatterns": ["^jest", "^@testing-library"],
-      "groupName": "Testing Updates"
+      "groupName": "Testing"
     },
     {
       "matchPackageNames": ["eslint", "prettier"],
-      "groupName": "Linting Updates"
+      "groupName": "Linting"
     }
   ],
   "lockFileMaintenance": {

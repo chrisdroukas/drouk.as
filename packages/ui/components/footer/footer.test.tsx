@@ -1,3 +1,4 @@
+import "@testing-library/jest-dom";
 import { SiteConfiguration } from "@/types";
 import { render, screen } from "@testing-library/react";
 import { Footer } from "./footer";
@@ -5,7 +6,9 @@ import { Footer } from "./footer";
 const mockConfiguration: SiteConfiguration = {
   name: "Test Site",
   description: "This is a test site",
-  ogImage: "https://example.com/test-image.jpg",
+  author: { name: "Chris Droukas", url: "https://drouk.as" },
+  creator: "Chris Droukas",
+  keywords: ["test", "site"],
   links: {
     url: "https://drouk.as",
     twitter: "https://twitter.com/drouk.as",
