@@ -14,7 +14,7 @@ const fetcher = async <T>(url: string, schema: ZodType<T>) => {
 };
 
 export function useAPI<T>(url: string, schema: ZodType<T>): APIResponse<T> {
-  const { data, error } = useSWR<T>(url, (url) => fetcher(url, schema));
+  const { data, error } = useSWR<T>(url, (url: string) => fetcher(url, schema));
 
   return {
     data,

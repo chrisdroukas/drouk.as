@@ -9,7 +9,7 @@ import ReactPDF, {
   View,
 } from "@react-pdf/renderer";
 import { ResumeType } from "app/api/schemas/resume";
-import React from "react";
+import React, { FC } from "react";
 
 const domain = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
@@ -226,8 +226,8 @@ interface ResumeProps {
   resume: ResumeType;
 }
 
-export const Resume: React.FC<ResumeProps> = (props: ResumeProps) => {
-  const year = new Date().getFullYear();
+export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
+  // const year = new Date().getFullYear();
 
   const { resume } = props;
 
