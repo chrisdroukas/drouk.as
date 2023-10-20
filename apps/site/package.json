@@ -9,7 +9,14 @@
     "lint": "next lint",
     "preview": "next build && next start",
     "start": "next start -p 8000",
-    "turbo": "next dev --turbo"
+    "turbo": "next dev --turbo",
+    "prisma:init": "pnpm dlx prisma init",
+    "prisma:generate": "pnpm dlx prisma generate",
+    "prisma:db": "pnpm dlx prisma db",
+    "prisma:migrate": "pnpm dlx prisma migrate",
+    "prisma:studio": "pnpm dlx prisma studio",
+    "prisma:validate": "pnpm dlx prisma validate",
+    "prisma:format": "pnpm dlx prisma format"
   },
   "dependencies": {
     "@hookform/resolvers": "3.3.2",
