@@ -105,7 +105,6 @@ export default makeSource({
     rehypePlugins: [
       rehypeSlug,
       [
-        // @ts-ignore
         rehypePrettyCode,
         {
           theme: "github-dark",
