@@ -1,5 +1,5 @@
 import { useDebug } from ".";
-import { Strings } from "../strings";
+import { Strings } from "@/library/strings";
 import useTilg from "tilg";
 
 const TilgString = "Foo";

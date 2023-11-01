@@ -14,7 +14,7 @@ import { Label } from "ui/components/ui/label";
 import { toast } from "ui/components/ui/use-toast";
 import { cn } from "ui/library/utilities/classnames";
 
-import { userAuthSchema } from "../../library/validation/auth";
+import { userAuthSchema } from "#/library/validation/auth";
 
 interface AuthenticationFormProps extends HTMLAttributes<HTMLDivElement> {}
 

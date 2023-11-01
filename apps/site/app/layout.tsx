@@ -8,8 +8,8 @@ import { TailwindIndicator } from "ui/components/tailwind-indicator";
 import { ThemeProvider } from "ui/components/theme-provider";
 import { cn } from "ui/library/utilities/classnames";
 
-import { getFontVariables } from "../components/fonts";
-import { siteConfiguration } from "../configuration/site";
+import { getFontVariables } from "#/components/fonts";
+import { siteConfiguration } from "#/configuration/site";
 
 interface RootLayoutProps {
   children: ReactNode;
