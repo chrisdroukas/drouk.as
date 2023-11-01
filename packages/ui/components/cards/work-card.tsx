@@ -15,7 +15,7 @@ interface WorkCardProps {
   name?: string;
   description?: string;
   position?: string;
-  url: LinkProps["href"];
+  url?: LinkProps["href"];
 }
 
 export const WorkCard: FC<WorkCardProps> = ({
