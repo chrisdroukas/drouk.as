@@ -1,11 +1,9 @@
+import { Callout } from "@/components/mdx/callout";
+import { cn } from "@/library/utilities/classnames";
 import { MDXComponents } from "mdx/types";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import NextImage, { ImageProps } from "next/image";
 import { HTMLAttributes, ImgHTMLAttributes } from "react";
-
-import { cn } from "@/library/utilities/classnames";
-// import { Callout } from "@/components/callout";
-// import { MdxCard } from "@/components/mdx-card";
 
 const Image = (props: ImageProps) => {
   return <NextImage {...props} />;
@@ -149,6 +147,7 @@ const components: MDXComponents = {
     />
   ),
   Image,
+  Callout,
 };
 
 interface MdxProps {
