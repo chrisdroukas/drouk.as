@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function LoginPage() {
+  console.log("ENV", process.env.DATABASE_URL, process.env.GITHUB_CLIENT_ID);
   return (
     <div className="container flex flex-1 w-screen items-center justify-center">
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
