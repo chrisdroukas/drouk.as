@@ -45,8 +45,8 @@ importers:
         specifier: 3.1.14
         version: 3.1.14(encoding@0.1.13)(react@18.2.0)
       '@vercel/kv':
-        specifier: 0.2.3
-        version: 0.2.3(encoding@0.1.13)
+        specifier: 0.2.4
+        version: 0.2.4
       concurrently:
         specifier: 8.2.2
         version: 8.2.2
@@ -6721,12 +6721,10 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  /@upstash/redis@1.22.0(encoding@0.1.13):
-    resolution: {integrity: sha512-sXoJDoEqqik0HbrNE7yRWckOySEFsoBxfRdCgOqkc0w6py19ZZG50SpGkDDEUXSnBqP8VgGYXhWAiBpqxrt5oA==}
+  /@upstash/redis@1.24.3:
+    resolution: {integrity: sha512-gw6d4IA1biB4eye5ESaXc0zOlVQI94aptsBvVcTghYWu1kRmOrJFoMFEDCa8p5uzluyYAOFCuY2GWLR6O4ZoIw==}
     dependencies:
-      isomorphic-fetch: 3.0.0(encoding@0.1.13)
-    transitivePeerDependencies:
-      - encoding
+      crypto-js: 4.2.0
     dev: false
 
   /@vercel/analytics@1.1.1:
@@ -6735,13 +6733,11 @@ packages:
       server-only: 0.0.1
     dev: true
 
-  /@vercel/kv@0.2.3(encoding@0.1.13):
-    resolution: {integrity: sha512-Wq1+EsRBQmvLlcqCZeYVg1MAARWrnETgLe3Sy3UCqG+zg7LThpkt0YHZe1NN3Aj4IRmCKQamotWrLDdEx+ZB3w==}
+  /@vercel/kv@0.2.4:
+    resolution: {integrity: sha512-wbIOOXhg6MzmNMzKFSWbbLAS65hCZcJN33z1coENzI1M0fOX55yE9v9LwVGqkzdItp3eZsv6pYvwcmGtllyLTw==}
     engines: {node: '>=14.6'}
     dependencies:
-      '@upstash/redis': 1.22.0(encoding@0.1.13)
-    transitivePeerDependencies:
-      - encoding
+      '@upstash/redis': 1.24.3
     dev: false
 
   /@vitejs/plugin-react@3.1.0(vite@4.5.0):
@@ -10762,15 +10758,6 @@ packages:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
     dev: true
-
-  /isomorphic-fetch@3.0.0(encoding@0.1.13):
-    resolution: {integrity: sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==}
-    dependencies:
-      node-fetch: 2.7.0(encoding@0.1.13)
-      whatwg-fetch: 3.6.19
-    transitivePeerDependencies:
-      - encoding
-    dev: false
 
   /istanbul-lib-coverage@3.2.0:
     resolution: {integrity: sha512-eOeJ5BHCmHYvQK7xt9GkdHuzuCGS1Y6g9Gvnx3Ym33fz/HpLRYxiS0wHNr+m/MBC8B647Xt608vCDEvhl9c6Mw==}
@@ -16523,10 +16510,6 @@ packages:
     dependencies:
       iconv-lite: 0.6.3
     dev: true
-
-  /whatwg-fetch@3.6.19:
-    resolution: {integrity: sha512-d67JP4dHSbm2TrpFj8AbO8DnL1JXL5J9u0Kq2xW6d0TFDbCA3Muhdt8orXC22utleTVj7Prqt82baN6RBvnEgw==}
-    dev: false
 
   /whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
