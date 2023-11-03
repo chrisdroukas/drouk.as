@@ -17,8 +17,7 @@
     "ui:add": "pnpm --filter ui ui:add",
     "ui:init": "pnpm --filter ui ui:init",
     "ui:diff": "pnpm --filter ui ui:diff",
-    "versions:check": "pnpm dlx npm-check-updates --workspaces --root",
-    "versions:upgrade": "pnpm dlx npm-check-updates --workspaces --root --upgrade --interactive",
+    "versions:upgrade": "pnpm dlx npm-check-updates",
     "versions:install": "pnpm install --recursive"
   },
   "devDependencies": {
