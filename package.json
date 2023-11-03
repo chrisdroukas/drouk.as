@@ -16,7 +16,9 @@
     "test": "dotenv -- turbo run test",
     "ui:add": "pnpm --filter ui ui:add",
     "ui:init": "pnpm --filter ui ui:init",
-    "ui:diff": "pnpm --filter ui ui:diff"
+    "ui:diff": "pnpm --filter ui ui:diff",
+    "versions:check": "pnpm dlx npm-check-updates --workspaces --root",
+    "versions:upgrade": "pnpm dlx npm-check-updates --workspaces --root --upgrade --interactive"
   },
   "devDependencies": {
     "@turbo/gen": "1.10.16",
@@ -27,7 +29,7 @@
     "turbo": "1.10.16",
     "typescript": "5.2.2"
   },
-  "packageManager": "pnpm@8.10.1",
+  "packageManager": "pnpm@8.10.2",
   "engines": {
     "node": ">=18.18.2"
   }
