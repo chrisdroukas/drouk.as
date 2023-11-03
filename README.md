@@ -12,7 +12,7 @@ This repository includes the following apps and packages:
 
 | App/Package            | Contents                                                                                                               |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `site`                 | A [Next.js 13](https://nextjs.org/) app powering the main [drouk.as](https://drouk.as/) site.                          |
+| `site`                 | A [Next.js 14](https://nextjs.org/) app powering the main [drouk.as](https://drouk.as/) site.                          |
 | `workshop`             | A [Storybook 7](https://storybook.js.org/) deployment running on [Vite](https://vitejs.dev) for component development. |
 | `ui`                   | A React component library consumed by all applications in the `apps` directory.                                        |
 | `eslint-config-custom` | `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`).                                  |
