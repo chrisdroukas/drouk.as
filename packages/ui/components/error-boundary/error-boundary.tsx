@@ -1,7 +1,7 @@
 "use client";
 
 import { Component, ErrorInfo, ReactNode } from "react";
-import { Strings } from "../../library/strings";
+import { Strings } from "@/library/strings";
 
 interface ErrorBoundaryProps {
   /**

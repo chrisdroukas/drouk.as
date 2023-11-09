@@ -3,10 +3,7 @@ import { ReactNode } from "react";
 import { Footer } from "ui/components/footer";
 import { Navigation } from "ui/components/navigation";
 
-import {
-  navigationConfiguration,
-  siteConfiguration,
-} from "../../configuration";
+import { navigationConfiguration, siteConfiguration } from "#/configuration";
 
 interface SiteLayoutProps {
   children: ReactNode;

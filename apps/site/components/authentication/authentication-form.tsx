@@ -14,7 +14,7 @@ import { Label } from "ui/components/ui/label";
 import { toast } from "ui/components/ui/use-toast";
 import { cn } from "ui/library/utilities/classnames";
 
-import { userAuthSchema } from "../../library/validation/auth";
+import { userAuthSchema } from "#/library/validation/auth";
 
 interface AuthenticationFormProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -41,7 +41,7 @@ export function AuthenticationForm({
     const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
       redirect: false,
-      callbackUrl: searchParams?.get("from") || "/dashboard",
+      callbackUrl: searchParams?.get("from") || "/",
     });
 
     setIsLoading(false);
@@ -86,7 +86,7 @@ export function AuthenticationForm({
           </div>
           <button className={cn(buttonVariants())} disabled={isLoading}>
             {isLoading && (
-              <Icons.loading className="mr-2 h-4 w-4 animate-spin" />
+              <Icons.loading className="mr-2 h-4 w-4 animate-pulse" />
             )}
             Sign In with Email
           </button>
@@ -112,7 +112,7 @@ export function AuthenticationForm({
         disabled={isLoading || isGitHubLoading}
       >
         {isGitHubLoading ? (
-          <Icons.loading className="mr-2 h-4 w-4 animate-spin" />
+          <Icons.loading className="mr-2 h-4 w-4 animate-pulse" />
         ) : (
           <Icons.gitHub className="mr-2 h-4 w-4" />
         )}{" "}
