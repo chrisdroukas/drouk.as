@@ -45,8 +45,8 @@ importers:
         specifier: 3.1.14
         version: 3.1.14(encoding@0.1.13)(react@18.2.0)
       '@vercel/kv':
-        specifier: 0.2.4
-        version: 0.2.4
+        specifier: 1.0.0
+        version: 1.0.0
       concurrently:
         specifier: 8.2.2
         version: 8.2.2
@@ -4935,7 +4935,7 @@ packages:
       '@babel/runtime': 7.23.2
       '@react-pdf/png-js': 2.2.0
       browserify-zlib: 0.2.0
-      crypto-js: 4.1.1
+      crypto-js: 4.2.0
       fontkit: 2.0.2
       vite-compatible-readable-stream: 3.6.1
     dev: false
@@ -6857,8 +6857,8 @@ packages:
       server-only: 0.0.1
     dev: true
 
-  /@vercel/kv@0.2.4:
-    resolution: {integrity: sha512-wbIOOXhg6MzmNMzKFSWbbLAS65hCZcJN33z1coENzI1M0fOX55yE9v9LwVGqkzdItp3eZsv6pYvwcmGtllyLTw==}
+  /@vercel/kv@1.0.0:
+    resolution: {integrity: sha512-StouXunmEqUfKE+1joSYfELWEEnI1MhTnzUdarHtv6H18RAm3cf5u5g9ElvA1DJNHcrMT6g5yVAhZcYRbk6lvg==}
     engines: {node: '>=14.6'}
     dependencies:
       '@upstash/redis': 1.24.3
@@ -8270,10 +8270,6 @@ packages:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  /crypto-js@4.1.1:
-    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
-    dev: false
 
   /crypto-js@4.2.0:
     resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
