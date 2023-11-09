@@ -1,7 +1,7 @@
 import { kv } from "@vercel/kv";
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { ActivityStats } from "../schemas/activity";
+import { ActivityStats } from "#/app/api/schemas/activity";
 
 /**
  * Token validation schema.

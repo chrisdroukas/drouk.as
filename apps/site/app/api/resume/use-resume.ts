@@ -1,5 +1,5 @@
-import { Resume, ResumeType } from "../schemas/resume";
-import { useAPI } from "../use-api";
+import { Resume, ResumeType } from "#/app/api/schemas/resume";
+import { useAPI } from "#/app/api/use-api";
 
 export function useResume() {
   const { data, error, loading } = useAPI<ResumeType>("/api/resume", Resume);

@@ -25,6 +25,10 @@ export const Strings = {
       labs: { title: "Labs", href: "/labs" },
     },
   },
+  writing: {
+    title: "Writing",
+    body: "Here's a look at what I've been up to lately.",
+  },
   login: {
     title: "Hello,",
     body: "Enter your email to login to drouk.as/.",

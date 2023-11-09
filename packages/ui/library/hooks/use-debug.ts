@@ -1,5 +1,5 @@
 import useTilg from "tilg";
-import { Strings } from "../strings";
+import { Strings } from "@/library/strings";
 
 /**
  * Logs lifecycle events and debug messages to the console.

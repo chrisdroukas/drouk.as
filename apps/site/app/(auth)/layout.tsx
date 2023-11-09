@@ -1,12 +1,9 @@
 import { ReactNode } from "react";
 
-import { Footer } from "ui/components/footer";
-import { Navigation } from "ui/components/navigation";
+import { Footer } from "@/components/footer";
+import { Navigation } from "@/components/navigation";
 
-import {
-  navigationConfiguration,
-  siteConfiguration,
-} from "../../configuration";
+import { navigationConfiguration, siteConfiguration } from "#/configuration";
 
 interface AuthLayoutProps {
   children: ReactNode;

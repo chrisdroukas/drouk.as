@@ -8,14 +8,13 @@ import ReactPDF, {
   Text,
   View,
 } from "@react-pdf/renderer";
-import { ResumeType } from "app/api/schemas/resume";
+import { ResumeType } from "#/app/api/schemas/resume";
 import React, { FC } from "react";
 
 const domain = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
   : "http://localhost:8000";
 const fontPath = `${domain}/fonts`;
-console.log(fontPath);
 
 Font.register({
   family: "Inter",
@@ -230,8 +229,6 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
   // const year = new Date().getFullYear();
 
   const { resume } = props;
-
-  console.log(resume);
 
   /**
    * Metadata for the PDF document.

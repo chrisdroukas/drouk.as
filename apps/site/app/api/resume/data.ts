@@ -1,4 +1,4 @@
-import { ResumeType, WorkType } from "../schemas/resume";
+import { ResumeType, WorkType } from "#/app/api/schemas/resume";
 
 const work: WorkType[] = [
   {

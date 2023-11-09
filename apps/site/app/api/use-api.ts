@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import { ZodType } from "zod";
-import { APIResponse } from "ui/types";
+import { APIResponse } from "@/types";
 
 const fetcher = async <T>(url: string, schema: ZodType<T>) => {
   const res = await fetch(url);

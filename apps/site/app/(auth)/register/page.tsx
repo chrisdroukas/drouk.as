@@ -1,8 +1,7 @@
 import Link from "next/link";
-
-import { buttonVariants } from "ui/components/ui/button";
-import { cn } from "ui/library/utilities/classnames";
-import { AuthenticationForm } from "../../../components/authentication";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/library/utilities/classnames";
+import { AuthenticationForm } from "#/components/authentication";
 
 export const metadata = {
   title: "Create an account",

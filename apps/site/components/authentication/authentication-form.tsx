@@ -1,5 +1,11 @@
 "use client";
 
+import { Icons } from "@/components/icons";
+import { buttonVariants } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { toast } from "@/components/ui/use-toast";
+import { cn } from "@/library/utilities/classnames";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
@@ -7,14 +13,7 @@ import { HTMLAttributes, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Icons } from "ui/components/icons";
-import { buttonVariants } from "ui/components/ui/button";
-import { Input } from "ui/components/ui/input";
-import { Label } from "ui/components/ui/label";
-import { toast } from "ui/components/ui/use-toast";
-import { cn } from "ui/library/utilities/classnames";
-
-import { userAuthSchema } from "../../library/validation/auth";
+import { userAuthSchema } from "#/library/validation/auth";
 
 interface AuthenticationFormProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -41,7 +40,7 @@ export function AuthenticationForm({
     const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
       redirect: false,
-      callbackUrl: searchParams?.get("from") || "/dashboard",
+      callbackUrl: searchParams?.get("from") || "/",
     });
 
     setIsLoading(false);
@@ -86,7 +85,7 @@ export function AuthenticationForm({
           </div>
           <button className={cn(buttonVariants())} disabled={isLoading}>
             {isLoading && (
-              <Icons.loading className="mr-2 h-4 w-4 animate-spin" />
+              <Icons.loading className="mr-2 h-4 w-4 animate-pulse" />
             )}
             Sign In with Email
           </button>
@@ -112,7 +111,7 @@ export function AuthenticationForm({
         disabled={isLoading || isGitHubLoading}
       >
         {isGitHubLoading ? (
-          <Icons.loading className="mr-2 h-4 w-4 animate-spin" />
+          <Icons.loading className="mr-2 h-4 w-4 animate-pulse" />
         ) : (
           <Icons.gitHub className="mr-2 h-4 w-4" />
         )}{" "}
