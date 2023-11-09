@@ -25,6 +25,11 @@ export const Strings = {
       labs: { title: "Labs", href: "/labs" },
     },
   },
+  login: {
+    title: "Hello,",
+    body: "Enter your email to login to drouk.as/.",
+    signup: "Don't have an account? Sign Up",
+  },
   errorBoundary: {
     didCatch: "Uncaught Error:",
   },

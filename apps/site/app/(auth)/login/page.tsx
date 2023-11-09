@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-
+import { Strings } from "@/library/strings";
 import { AuthenticationForm } from "../../../components/authentication";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function LoginPage() {
     <div className="container flex flex-1 w-screen items-center justify-center">
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
         <div className="flex flex-col space-y-2 text-center">
-          <h1 className="text-2xl font-semibold tracking-tight">Hello.</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">{Strings}</h1>
           <p className="text-sm text-muted-foreground">
             Enter your email to login to drouk.as/.
           </p>
