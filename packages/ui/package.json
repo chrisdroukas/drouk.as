@@ -67,7 +67,7 @@
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.10",
     "@testing-library/jest-dom": "6.1.4",
-    "@testing-library/react": "14.0.0",
+    "@testing-library/react": "14.1.0",
     "@types/jest": "29.5.7",
     "@types/mdx": "2.0.9",
     "@types/node": "20.8.10",
