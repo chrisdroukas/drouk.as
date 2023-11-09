@@ -1,13 +1,17 @@
 "use client";
 
-import { useResume } from "app/api/resume/use-resume";
-import { WorkCard } from "ui/components/cards/work-card";
+import { WorkCard } from "@/components/cards/work-card";
+import { useResume } from "#/app/api/resume/use-resume";
 
 export function Resume() {
   const { resume, loading, error } = useResume();
 
-  if (error) return <div>failed to load</div>;
-  if (loading) return <div>loading...</div>;
+  if (error) {
+    return <div>failed to load</div>;
+  }
+  if (loading) {
+    return <div>loading...</div>;
+  }
 
   const renderWork = resume?.work?.map((item) => (
     <WorkCard

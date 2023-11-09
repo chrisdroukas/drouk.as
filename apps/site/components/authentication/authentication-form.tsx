@@ -7,12 +7,12 @@ import { HTMLAttributes, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Icons } from "ui/components/icons";
-import { buttonVariants } from "ui/components/ui/button";
-import { Input } from "ui/components/ui/input";
-import { Label } from "ui/components/ui/label";
-import { toast } from "ui/components/ui/use-toast";
-import { cn } from "ui/library/utilities/classnames";
+import { Icons } from "@/components/icons";
+import { buttonVariants } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { toast } from "@/components/ui/use-toast";
+import { cn } from "@/library/utilities/classnames";
 
 import { userAuthSchema } from "#/library/validation/auth";
 

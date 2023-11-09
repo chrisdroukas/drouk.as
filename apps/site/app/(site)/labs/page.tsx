@@ -1,5 +1,5 @@
-// import { Intro } from "ui/components/intro";
-// import { Strings } from "ui/library/strings";
+// import { Intro } from "@/components/intro";
+// import { Strings } from "@/library/strings";
 
 export default async function BlogPage() {
   //   const posts = allPosts

@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
 
 import { authOptions } from "#/library/auth";
-
 import { getCurrentUser } from "#/library/session";
 
 export const metadata = {

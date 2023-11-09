@@ -1,11 +1,12 @@
-import { Strings } from "@/library/strings";
-import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { AllPostsButton } from "ui/components/buttons/all-posts";
-import { Mdx } from "ui/components/mdx";
-import "ui/styles/mdx.css";
+
+import "@/styles/mdx.css";
+import { AllPostsButton } from "@/components/buttons/all-posts";
+import { Mdx } from "@/components/mdx";
+import { Strings } from "@/library/strings";
+import { allPosts } from "contentlayer/generated";
 
 interface PostPageProps {
   params: {
@@ -15,7 +16,7 @@ interface PostPageProps {
 
 async function getPostFromParams({ params }: PostPageProps) {
   const slug = params?.slug?.join("/");
-  const post = allPosts.find((post) => post.slugAsParams === slug);
+  const post = allPosts.find((postData) => postData.slugAsParams === slug);
 
   if (!post) {
     null;

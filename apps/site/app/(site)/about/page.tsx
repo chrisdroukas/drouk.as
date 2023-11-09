@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+
 import { Resume } from "./data";
 
 export const metadata: Metadata = {

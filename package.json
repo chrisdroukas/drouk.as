@@ -16,18 +16,21 @@
     "test": "dotenv -- turbo run test",
     "ui:add": "pnpm --filter ui ui:add",
     "ui:init": "pnpm --filter ui ui:init",
-    "ui:diff": "pnpm --filter ui ui:diff"
+    "ui:diff": "pnpm --filter ui ui:diff",
+    "versions:upgrade": "pnpm dlx npm-check-updates",
+    "versions:install": "pnpm install --recursive"
   },
   "devDependencies": {
     "@turbo/gen": "1.10.16",
     "dotenv-cli": "7.3.0",
-    "eslint": "8.52.0",
+    "eslint": "8.53.0",
+    "next": "14.0.1",
     "eslint-config-custom": "workspace:*",
     "prettier": "3.0.3",
     "turbo": "1.10.16",
     "typescript": "5.2.2"
   },
-  "packageManager": "pnpm@8.10.1",
+  "packageManager": "pnpm@8.10.2",
   "engines": {
     "node": ">=18.18.2"
   }

@@ -1,13 +1,11 @@
-import { ReactNode } from "react";
 import { Metadata } from "next";
+import { ReactNode } from "react";
 
-import "ui/styles/globals.css";
-
-import { Analytics } from "ui/components/analytics";
-import { TailwindIndicator } from "ui/components/tailwind-indicator";
-import { ThemeProvider } from "ui/components/theme-provider";
-import { cn } from "ui/library/utilities/classnames";
-
+import "@/styles/globals.css";
+import { Analytics } from "@/components/analytics";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/library/utilities/classnames";
 import { getFontVariables } from "#/components/fonts";
 import { siteConfiguration } from "#/configuration/site";
 

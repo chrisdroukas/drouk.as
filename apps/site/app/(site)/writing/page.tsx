@@ -1,11 +1,11 @@
-import { Metadata } from "next";
-import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { AspectRatio } from "ui/components/ui/aspect-ratio";
-// import { formatDate } from "@/lib/utils";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Strings } from "@/library/strings";
+import { allPosts } from "contentlayer/generated";
 
 export const metadata: Metadata = {
   title: "Writing",
@@ -24,10 +24,10 @@ export default async function Writing() {
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
           <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
-            Writing
+            {Strings.writing.title}
           </h1>
           <p className="text-xl text-muted-foreground">
-            Here's a look at what I've been up to lately.
+            {Strings.writing.body}
           </p>
         </div>
       </div>

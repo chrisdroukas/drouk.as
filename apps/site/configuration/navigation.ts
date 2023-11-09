@@ -1,5 +1,5 @@
-import { Strings } from "ui/library/strings";
-import { NavigationConfiguration } from "ui/types";
+import { Strings } from "@/library/strings";
+import { NavigationConfiguration } from "@/types";
 
 export const navigationConfiguration: NavigationConfiguration = {
   navigationItems: [

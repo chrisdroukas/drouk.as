@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import { ZodType } from "zod";
-import { APIResponse } from "ui/types";
+
+import { APIResponse } from "@/types";
 
 const fetcher = async <T>(url: string, schema: ZodType<T>) => {
   const res = await fetch(url);
@@ -14,7 +15,9 @@ const fetcher = async <T>(url: string, schema: ZodType<T>) => {
 };
 
 export function useAPI<T>(url: string, schema: ZodType<T>): APIResponse<T> {
-  const { data, error } = useSWR<T>(url, (url: string) => fetcher(url, schema));
+  const { data, error } = useSWR<T>(url, (fetchUrl: string) =>
+    fetcher(fetchUrl, schema)
+  );
 
   return {
     data,

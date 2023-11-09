@@ -1,5 +1,5 @@
-import { Strings } from "ui/library/strings";
-import { SiteConfiguration } from "ui/types";
+import { Strings } from "@/library/strings";
+import { SiteConfiguration } from "@/types";
 
 export const siteConfiguration: SiteConfiguration = {
   name: Strings.configuration.name,

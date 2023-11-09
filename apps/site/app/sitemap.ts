@@ -1,4 +1,4 @@
-import { navigationConfiguration, siteConfiguration } from "configuration";
+import { navigationConfiguration, siteConfiguration } from "#/configuration";
 import { allPosts } from "contentlayer/generated";
 
 export default async function sitemap() {
