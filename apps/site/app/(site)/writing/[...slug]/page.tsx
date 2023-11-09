@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { allPosts } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 import { AllPostsButton } from "@/components/buttons/all-posts";
 import { Mdx } from "@/components/mdx";
 import { Strings } from "@/library/strings";
+import { allPosts } from "contentlayer/generated";
 
 interface PostPageProps {
   params: {

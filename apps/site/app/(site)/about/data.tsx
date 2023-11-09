@@ -1,7 +1,7 @@
 "use client";
 
-import { useResume } from "#/app/api/resume/use-resume";
 import { WorkCard } from "@/components/cards/work-card";
+import { useResume } from "#/app/api/resume/use-resume";
 
 export function Resume() {
   const { resume, loading, error } = useResume();
