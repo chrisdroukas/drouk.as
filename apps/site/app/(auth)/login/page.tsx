@@ -1,7 +1,8 @@
-import { AuthenticationForm } from "#/components/authentication";
-import { Strings } from "@/library/strings";
 import { Metadata } from "next";
 import Link from "next/link";
+
+import { AuthenticationForm } from "#/components/authentication";
+import { Strings } from "@/library/strings";
 
 export const metadata: Metadata = {
   title: "Login",

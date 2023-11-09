@@ -1,7 +1,8 @@
+import { NextApiHandler } from "next";
+import ReactPDF from "@react-pdf/renderer";
+
 import { data } from "#/app/api/resume/data";
 import { Resume } from "#/components/pdf/resume";
-import ReactPDF from "@react-pdf/renderer";
-import { NextApiHandler } from "next";
 
 const ResumeDocument: NextApiHandler = async (_, res) => {
   const DocumentStream = await ReactPDF.renderToStream(

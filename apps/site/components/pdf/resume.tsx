@@ -1,5 +1,6 @@
 "use client";
 
+import React, { FC } from "react";
 import ReactPDF, {
   Document,
   Font,
@@ -8,8 +9,8 @@ import ReactPDF, {
   Text,
   View,
 } from "@react-pdf/renderer";
+
 import { ResumeType } from "#/app/api/schemas/resume";
-import React, { FC } from "react";
 
 const domain = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`

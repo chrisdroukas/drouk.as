@@ -1,12 +1,13 @@
+import { Metadata } from "next";
+import { ReactNode } from "react";
+
+import "@/styles/globals.css";
 import { getFontVariables } from "#/components/fonts";
 import { siteConfiguration } from "#/configuration/site";
 import { Analytics } from "@/components/analytics";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/library/utilities/classnames";
-import "@/styles/globals.css";
-import { Metadata } from "next";
-import { ReactNode } from "react";
 
 interface RootLayoutProps {
   children: ReactNode;

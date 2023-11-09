@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
-
 import { navigationConfiguration, siteConfiguration } from "#/configuration";
 
 interface AuthLayoutProps {

@@ -6,8 +6,12 @@ import { WorkCard } from "@/components/cards/work-card";
 export function Resume() {
   const { resume, loading, error } = useResume();
 
-  if (error) return <div>failed to load</div>;
-  if (loading) return <div>loading...</div>;
+  if (error) {
+    return <div>failed to load</div>;
+  }
+  if (loading) {
+    return <div>loading...</div>;
+  }
 
   const renderWork = resume?.work?.map((item) => (
     <WorkCard

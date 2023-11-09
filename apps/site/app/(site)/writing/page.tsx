@@ -1,10 +1,11 @@
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Strings } from "@/library/strings";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Strings } from "@/library/strings";
 
 export const metadata: Metadata = {
   title: "Writing",

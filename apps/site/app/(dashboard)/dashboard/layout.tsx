@@ -1,5 +1,6 @@
-import { notFound } from "next/navigation";
 import { ReactNode } from "react";
+import { notFound } from "next/navigation";
+
 import { getCurrentUser } from "#/library/session";
 
 interface DashboardLayoutProps {
