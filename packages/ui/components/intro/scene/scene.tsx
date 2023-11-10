@@ -9,14 +9,12 @@ interface SceneProps {
   theme?: string;
 }
 
-const CustomGeometryParticles = (props: SceneProps) => {
+export const ParticleScene = (props: SceneProps) => {
   const { count, theme } = props;
   const radius = 2;
 
-  // This reference gives us direct access to our points
   const points = useRef<THREE.Points>(null);
 
-  // Generate our positions attributes array
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(count * 3);
 
@@ -52,7 +50,6 @@ const CustomGeometryParticles = (props: SceneProps) => {
     const { clock } = state;
 
     if (points.current) {
-      // Type assertion to treat the material as THREE.ShaderMaterial
       const material = points.current.material as THREE.ShaderMaterial;
 
       if (material.uniforms.uTime) {
@@ -88,7 +85,7 @@ export const Scene = () => {
   return (
     <Canvas key={resolvedTheme} camera={{ position: [1.1, 1.1, 1.1] }}>
       <ambientLight intensity={0.5} />
-      <CustomGeometryParticles count={5000} theme={resolvedTheme} />
+      <ParticleScene count={5000} theme={resolvedTheme} />
     </Canvas>
   );
 };
