@@ -12,13 +12,13 @@ export default async function Page() {
             href: Strings.configuration.navigation.about.href,
             label: `${Strings.configuration.navigation.about.title}`,
             variant: "default",
-            size: "lg",
+            size: "default",
           },
           {
             href: Strings.configuration.links.github,
             label: "GitHub",
             variant: "outline",
-            size: "lg",
+            size: "default",
           },
         ]}
       />

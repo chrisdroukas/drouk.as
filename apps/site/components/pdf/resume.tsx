@@ -254,7 +254,7 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
       <Page {...pageData} style={styles.page}>
         <View>
           <Text>{resume.basics.name}</Text>
-          <Text>{resume.basics.name}</Text>
+          <Text>{resume.basics.label}</Text>
         </View>
       </Page>
     </Document>
