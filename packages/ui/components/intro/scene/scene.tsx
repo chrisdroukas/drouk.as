@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import * as THREE from "three";
 import { vertexShader, fragmentShader } from "@/components/intro/shaders";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { motion } from "framer-motion";
 
 interface SceneProps {
   count: number;
@@ -81,11 +82,17 @@ export const ParticleScene = (props: SceneProps) => {
 export const Scene = () => {
   const { resolvedTheme } = useTheme();
 
-  console.log(resolvedTheme);
   return (
-    <Canvas key={resolvedTheme} camera={{ position: [1.1, 1.1, 1.1] }}>
-      <ambientLight intensity={0.5} />
-      <ParticleScene count={5000} theme={resolvedTheme} />
-    </Canvas>
+    <motion.div
+      className="absolute w-full h-full"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <Canvas key={resolvedTheme} camera={{ position: [1.1, 1.1, 1.1] }}>
+        <ambientLight intensity={0.5} />
+        <ParticleScene count={5000} theme={resolvedTheme} />
+      </Canvas>
+    </motion.div>
   );
 };

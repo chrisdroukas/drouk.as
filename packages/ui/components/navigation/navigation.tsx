@@ -3,11 +3,10 @@
 import { FC, useState, useLayoutEffect } from "react";
 
 import { NavigationCompact } from "@/components/navigation/navigation-compact";
-
 import { useBreakpoint } from "@/library/hooks";
-
 import { NavigationItem, SiteConfiguration } from "@/types";
 import { NavigationRegular } from "./navigation-regular";
+import { NavigationBarProps } from "./navigation-bar";
 
 export enum UIMode {
   Regular,
@@ -24,11 +23,13 @@ export interface NavigationProps {
   navigationItems?: NavigationItem[];
   displayNavigationItems?: boolean;
   authenticationMode?: AuthenticationMode;
+  overlay?: NavigationBarProps["overlay"];
 }
 
 export const Navigation: FC<NavigationProps> = ({
   configuration,
   navigationItems,
+  overlay,
   displayNavigationItems = true,
 }: NavigationProps) => {
   const { isAboveSm } = useBreakpoint("sm");
@@ -52,6 +53,7 @@ export const Navigation: FC<NavigationProps> = ({
           configuration={configuration}
           displayNavigationItems={displayNavigationItems}
           navigationItems={navigationItems}
+          overlay={overlay}
         />
       );
     }
@@ -60,6 +62,7 @@ export const Navigation: FC<NavigationProps> = ({
         <NavigationCompact
           configuration={configuration}
           navigationItems={navigationItems}
+          overlay={overlay}
         />
       );
     }

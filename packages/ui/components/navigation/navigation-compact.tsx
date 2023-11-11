@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { cn } from "@/library/utilities/classnames";
 
-import { Auth } from "@/components/navigation/auth";
 import { Logo } from "@/components/navigation/logo";
 import { NavigationProps } from "@/components/navigation/navigation";
 import { NavigationBar } from "@/components/navigation/navigation-bar";
@@ -70,6 +69,7 @@ const NavigationCompactDialog = ({
 export const NavigationCompact: FC<NavigationCompactProps> = ({
   configuration,
   navigationItems,
+  overlay,
   onOpenChange,
 }) => {
   const { isAboveSm } = useBreakpoint("sm");
@@ -112,7 +112,11 @@ export const NavigationCompact: FC<NavigationCompactProps> = ({
 
   return (
     <>
-      <NavigationBar leadingItems={[renderMenuAction, renderLogo]} />
+      <NavigationBar
+        leadingItems={[renderLogo]}
+        trailingItems={[renderMenuAction]}
+        overlay={overlay}
+      />
       <NavigationCompactDialog
         open={showCompactMenu}
         onOpenChange={toggleCompactMenu}

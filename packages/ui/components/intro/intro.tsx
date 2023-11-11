@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Balancer from "react-wrap-balancer";
 
 import { Scene } from "@/components/intro/scene";
@@ -17,13 +17,14 @@ interface IntroButton {
 
 interface IntroProps {
   title: string;
-  body: string;
   buttons?: IntroButton[];
+  children?: ReactNode;
 }
 
-export const Intro: FC<IntroProps> = ({ title, body, buttons }) => {
+export const Intro: FC<IntroProps> = ({ title, buttons, children }) => {
   return (
-    <section className="relative h-screen max-h-[1000px] min-h-[500px] lg:min-h-[600px] select-none bg-zinc-300 dark:bg-zinc-900 cursor-default">
+    <section className="relative h-screen max-h-[1000px] min-h-[500px] lg:min-h-[600px] select-none bg-neutral-200 dark:bg-neutral-900 cursor-default">
+      {children}
       <Scene />
       <div className="absolute w-full bottom-12">
         <div className="container flex flex-col gap-8">

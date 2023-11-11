@@ -25,7 +25,7 @@ const NavigationItemComponent: FC<NavigationItemProps> = ({
   <Link
     href={item.disabled ? "#" : item.href}
     className={cn(
-      "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+      "flex items-center text-lg font-bold transition-colors hover:text-foreground sm:text-sm",
       isActive ? "text-foreground" : "text-muted-foreground",
       item.disabled && "cursor-not-allowed opacity-80"
     )}
@@ -37,6 +37,7 @@ const NavigationItemComponent: FC<NavigationItemProps> = ({
 export const NavigationRegular: FC<NavigationProps> = ({
   configuration,
   navigationItems,
+  overlay,
   displayNavigationItems = true,
 }: NavigationProps) => {
   const segment = useSelectedLayoutSegment();
@@ -64,6 +65,7 @@ export const NavigationRegular: FC<NavigationProps> = ({
     <NavigationBar
       leadingItems={[renderLogo]}
       trailingItems={[renderNavigationItems]}
+      overlay={overlay}
     />
   );
 };

@@ -1,12 +1,13 @@
 import { Intro } from "@/components/intro";
 import { Strings } from "@/library/strings";
+import { Navigation } from "@/components/navigation";
+import { navigationConfiguration, siteConfiguration } from "#/configuration";
 
 export default async function Page() {
   return (
     <>
       <Intro
         title={Strings.intro.title}
-        body={Strings.intro.body}
         buttons={[
           {
             href: Strings.configuration.navigation.about.href,
@@ -21,7 +22,13 @@ export default async function Page() {
             size: "default",
           },
         ]}
-      />
+      >
+        <Navigation
+          configuration={siteConfiguration}
+          navigationItems={navigationConfiguration.navigationItems}
+          overlay={true}
+        />
+      </Intro>
     </>
   );
 }
