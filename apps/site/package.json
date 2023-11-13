@@ -31,7 +31,7 @@
     "date-fns": "2.30.0",
     "gray-matter": "4.0.3",
     "next": "14.0.2",
-    "next-auth": "4.24.4",
+    "next-auth": "4.24.5",
     "next-contentlayer": "0.3.4",
     "next-mdx-remote": "4.4.1",
     "next-remote-watch": "2.0.0",
