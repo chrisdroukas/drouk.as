@@ -54,13 +54,13 @@
     "@mdx-js/mdx": "3.0.0",
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.10",
-    "@types/node": "20.9.1",
-    "@types/react": "18.2.37",
-    "@types/react-dom": "18.2.15",
+    "@types/node": "20.9.4",
+    "@types/react": "18.2.38",
+    "@types/react-dom": "18.2.17",
     "@vercel/analytics": "1.1.1",
     "autoprefixer": "10.4.16",
     "encoding": "0.1.13",
-    "eslint": "8.53.0",
+    "eslint": "8.54.0",
     "eslint-config-custom": "workspace:*",
     "postcss": "8.4.31",
     "prisma": "5.6.0",
@@ -68,6 +68,6 @@
     "remark": "15.0.1",
     "tailwindcss": "3.3.5",
     "tsconfig": "workspace:*",
-    "typescript": "5.2.2"
+    "typescript": "5.3.2"
   }
 }
