@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 
-import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import { navigationConfiguration, siteConfiguration } from "#/configuration";
 
@@ -19,7 +18,6 @@ export default async function SiteLayout({ children }: AuthLayoutProps) {
         displayNavigationItems={false}
       />
       <main className="flex flex-1">{children}</main>
-      <Footer configuration={siteConfiguration} />
     </div>
   );
 }

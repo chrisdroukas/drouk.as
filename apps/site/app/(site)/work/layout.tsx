@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 
-import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import { navigationConfiguration, siteConfiguration } from "#/configuration";
 
@@ -16,7 +15,6 @@ export default async function GenericLayout({ children }: SiteLayoutProps) {
         navigationItems={navigationConfiguration.navigationItems}
       />
       <main className="flex-1">{children}</main>
-      <Footer configuration={siteConfiguration} />
     </div>
   );
 }
