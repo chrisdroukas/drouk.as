@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { cn } from "@/library/utilities/classnames";
+import { cn } from "@/library/utilities";
 
 import { Logo } from "@/components/navigation/logo";
 import { NavigationProps } from "@/components/navigation/navigation";

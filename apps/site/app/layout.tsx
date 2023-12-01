@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 import { Analytics } from "@/components/analytics";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/library/utilities/classnames";
+import { cn } from "@/library/utilities";
 import { getFontVariables } from "#/components/fonts";
 import { siteConfiguration } from "#/configuration/site";
 

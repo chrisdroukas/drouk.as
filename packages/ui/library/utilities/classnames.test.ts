@@ -1,4 +1,4 @@
-import { cn } from "./classnames";
+import { cn } from "@/library/utilities";
 
 describe("classnames", () => {
   it("should correctly merge classnames", () => {
