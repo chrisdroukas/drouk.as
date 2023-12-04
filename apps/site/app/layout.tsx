@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ReactNode } from "react";
+import React, { ReactNode, FC } from "react";
 
 import "@/styles/globals.css";
 import { Analytics } from "@/components/analytics";
@@ -43,7 +43,9 @@ export const metadata: Metadata = {
   },
 };
 
-// The RootLayout component acts as the base layout of the application
+/*
+ * The RootLayout component acts as the base layout of the application.
+ */
 export default async function RootLayout({ children }: RootLayoutProps) {
   // Set up fonts
   const { fontSansVariable, fontHeadingVariable } = getFontVariables();
@@ -55,17 +57,36 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     fontHeadingVariable
   );
 
-  // Return the layout
+  /*
+   * Return the layout.
+   */
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className={bodyClasses}>
+    <Html>
+      <Body className={bodyClasses}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>
-      </body>
-    </html>
+      </Body>
+    </Html>
   );
 }
+
+/*
+ * Html component encapsulates the `html` element.
+ */
+const Html: FC<{ children: ReactNode }> = ({ children }) => (
+  <html lang="en" suppressHydrationWarning>
+    <head />
+    {children}
+  </html>
+);
+
+/*
+ * Body component encapsulates the `body` element.
+ */
+const Body: FC<{ children: ReactNode; className: string }> = ({
+  children,
+  className,
+}) => <body className={className}>{children}</body>;
