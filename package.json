@@ -21,7 +21,7 @@
     "versions:install": "pnpm install --recursive"
   },
   "devDependencies": {
-    "@turbo/gen": "1.11.0",
+    "@turbo/gen": "1.11.1",
     "@types/jest": "29.5.11",
     "@types/mdx": "2.0.10",
     "@types/node": "20.10.4",
@@ -31,9 +31,9 @@
     "dotenv-cli": "7.3.0",
     "eslint-config-custom": "workspace:*",
     "eslint": "8.55.0",
-    "next": "14.0.3",
+    "next": "14.0.4",
     "prettier": "3.1.0",
-    "turbo": "1.11.0",
+    "turbo": "1.11.1",
     "typescript": "5.3.3"
   },
   "packageManager": "pnpm@8.11.0",
