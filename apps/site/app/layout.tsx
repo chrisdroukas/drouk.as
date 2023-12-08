@@ -47,10 +47,14 @@ export const metadata: Metadata = {
  * The RootLayout component acts as the base layout of the application.
  */
 export default async function RootLayout({ children }: RootLayoutProps) {
-  // Set up fonts
+  /*
+   * Set up fonts
+   */
   const { fontSansVariable, fontHeadingVariable } = getFontVariables();
 
-  // Define classes for body
+  /*
+   * Define classes for body
+   */
   const bodyClasses = cn(
     "min-h-screen bg-background font-sans antialiased",
     fontSansVariable,

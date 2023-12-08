@@ -1,20 +1,15 @@
-import { ReactNode } from "react";
-
-import { Navigation } from "@/components/navigation";
+import { SiteLayout, SiteLayoutProps } from "@/components/layouts";
 import { navigationConfiguration, siteConfiguration } from "#/configuration";
 
-interface SiteLayoutProps {
-  children: ReactNode;
-}
-
-export default async function GenericLayout({ children }: SiteLayoutProps) {
+export default async function Layout({ children }: SiteLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Navigation
-        configuration={siteConfiguration}
-        navigationItems={navigationConfiguration.navigationItems}
-      />
-      <main className="flex-1">{children}</main>
-    </div>
+    <SiteLayout
+      navigation={{
+        configuration: siteConfiguration,
+        navigationItems: navigationConfiguration.navigationItems,
+      }}
+    >
+      {children}
+    </SiteLayout>
   );
 }
