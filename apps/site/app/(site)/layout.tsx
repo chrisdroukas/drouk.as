@@ -1,7 +1,8 @@
-import { SiteLayout, SiteLayoutProps } from "@/components/layouts";
+import { ReactNode } from "react";
+import { SiteLayout } from "@/components/layouts";
 import { siteConfiguration } from "#/configuration";
 
-export default async function Layout({ children }: SiteLayoutProps) {
+export default async function Layout({ children }: { children: ReactNode }) {
   return (
     <SiteLayout footer={{ configuration: siteConfiguration }}>
       {children}

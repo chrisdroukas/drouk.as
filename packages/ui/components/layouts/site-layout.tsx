@@ -26,7 +26,7 @@ const MainContent = forwardRef<
   </main>
 ));
 
-const SiteLayout = forwardRef<HTMLDivElement, SiteLayoutProps>(
+export const SiteLayout = forwardRef<HTMLDivElement, SiteLayoutProps>(
   ({ children, navigation, footer, ...props }, ref) => (
     <SiteLayoutWrapper ref={ref} {...props}>
       {navigation ? <Navigation {...navigation} /> : null}
@@ -39,5 +39,3 @@ const SiteLayout = forwardRef<HTMLDivElement, SiteLayoutProps>(
 SiteLayout.displayName = "SiteLayout";
 SiteLayoutWrapper.displayName = "SiteLayoutWrapper";
 MainContent.displayName = "MainContent";
-
-export { SiteLayout };
