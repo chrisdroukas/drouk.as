@@ -1,17 +1,11 @@
 import { ReactNode } from "react";
-
-import { Footer } from "@/components/footer";
+import { SiteLayout } from "@/components/layouts";
 import { siteConfiguration } from "#/configuration";
 
-interface SiteLayoutProps {
-  children: ReactNode;
-}
-
-export default async function SiteLayout({ children }: SiteLayoutProps) {
+export default async function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <main className="flex-1">{children}</main>
-      <Footer configuration={siteConfiguration} />
-    </div>
+    <SiteLayout footer={{ configuration: siteConfiguration }}>
+      {children}
+    </SiteLayout>
   );
 }

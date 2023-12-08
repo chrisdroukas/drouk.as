@@ -6,7 +6,7 @@ import { Icons } from "@/components/icons";
 import { ThemeSelector } from "@/components/theme-selector";
 import { SiteConfiguration } from "@/types";
 
-interface FooterProps {
+export interface FooterProps {
   configuration: SiteConfiguration;
 }
 
