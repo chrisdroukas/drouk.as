@@ -1,4 +1,4 @@
-import { cn } from "@/library/utilities/classnames";
+import { cn } from "@/library/utilities";
 
 interface CalloutProps {
   icon?: string;

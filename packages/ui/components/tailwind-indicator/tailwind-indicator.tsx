@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC, forwardRef } from "react";
 
 /**
  * Displays the current viewport size in accordance with Tailwind.
@@ -24,22 +24,37 @@ export const TailwindIndicator: FC = () => {
     { breakpoint: "hidden 2xl:block", label: "2XL" },
   ];
 
-  /**
-   * Render a viewport size indicator.
-   * @note Hovering the viewport size indicator will hide it to
-   * reveal content beneath.
-   */
   return (
-    <div
-      className={
-        "fixed bottom-5 left-5 z-50 flex items-center justify-center rounded-md bg-gray-800 p-3 font-mono text-xs text-white select-none transition ease-in-out delay-100 hover:opacity-0"
-      }
-    >
+    <TailwindContainer>
       {breakpoints.map(({ breakpoint, label }) => (
-        <div key={label} className={breakpoint}>
+        <ViewportLabel key={label} breakpoint={breakpoint}>
           Viewport: {label}
-        </div>
+        </ViewportLabel>
       ))}
-    </div>
+    </TailwindContainer>
   );
 };
+
+const TailwindContainer = forwardRef<
+  HTMLDivElement,
+  React.ComponentPropsWithoutRef<"div">
+>((props, ref) => (
+  <div
+    ref={ref}
+    {...props}
+    className={
+      "fixed bottom-5 mx-auto inset-x-0 max-w-max z-50 flex items-center justify-center rounded-md bg-gray-800 p-3 font-mono text-xs text-white select-none transition ease-in-out delay-100 hover:opacity-0"
+    }
+  />
+));
+TailwindContainer.displayName = "TailwindContainer";
+
+const ViewportLabel = forwardRef<
+  HTMLDivElement,
+  React.ComponentPropsWithoutRef<"div"> & { breakpoint: string }
+>(({ breakpoint, children, ...props }, ref) => (
+  <div ref={ref} {...props} className={breakpoint}>
+    {children}
+  </div>
+));
+ViewportLabel.displayName = "ViewportLabel";

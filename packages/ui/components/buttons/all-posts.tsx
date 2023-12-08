@@ -2,7 +2,7 @@
 
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/library/utilities/classnames";
+import { cn } from "@/library/utilities";
 import Link, { LinkProps } from "next/link";
 import { FC } from "react";
 

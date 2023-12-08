@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/library/utilities/classnames";
+import { cn } from "@/library/utilities";
 import * as OverlayNavigationPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
-import { cn } from "@/library/utilities/classnames";
+import { cn } from "@/library/utilities";
 import { buttonVariants } from "@/components/ui/button";
 
 interface AuthProps {}
