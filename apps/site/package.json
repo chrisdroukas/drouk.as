@@ -38,7 +38,7 @@
     "postmark": "4.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.48.2",
+    "react-hook-form": "7.49.0",
     "rehype-autolink-headings": "7.1.0",
     "rehype-pretty-code": "0.12.1",
     "rehype-raw": "7.0.0",
@@ -50,7 +50,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@babel/core": "7.23.5",
+    "@babel/core": "7.23.6",
     "@mdx-js/mdx": "3.0.0",
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.10",
