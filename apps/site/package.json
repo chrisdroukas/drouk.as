@@ -28,7 +28,7 @@
     "concurrently": "8.2.2",
     "contentlayer": "0.3.4",
     "cookies-next": "4.1.0",
-    "date-fns": "2.30.0",
+    "date-fns": "3.0.0",
     "gray-matter": "4.0.3",
     "next": "14.0.4",
     "next-auth": "4.24.5",
