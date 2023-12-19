@@ -114,8 +114,8 @@ importers:
         specifier: 7.1.0
         version: 7.1.0
       rehype-pretty-code:
-        specifier: 0.12.1
-        version: 0.12.1(shikiji@0.8.6)
+        specifier: 0.12.3
+        version: 0.12.3(shikiji@0.8.6)
       rehype-raw:
         specifier: 7.0.0
         version: 7.0.0
@@ -14696,11 +14696,11 @@ packages:
       hast-util-from-html: 2.0.1
       unified: 11.0.4
 
-  /rehype-pretty-code@0.12.1(shikiji@0.8.6):
-    resolution: {integrity: sha512-QeGvAPTc31KwP52wBjXqdXXfBAhEs6wETNlOcZRkaPKZZo6Alsz0U6yY05cCKQK53xYNeDCClVYDCyVMl3SP1Q==}
+  /rehype-pretty-code@0.12.3(shikiji@0.8.6):
+    resolution: {integrity: sha512-6NbIit8A3hLrkKBEbNs862jVnTLeIOM2AmM0VZ/MtyHb+OuNMeCa6UZSx6UG4zrobm5tY9efTwhih1exsGYsiw==}
     engines: {node: '>=18'}
     peerDependencies:
-      shikiji: ^0.7.0 || ^0.8.0
+      shikiji: ^0.7.0 || ^0.8.0 || ^0.9.0
     dependencies:
       '@types/hast': 3.0.3
       hast-util-to-string: 3.0.0
