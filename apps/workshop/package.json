@@ -14,18 +14,18 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "7.6.4",
-    "@storybook/addon-essentials": "7.6.4",
-    "@storybook/addon-links": "7.6.4",
-    "@storybook/react": "7.6.4",
-    "@storybook/react-vite": "7.6.4",
+    "@storybook/addon-actions": "7.6.6",
+    "@storybook/addon-essentials": "7.6.6",
+    "@storybook/addon-links": "7.6.6",
+    "@storybook/react": "7.6.6",
+    "@storybook/react-vite": "7.6.6",
     "@storybook/testing-library": "0.2.2",
     "eslint-config-custom": "workspace:*",
     "serve": "14.2.1",
-    "storybook": "7.6.4",
+    "storybook": "7.6.6",
     "storybook-addon-swc": "1.2.0",
     "storybook-dark-mode": "3.0.3",
     "tsconfig": "workspace:*",
-    "vite": "5.0.8"
+    "vite": "5.0.10"
   }
 }
