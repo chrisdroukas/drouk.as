@@ -15,6 +15,13 @@ const work: WorkType[] = [
       region: "District of Columbia",
       countryCode: "US",
     },
+    summary:
+      "Designed Washington Post Social Reader — the first frictionless social reader application on Facebook — scaling to a peak MAU of 17 million.",
+    highlights: [
+      "Transitioned Social Reader from a Facebook application to an independent web app, improving user retention.",
+      "Designed engaging experiences like newsfeed customization, sharing tools, and contextual topic recommendations.",
+      "Modernized iOS application to introduce support for iPad.",
+    ],
   },
   {
     id: "1",
@@ -30,6 +37,13 @@ const work: WorkType[] = [
       region: "District of Columbia",
       countryCode: "US",
     },
+    summary:
+      "Led interface design, user experience, research and testing for Trove's iOS, Apple Watch and web applications. Focused on deliberate, scalable information architecture, maximizing user retention and streamlining new user acquisition.",
+    highlights: [
+      "Designed end-to-end experience for user-curated newsfeeds.",
+      "Designed engaging experiences like newsfeed customization, sharing tools, and contextual topic recommendations.",
+      "Modernized iOS application to introduce support for iPad.",
+    ],
   },
   {
     id: "2",
