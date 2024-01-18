@@ -73,7 +73,7 @@
     "@testing-library/jest-dom": "6.2.0",
     "@testing-library/react": "14.1.2",
     "@vercel/analytics": "1.1.1",
-    "autoprefixer": "10.4.16",
+    "autoprefixer": "10.4.17",
     "eslint-config-custom": "workspace:*",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
