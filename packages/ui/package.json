@@ -70,8 +70,8 @@
   "devDependencies": {
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.10",
-    "@testing-library/jest-dom": "6.2.0",
-    "@testing-library/react": "14.1.2",
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/react": "14.2.1",
     "@vercel/analytics": "1.1.1",
     "autoprefixer": "10.4.16",
     "eslint-config-custom": "workspace:*",
