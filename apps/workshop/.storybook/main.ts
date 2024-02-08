@@ -3,12 +3,7 @@ import { mergeConfig } from "vite";
 import path from "path";
 const config: StorybookConfig = {
   stories: ["../stories/**/*.stories.tsx"],
-  addons: [
-    "storybook-addon-swc",
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "storybook-dark-mode",
-  ],
+  addons: ["storybook-addon-swc", "storybook-dark-mode"],
   framework: {
     name: "@storybook/react-vite",
     options: {},
