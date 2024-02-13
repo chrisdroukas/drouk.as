@@ -49,14 +49,14 @@
     "@radix-ui/react-toast": "1.1.5",
     "@radix-ui/react-toggle": "1.0.3",
     "@radix-ui/react-tooltip": "1.0.7",
-    "@react-three/drei": "9.97.3",
+    "@react-three/drei": "9.97.5",
     "@react-three/fiber": "8.15.16",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
     "cmdk": "0.2.1",
     "contentlayer": "0.3.4",
     "date-fns": "3.3.1",
-    "framer-motion": "11.0.3",
+    "framer-motion": "11.0.4",
     "next-contentlayer": "0.3.4",
     "next-themes": "0.2.1",
     "react-day-picker": "8.10.0",
@@ -85,6 +85,6 @@
     "tailwindcss": "3.4.1",
     "tilg": "0.1.1",
     "tsconfig": "workspace:*",
-    "tsup": "8.0.1"
+    "tsup": "8.0.2"
   }
 }
