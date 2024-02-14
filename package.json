@@ -21,7 +21,7 @@
     "versions:install": "pnpm install --recursive"
   },
   "devDependencies": {
-    "@turbo/gen": "1.12.3",
+    "@turbo/gen": "1.12.4",
     "@types/jest": "29.5.12",
     "@types/mdx": "2.0.11",
     "@types/node": "20.11.17",
@@ -33,7 +33,7 @@
     "eslint": "8.56.0",
     "next": "14.1.0",
     "prettier": "3.2.5",
-    "turbo": "1.12.3",
+    "turbo": "1.12.4",
     "typescript": "5.3.3"
   },
   "packageManager": "pnpm@8.15.2",
