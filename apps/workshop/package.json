@@ -24,6 +24,6 @@
     "storybook-addon-swc": "1.2.0",
     "storybook-dark-mode": "3.0.3",
     "tsconfig": "workspace:*",
-    "vite": "5.1.1"
+    "vite": "5.1.2"
   }
 }
