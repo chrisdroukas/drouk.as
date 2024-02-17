@@ -26,7 +26,7 @@
     "@types/mdx": "2.0.11",
     "@types/node": "20.11.19",
     "@types/react-dom": "18.2.19",
-    "@types/react": "18.2.55",
+    "@types/react": "18.2.56",
     "@types/three": "0.161.2",
     "dotenv-cli": "7.3.0",
     "eslint-config-custom": "workspace:*",
@@ -36,7 +36,7 @@
     "turbo": "1.12.4",
     "typescript": "5.3.3"
   },
-  "packageManager": "pnpm@8.15.2",
+  "packageManager": "pnpm@8.15.3",
   "engines": {
     "node": ">=18.19.0"
   }
