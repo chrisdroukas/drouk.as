@@ -55,7 +55,7 @@
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.10",
     "@vercel/analytics": "1.2.0",
-    "autoprefixer": "10.4.17",
+    "autoprefixer": "10.4.19",
     "encoding": "0.1.13",
     "eslint-config-custom": "workspace:*",
     "postcss": "8.4.35",
