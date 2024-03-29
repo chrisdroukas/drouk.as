@@ -50,7 +50,7 @@
     "@radix-ui/react-toggle": "1.0.3",
     "@radix-ui/react-tooltip": "1.0.7",
     "@react-three/drei": "9.97.6",
-    "@react-three/fiber": "8.15.16",
+    "@react-three/fiber": "8.16.1",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
     "cmdk": "0.2.1",
