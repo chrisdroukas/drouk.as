@@ -1,6 +1,7 @@
 import React from "react";
 import { useDarkMode } from "storybook-dark-mode";
 import { ThemeProvider } from "ui/components/theme-provider";
+import "ui/tailwind.config";
 
 /**
  * We're using the `useDarkMode()` hook to set Mantine's dark
