@@ -26,6 +26,6 @@
     "storybook-dark-mode": "4.0.1",
     "tsconfig": "workspace:*",
     "tailwindcss": "3.4.3",
-    "vite": "5.2.7"
+    "vite": "5.2.8"
   }
 }
