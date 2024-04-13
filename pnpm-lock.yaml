@@ -355,8 +355,8 @@ importers:
         specifier: 1.0.7
         version: 1.0.7(@types/react-dom@18.2.24)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
       '@react-three/drei':
-        specifier: 9.105.1
-        version: 9.105.1(@react-three/fiber@8.16.1)(@types/react@18.2.74)(@types/three@0.163.0)(react-dom@18.2.0)(react@18.2.0)(three@0.163.0)
+        specifier: 9.105.4
+        version: 9.105.4(@react-three/fiber@8.16.1)(@types/react@18.2.74)(@types/three@0.163.0)(react-dom@18.2.0)(react@18.2.0)(three@0.163.0)
       '@react-three/fiber':
         specifier: 8.16.1
         version: 8.16.1(react-dom@18.2.0)(react@18.2.0)(three@0.163.0)
@@ -4240,7 +4240,7 @@ packages:
       '@types/react-dom':
         optional: true
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.0
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.74)(react@18.2.0)
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.2.74)(react@18.2.0)
       '@types/react': 18.2.74
@@ -4723,7 +4723,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.0
       '@types/react': 18.2.74
       react: 18.2.0
     dev: false
@@ -4752,7 +4752,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.0
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.2.74)(react@18.2.0)
       '@types/react': 18.2.74
       react: 18.2.0
@@ -4771,7 +4771,7 @@ packages:
       '@types/react-dom':
         optional: true
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.0
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.24)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
       '@types/react': 18.2.74
       '@types/react-dom': 18.2.24
@@ -4974,8 +4974,8 @@ packages:
     resolution: {integrity: sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==}
     dev: false
 
-  /@react-three/drei@9.105.1(@react-three/fiber@8.16.1)(@types/react@18.2.74)(@types/three@0.163.0)(react-dom@18.2.0)(react@18.2.0)(three@0.163.0):
-    resolution: {integrity: sha512-yDplhbP8MOGIJmYpBqSzgQ1oZ2e3J6172Q95M69PT37jLcpTQKrVDAlMktoGdAlqSV+924XVr75ZYaHDP0Zhfw==}
+  /@react-three/drei@9.105.4(@react-three/fiber@8.16.1)(@types/react@18.2.74)(@types/three@0.163.0)(react-dom@18.2.0)(react@18.2.0)(three@0.163.0):
+    resolution: {integrity: sha512-pBZQmaV4yuBXP/TMcWJc5RNm3v9CykOqQDg2tyjZHijV4aa8jf38ae7WyQa5zDjuZcrHlQd2IGMX0Ia2UTHEUA==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
       react: '>=18.0'
@@ -13351,7 +13351,7 @@ packages:
     peerDependencies:
       esbuild: 0.*
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.0
       '@esbuild-plugins/node-resolve': 0.1.4(esbuild@0.20.2)
       '@fal-works/esbuild-plugin-global-externals': 2.1.2
       '@mdx-js/esbuild': 2.3.0(esbuild@0.20.2)
@@ -16386,7 +16386,7 @@ packages:
   /rtl-css-js@1.16.1:
     resolution: {integrity: sha512-lRQgou1mu19e+Ya0LsTvKrVJ5TYUbqCVPAiImX3UfLTenarvPUl1QFdvu5Z3PYmHT9RCcwIfbjRQBntExyj3Zg==}
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.0
     dev: false
 
   /run-async@2.4.1:
