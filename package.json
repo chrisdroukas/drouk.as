@@ -23,21 +23,21 @@
   "devDependencies": {
     "@turbo/gen": "1.13.2",
     "@types/jest": "29.5.12",
-    "@types/mdx": "2.0.12",
-    "@types/node": "20.12.4",
-    "@types/react-dom": "18.2.24",
-    "@types/react": "18.2.74",
+    "@types/mdx": "2.0.13",
+    "@types/node": "20.12.7",
+    "@types/react-dom": "18.2.25",
+    "@types/react": "18.2.79",
     "@types/three": "0.163.0",
     "dotenv-cli": "7.4.1",
     "eslint-config-custom": "workspace:*",
-    "eslint": "8.57.0",
-    "next": "14.1.4",
+    "eslint": "9.0.0",
+    "next": "14.2.1",
     "prettier": "3.2.5",
     "turbo": "1.13.2",
-    "typescript": "5.4.4"
+    "typescript": "5.4.5"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.0.1",
   "engines": {
-    "node": ">=20.12.1"
+    "node": ">=20.12.2"
   }
 }

@@ -13,19 +13,19 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@storybook/nextjs": "8.0.6",
-    "@storybook/addon-essentials": "8.0.6",
-    "@storybook/addon-links": "8.0.6",
-    "@storybook/react": "8.0.6",
-    "@storybook/react-vite": "8.0.6",
+    "@storybook/nextjs": "8.0.8",
+    "@storybook/addon-essentials": "8.0.8",
+    "@storybook/addon-links": "8.0.8",
+    "@storybook/react": "8.0.8",
+    "@storybook/react-vite": "8.0.8",
     "@storybook/testing-library": "0.2.2",
     "eslint-config-custom": "workspace:*",
     "serve": "14.2.1",
-    "storybook": "8.0.6",
+    "storybook": "8.0.8",
     "storybook-addon-swc": "1.2.0",
     "storybook-dark-mode": "4.0.1",
     "tsconfig": "workspace:*",
     "tailwindcss": "3.4.3",
-    "vite": "5.2.8"
+    "vite": "5.2.9"
   }
 }
