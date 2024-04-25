@@ -20,7 +20,7 @@
     "@storybook/react-vite": "8.0.8",
     "@storybook/testing-library": "0.2.2",
     "eslint-config-custom": "workspace:*",
-    "serve": "14.2.1",
+    "serve": "14.2.3",
     "storybook": "8.0.8",
     "storybook-addon-swc": "1.2.0",
     "storybook-dark-mode": "4.0.1",
