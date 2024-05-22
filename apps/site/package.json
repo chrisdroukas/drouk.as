@@ -27,7 +27,7 @@
     "@vercel/kv": "1.0.1",
     "concurrently": "8.2.2",
     "contentlayer": "0.3.4",
-    "cookies-next": "4.1.1",
+    "cookies-next": "4.2.1",
     "date-fns": "3.6.0",
     "gray-matter": "4.0.3",
     "next": "14.2.1",
