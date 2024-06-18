@@ -1,12 +1,12 @@
 export const Strings = {
   intro: {
-    title: "Chris Droukas is a Design Technologist in New York.",
+    title: "Chris Droukas is a Product Engineer in New York.",
     body: "Designing at Goldman Sachs for Goldman Sachs Developer and Marquee. Previously: Priceline, SocialCode, and Washington Post Labs.",
   },
   configuration: {
     name: "drouk.as/",
-    description: "Chris Droukas is a Design Technologist in New York.",
-    keywords: ["Chris Droukas", "Design Technologist"],
+    description: "Chris Droukas is a Product Engineer in New York.",
+    keywords: ["Chris Droukas", "Product Engineer"],
     author: {
       name: "Chris Droukas",
       url: "https://drouk.as",

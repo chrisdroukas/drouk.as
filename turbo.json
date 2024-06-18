@@ -20,7 +20,7 @@
     "STRAVA_CLIENT_SECRET",
     "STRAVA_TOKEN_DOCUMENT"
   ],
-  "pipeline": {
+  "tasks": {
     "build": {
       "outputs": [
         "dist/**",

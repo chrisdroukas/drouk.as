@@ -260,3 +260,9 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     </Document>
   );
 };
+
+export async function generateResume(resume: ResumeProps["resume"]) {
+  const DocumentStream = await ReactPDF.renderToStream(
+    <Resume resume={resume} />
+  );
+}
