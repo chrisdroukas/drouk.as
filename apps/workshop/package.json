@@ -23,7 +23,7 @@
     "serve": "14.2.1",
     "storybook": "8.0.8",
     "storybook-addon-swc": "1.2.0",
-    "storybook-dark-mode": "4.0.1",
+    "storybook-dark-mode": "4.0.2",
     "tsconfig": "workspace:*",
     "tailwindcss": "3.4.3",
     "vite": "5.2.9"
