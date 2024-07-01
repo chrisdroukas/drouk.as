@@ -34,7 +34,7 @@
     "next": "14.2.1",
     "prettier": "3.2.5",
     "turbo": "1.13.2",
-    "typescript": "5.4.5"
+    "typescript": "5.5.3"
   },
   "packageManager": "pnpm@9.0.1",
   "engines": {
