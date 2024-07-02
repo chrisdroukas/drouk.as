@@ -8,8 +8,8 @@
     "dev": "storybook dev -p 6006 --no-open"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "ui": "workspace:*"
   },
   "devDependencies": {
