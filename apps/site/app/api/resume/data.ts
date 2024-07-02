@@ -108,11 +108,11 @@ const work: WorkType[] = [
 export const data: ResumeType = {
   basics: {
     name: "Chris Droukas",
-    label: "Design Technologist",
+    label: "Product Engineer",
     email: "chris@drouk.as",
     url: "https://drouk.as",
     summary:
-      "Chris Droukas is a design technologist in New York, designing at Goldman Sachs for Goldman Sachs Developer and Marquee. Previously: Priceline, SocialCode, and Washington Post Labs.",
+      "Chris Droukas is a product engineer in New York, designing at Goldman Sachs for Goldman Sachs Developer and Marquee. Previously: Priceline, SocialCode, and Washington Post Labs.",
     location: {
       city: "New York",
       region: "New York",
