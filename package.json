@@ -21,7 +21,7 @@
     "versions:install": "pnpm install --recursive"
   },
   "devDependencies": {
-    "@turbo/gen": "1.13.2",
+    "@turbo/gen": "1.13.4",
     "@types/jest": "29.5.12",
     "@types/mdx": "2.0.13",
     "@types/node": "20.12.7",
