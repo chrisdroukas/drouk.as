@@ -75,7 +75,7 @@
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "0.4.4",
-    "@tailwindcss/typography": "0.5.12",
+    "@tailwindcss/typography": "0.5.15",
     "@testing-library/jest-dom": "6.4.2",
     "@testing-library/react": "15.0.2",
     "@vercel/analytics": "1.2.2",
