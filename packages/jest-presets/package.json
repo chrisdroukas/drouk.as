@@ -5,7 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@jest/globals": "29.7.0",
-    "@testing-library/jest-dom": "6.4.8",
-    "ts-jest": "29.2.3"
+    "@testing-library/jest-dom": "6.5.0",
+    "ts-jest": "29.2.5"
   }
 }

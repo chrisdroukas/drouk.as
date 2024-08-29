@@ -21,23 +21,23 @@
     "versions:install": "pnpm install --recursive"
   },
   "devDependencies": {
-    "@turbo/gen": "2.0.9",
+    "@turbo/gen": "2.1.0",
     "@types/jest": "29.5.12",
     "@types/mdx": "2.0.13",
-    "@types/node": "20.14.12",
+    "@types/node": "22.5.1",
     "@types/react-dom": "18.3.0",
-    "@types/react": "18.3.3",
-    "@types/three": "0.166.0",
+    "@types/react": "18.3.4",
+    "@types/three": "0.167.2",
     "dotenv-cli": "7.4.2",
     "eslint-config-custom": "workspace:*",
-    "eslint": "9.7.0",
-    "next": "14.2.5",
+    "eslint": "9.9.1",
+    "next": "14.2.7",
     "prettier": "3.3.3",
-    "turbo": "2.0.9",
+    "turbo": "2.1.0",
     "typescript": "5.5.4"
   },
-  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e",
+  "packageManager": "pnpm@9.9.0",
   "engines": {
-    "node": ">=20.15.0"
+    "node": ">=20.17.0"
   }
 }
