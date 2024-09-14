@@ -58,7 +58,7 @@
     "autoprefixer": "10.4.19",
     "encoding": "0.1.13",
     "eslint-config-custom": "workspace:*",
-    "postcss": "8.4.38",
+    "postcss": "8.4.47",
     "prisma": "5.12.1",
     "rehype": "13.0.1",
     "remark": "15.0.1",
