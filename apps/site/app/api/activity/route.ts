@@ -37,8 +37,6 @@ export async function GET() {
      */
     const tokens = await responseToken.json();
 
-    console.log(tokens);
-
     /**
      * Validate and cast the JSON to the
      * expected schema.
