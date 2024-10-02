@@ -65,8 +65,6 @@ const spacers = {
 const styles = StyleSheet.create({
   page: {
     alignItems: "stretch",
-    // backgroundColor: getNeutralColor(1, theme),
-    // color: getNeutralColor(12, theme),
     display: "flex",
     flexDirection: "row",
     flexWrap: "nowrap",
@@ -144,60 +142,7 @@ const styles = StyleSheet.create({
     marginBottom: spacers[1],
     marginTop: spacers[3],
   },
-  itemSubheadingRow: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    gap: spacers[1],
-    marginBottom: spacers[1],
-  },
-  itemSubheading: {
-    fontSize: fontSizes.xxs,
-    fontStyle: "italic",
-  },
-  professionalTitle: {
-    borderRadius: "3px",
-    fontWeight: 700,
-    paddingHorizontal: spacers[1],
-  },
-  bold: { fontWeight: 700 },
-  flexColumn: { display: "flex", flexDirection: "column" },
-  flexRow: { alignItems: "center", display: "flex", flexDirection: "row" },
-  flexRowAlignStart: {
-    alignItems: "flex-start",
-    display: "flex",
-    flexDirection: "row",
-  },
-  a: {
-    textDecoration: "underline",
-  },
-  list: {
-    marginTop: spacers[2],
-  },
-  code: {
-    // backgroundColor: getNeutralColor(4, theme),
-    borderRadius: "3px",
-    fontFamily: "JetBrains Mono",
-    fontWeight: 500,
-    paddingHorizontal: spacers[2],
-  },
 });
-
-// const htmlProps: Omit<HtmlProps, "children"> = {
-//   renderers: htmlRenderers,
-//   style: { fontSize: fontSizes.xxs },
-//   stylesheet: {
-//     a: styles.a,
-//     p: styles.sectionParagraph,
-//     ul: styles.list,
-//     ol: styles.list,
-//     code: styles.code,
-//   },
-// };
-
-// interface PDFProps {
-//   privateInformation?: PrivateField[];
-// }
 
 interface ResumeProps {
   resume: ResumeType;
@@ -232,6 +177,7 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
         <View>
           <Text>{resume.basics.name}</Text>
           <Text>{resume.basics.label}</Text>
+          <Text>{resume.basics.url}</Text>
         </View>
       </Page>
     </Document>

@@ -1,34 +1,31 @@
-import { Intro } from "@/components/intro";
-import { Strings } from "@/library/strings";
-import { Navigation } from "@/components/navigation";
-import { navigationConfiguration, siteConfiguration } from "#/configuration";
+"use client";
 
-export default async function Page() {
+import { useEffect, useState } from "react";
+
+import { PDFViewer } from "@react-pdf/renderer";
+
+import { cn } from "@/library/utilities";
+
+import { Resume } from "#/components/pdf";
+import { data } from "#/app/api/resume/data";
+
+export default function Page() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  /*
+   * Define classes for PDFViewer.
+   */
+  const pdfViewerClasses = cn("min-h-screen min-w-full");
+
   return (
-    <>
-      <Intro
-        title={Strings.intro.title}
-        buttons={[
-          {
-            href: Strings.configuration.navigation.about.href,
-            label: `${Strings.configuration.navigation.about.title}`,
-            variant: "default",
-            size: "default",
-          },
-          {
-            href: Strings.configuration.links.github,
-            label: "GitHub",
-            variant: "outline",
-            size: "default",
-          },
-        ]}
-      >
-        <Navigation
-          configuration={siteConfiguration}
-          navigationItems={navigationConfiguration.navigationItems}
-          overlay={true}
-        />
-      </Intro>
-    </>
+    loaded && (
+      <PDFViewer className={pdfViewerClasses}>
+        <Resume resume={data} />
+      </PDFViewer>
+    )
   );
 }
