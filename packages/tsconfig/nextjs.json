@@ -13,6 +13,7 @@
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "baseUrl": ".",
+
     "paths": {
       "@/*": ["../../packages/ui/*"]
     }

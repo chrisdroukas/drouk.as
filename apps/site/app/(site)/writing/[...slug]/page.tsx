@@ -6,7 +6,7 @@ import "@/styles/mdx.css";
 import { AllPostsButton } from "@/components/buttons/all-posts";
 import { Mdx } from "@/components/mdx";
 import { Strings } from "@/library/strings";
-import { allPosts } from "contentlayer/generated";
+import { writing } from "#/.velite";
 
 interface PostPageProps {
   params: {
@@ -16,7 +16,7 @@ interface PostPageProps {
 
 async function getPostFromParams({ params }: PostPageProps) {
   const slug = params?.slug?.join("/");
-  const post = allPosts.find((postData) => postData.slugAsParams === slug);
+  const post = writing.find((postData) => postData.slug === slug);
 
   if (!post) {
     null;
@@ -44,17 +44,17 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    authors: post.authors.map((author) => ({
-      name: author,
-    })),
+    // authors: post.authors.map((author) => ({
+    //   name: author,
+    // })),
   };
 }
 
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  return allPosts.map((post) => ({
-    slug: post.slugAsParams.split("/"),
+  return writing.map((post) => ({
+    slug: post.slug.split("/"),
   }));
 }
 
@@ -83,7 +83,7 @@ export default async function PostPage({ params }: PostPageProps) {
           priority
         />
       )}
-      <Mdx code={post.body.code} />
+      <Mdx code={post.code} />
       <hr className="mt-12" />
       <div className="flex py-6 lg:py-10">
         <AllPostsButton href={Strings.configuration.navigation.writing.href} />

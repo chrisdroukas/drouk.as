@@ -4,8 +4,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "contentlayer build && next build",
-    "dev": "concurrently \"contentlayer dev\" \"next dev -p 8000\"",
+    "build": "velite build && next build",
+    "dev": "concurrently \"velite dev\" \"next dev -p 8000\"",
     "postinstall": "prisma generate",
     "lint": "next lint",
     "preview": "next build && next start",
@@ -22,17 +22,15 @@
   "dependencies": {
     "@hookform/resolvers": "3.9.0",
     "@next-auth/prisma-adapter": "1.0.7",
-    "@prisma/client": "5.19.0",
-    "@react-pdf/renderer": "3.4.4",
-    "@vercel/kv": "2.0.0",
-    "concurrently": "8.2.2",
-    "contentlayer": "0.3.4",
+    "@prisma/client": "5.20.0",
+    "@react-pdf/renderer": "4.0.0",
+    "@vercel/kv": "3.0.0",
+    "concurrently": "9.0.1",
     "cookies-next": "4.2.1",
-    "date-fns": "3.6.0",
+    "date-fns": "4.1.0",
     "gray-matter": "4.0.3",
-    "next": "14.2.7",
-    "next-auth": "4.24.7",
-    "next-contentlayer": "0.3.4",
+    "next": "14.2.14",
+    "next-auth": "4.24.8",
     "next-mdx-remote": "5.0.0",
     "next-remote-watch": "2.0.0",
     "postmark": "4.0.5",
@@ -48,7 +46,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@babel/core": "7.25.2",
+    "@babel/core": "7.25.7",
     "@mdx-js/mdx": "3.0.1",
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.15",
@@ -56,11 +54,12 @@
     "autoprefixer": "10.4.20",
     "encoding": "0.1.13",
     "eslint-config-custom": "workspace:*",
-    "postcss": "8.4.41",
-    "prisma": "5.19.0",
-    "rehype": "13.0.1",
+    "postcss": "8.4.47",
+    "prisma": "5.20.0",
+    "rehype": "13.0.2",
     "remark": "15.0.1",
-    "tailwindcss": "3.4.10",
-    "tsconfig": "workspace:*"
+    "tailwindcss": "3.4.13",
+    "tsconfig": "workspace:*",
+    "velite": "0.1.1"
   }
 }

@@ -1,0 +1,6 @@
+[
+  {
+    "title": "Privacy Policy",
+    "code": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(r){const o={a:\"a\",h2:\"h2\",p:\"p\",...r.components};return t(e,{children:[t(o.p,{children:[\"The \",n(o.a,{href:\"https://drouk.as\",children:\"drouk.as\"}),' Privacy Policy describes how we collect, use, and share information about you when you use our website, applications, and other online products and services (collectively, the \"Services\") or when you otherwise interact with us or receive a communication from us. This policy applies to all of the Services offered by ',n(o.a,{href:\"https://drouk.as\",children:\"drouk.as\"}),\" or affiliated companies.\"]}),\"\\n\",n(o.p,{children:\"We are committed to protecting your privacy and handling your data in an open and transparent manner.\"}),\"\\n\",n(o.h2,{children:\"Consent\"}),\"\\n\",n(o.p,{children:\"By accessing and using our website, you agree to the terms of this Privacy Policy and our data collection practices. Your continued use of the website after any changes or revisions to this Privacy Policy signifies your agreement with the terms of the revised Privacy Policy.\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  }
+]
