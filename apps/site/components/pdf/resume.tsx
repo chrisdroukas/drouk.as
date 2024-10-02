@@ -2,6 +2,8 @@
 
 import React, { FC } from "react";
 import ReactPDF, {
+  PageProps,
+  DocumentProps,
   Document,
   Font,
   Page,
@@ -234,7 +236,7 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
   /**
    * Metadata for the PDF document.
    */
-  const documentData: ReactPDF.DocumentProps = {
+  const documentData: DocumentProps = {
     title: `${resume.basics.name} - Resume`,
     author: resume.basics.name,
     subject: `${resume.basics.name} - Resume`,
@@ -245,7 +247,7 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
   /**
    * Metadata for the PDF page.
    */
-  const pageData: ReactPDF.PageProps = {
+  const pageData: PageProps = {
     size: "LETTER",
   };
 
@@ -260,3 +262,9 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     </Document>
   );
 };
+
+export async function generateResume(resume: ResumeProps["resume"]) {
+  const DocumentStream = await ReactPDF.renderToStream(
+    <Resume resume={resume} />
+  );
+}

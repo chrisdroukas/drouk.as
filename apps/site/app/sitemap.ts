@@ -1,5 +1,5 @@
 import { navigationConfiguration, siteConfiguration } from "#/configuration";
-import { allPosts } from "contentlayer/generated";
+import { writing } from "#/.velite";
 
 export default async function sitemap() {
   const app = {
@@ -12,8 +12,8 @@ export default async function sitemap() {
     lastModified: new Date().toISOString(),
   }));
 
-  const posts = allPosts.map((post) => ({
-    url: `${siteConfiguration.links.url}/writing${post.slug}`,
+  const posts = writing.map((post) => ({
+    url: `${siteConfiguration.links.url}/${post.slug}`,
     lastModified: post.date,
   }));
 

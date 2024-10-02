@@ -19,7 +19,7 @@ export async function GET() {
   /**
    * Retrieve refresh_token from Vercel KV.
    */
-  const refresh_token = await kv.hget("strava", "refresh_token");
+  const refresh_token = await kv.hget("strava", "refreshToken");
 
   /**
    * Fetch the new tokens from the Strava API.

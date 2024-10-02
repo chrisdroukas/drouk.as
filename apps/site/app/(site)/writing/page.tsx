@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Strings } from "@/library/strings";
-import { allPosts } from "contentlayer/generated";
+import { writing } from "#/.velite";
 
 export const metadata: Metadata = {
   title: "Writing",
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Writing() {
-  const posts = allPosts
-    .filter((post) => post.published)
+  const posts = writing
+    .filter((post) => post.date)
     .sort((a, b) => {
       return compareDesc(new Date(a.date), new Date(b.date));
     });
@@ -36,12 +36,12 @@ export default async function Writing() {
         <div className="grid gap-10 sm:grid-cols-2">
           {posts.map((post, index) => (
             <Link
-              key={post._id}
-              href={post.slug}
+              key={post.slug}
+              href={post.permalink}
               className="group relative flex flex-col space-y-2"
             >
               <article
-                key={post._id}
+                key={post.slug}
                 className="group relative flex flex-col space-y-2"
               >
                 {post.image && (

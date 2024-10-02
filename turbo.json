@@ -18,9 +18,13 @@
     "SMTP_FROM",
     "STRAVA_CLIENT_ID",
     "STRAVA_CLIENT_SECRET",
-    "STRAVA_TOKEN_DOCUMENT"
+    "STRAVA_TOKEN_DOCUMENT",
+    "KV_REST_API_READ_ONLY_TOKEN",
+    "KV_REST_API_TOKEN",
+    "KV_REST_API_URL",
+    "KV_URL"
   ],
-  "pipeline": {
+  "tasks": {
     "build": {
       "outputs": [
         "dist/**",

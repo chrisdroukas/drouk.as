@@ -1,7 +1,7 @@
+import * as runtime from "react/jsx-runtime";
 import { Callout } from "@/components/mdx/callout";
 import { cn } from "@/library/utilities";
 import { MDXComponents } from "mdx/types";
-import { useMDXComponent } from "next-contentlayer/hooks";
 import NextImage, { ImageProps } from "next/image";
 import { HTMLAttributes, ImgHTMLAttributes } from "react";
 
@@ -153,6 +153,11 @@ const components: MDXComponents = {
 interface MdxProps {
   code: string;
 }
+
+const useMDXComponent = (code: string) => {
+  const fn = new Function(code);
+  return fn({ ...runtime }).default;
+};
 
 export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
