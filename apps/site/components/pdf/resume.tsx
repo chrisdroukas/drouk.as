@@ -1,5 +1,3 @@
-"use client";
-
 import React, { FC } from "react";
 import ReactPDF, {
   PageProps,
@@ -45,29 +43,6 @@ Font.register({
     },
   ],
 });
-
-// Font.register({
-//   family: "JetBrains Mono",
-//   fonts: [
-//     {
-//       fontStyle: "normal",
-//       fontWeight: 500,
-//       src: `${fontPath}/JetBrainsMono-Medium.ttf`,
-//     },
-//   ],
-// });
-
-// const hyphenationCallback = (word: string) => {
-//   // don't hyphenate
-//   return [word];
-// };
-
-// Font.registerHyphenationCallback(hyphenationCallback);
-
-// Font.registerEmojiSource({
-//   format: "png",
-//   url: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/",
-// });
 
 const fontSizes = {
   xl: 20,
@@ -262,9 +237,3 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     </Document>
   );
 };
-
-export async function generateResume(resume: ResumeProps["resume"]) {
-  const DocumentStream = await ReactPDF.renderToStream(
-    <Resume resume={resume} />
-  );
-}
