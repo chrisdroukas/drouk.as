@@ -149,7 +149,11 @@ interface ResumeProps {
 }
 
 export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
-  // const year = new Date().getFullYear();
+  const date = new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
 
   const { resume } = props;
 
@@ -178,6 +182,7 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
           <Text>{resume.basics.name}</Text>
           <Text>{resume.basics.label}</Text>
           <Text>{resume.basics.url}</Text>
+          <Text>Generated {date}. For the latest updates, see LinkedIn.</Text>
         </View>
       </Page>
     </Document>
