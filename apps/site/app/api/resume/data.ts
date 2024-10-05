@@ -8,8 +8,8 @@ const work: WorkType[] = [
       "Washington Post Labs was an experimental media group focused on personalized news and information.",
     position: "Product Designer",
     url: "https://wapo.st",
-    startDate: new Date("May 2012"),
-    endDate: new Date("January 2014"),
+    startDate: new Date(2012, 4, 1),
+    endDate: new Date(2014, 0, 1),
     location: {
       city: "Washington",
       region: "District of Columbia",
@@ -30,8 +30,8 @@ const work: WorkType[] = [
       "Trove News was a social news aggregation service originating from Washington Post Labs technology.",
     position: "Product Designer",
     url: "https://en.wikipedia.org/wiki/Trove_(app)",
-    startDate: new Date("January 2014"),
-    endDate: new Date("November 2015"),
+    startDate: new Date(2014, 0, 1),
+    endDate: new Date(2015, 10, 1),
     location: {
       city: "Washington",
       region: "District of Columbia",
@@ -52,8 +52,8 @@ const work: WorkType[] = [
       "SocialCode was a multiplatform performance advertisement management, analytics, and reporting service.",
     position: "Product Designer",
     url: "https://socialcode.com",
-    startDate: new Date("November 2015"),
-    endDate: new Date("March 2017"),
+    startDate: new Date(2015, 10, 1),
+    endDate: new Date(2017, 2, 1),
     location: {
       city: "Washington",
       region: "District of Columbia",
@@ -67,8 +67,8 @@ const work: WorkType[] = [
       "Priceline is an online travel agency specializing in discount rates for hotels, airfare, and car rentals.",
     position: "Design Lead",
     url: "https://priceline.com",
-    startDate: new Date("April 2017"),
-    endDate: new Date("January 2019"),
+    startDate: new Date(2017, 2, 1),
+    endDate: new Date(2019, 0, 1),
     location: {
       city: "New York",
       region: "New York",
@@ -82,8 +82,8 @@ const work: WorkType[] = [
       "Goldman Sachs Marquee is an integrated storefront for institutional client services.",
     position: "Product Designer",
     url: "https://marquee.gs.com",
-    startDate: new Date("January 2019"),
-    endDate: new Date("December 2019"),
+    startDate: new Date(2019, 0, 1),
+    endDate: new Date(2019, 11, 1),
     location: {
       city: "New York",
       region: "New York",
@@ -96,7 +96,7 @@ const work: WorkType[] = [
     description: "Goldman Sachs Developer is a financial technology platform.",
     position: "Vice President, Product Design",
     url: "https://developer.gs.com",
-    startDate: new Date("December 2019"),
+    startDate: new Date(2019, 11, 1),
     location: {
       city: "New York",
       region: "New York",

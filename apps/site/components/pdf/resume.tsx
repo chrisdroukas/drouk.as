@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import ReactPDF, {
+import {
   PageProps,
   DocumentProps,
   Document,
@@ -10,7 +10,7 @@ import ReactPDF, {
   View,
 } from "@react-pdf/renderer";
 
-import { ResumeType } from "#/app/api/schemas/resume";
+import { ResumeType, WorkType } from "#/app/api/schemas/resume";
 
 const domain = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
@@ -44,41 +44,92 @@ Font.register({
   ],
 });
 
+const colors = {
+  primary: "hsl(222.2 84% 4.9%)",
+  secondary: "hsl(215.3 25% 26.7%)",
+  tertiary: "hsl(215.4 16.3% 46.9%)",
+};
+
 const fontSizes = {
-  xl: 20,
-  l: 18,
-  m: 14,
-  s: 13,
-  xs: 12,
-  xxs: 10,
+  xs: 6,
+  s: 10,
+  m: 12,
+  l: 14,
 };
 
 const spacers = {
-  1: "6px",
+  1: "4px",
   2: "8px",
-  3: "10px",
-  4: "12px",
-  5: "14px",
-  6: "16px",
+  3: "12px",
+  4: "16px",
+  5: "20px",
+  6: "24px",
 };
 
 const styles = StyleSheet.create({
   page: {
     alignItems: "stretch",
     display: "flex",
-    flexDirection: "row",
-    flexWrap: "nowrap",
-    fontFamily: "Cal Sans",
-    color: "black",
+    flexDirection: "column",
+    gap: spacers[2],
+    fontFamily: "Inter",
+    fontWeight: "normal",
+    color: colors.primary,
     paddingVertical: 40,
     paddingHorizontal: 40,
-    fontSize: fontSizes.xxs,
+    fontSize: fontSizes.m,
     justifyContent: "flex-start",
-    lineHeight: 1.3,
   },
+
   headerContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingBottom: spacers[2],
+    borderBottom: `0.25px solid ${colors.tertiary}`,
+  },
+  titleContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  contactContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+
+  header: {
+    fontFamily: "Cal Sans",
+    fontSize: fontSizes.l,
+  },
+  subHeader: {
+    fontSize: fontSizes.s,
+    color: colors.secondary,
+  },
+  contact: {
+    fontSize: fontSizes.s,
+  },
+
+  section: {
+    // backgroundColor: "yellow",
+  },
+  sectionTitle: {
+    fontFamily: "Cal Sans",
+    fontWeight: "semibold",
+    fontSize: fontSizes.l,
+  },
+  sectionItem: {
+    fontFamily: "Inter",
+    fontSize: fontSizes.s,
+  },
+
+  disclaimer: {
+    position: "absolute",
+    fontSize: fontSizes.xs,
+    bottom: 30,
+    left: 0,
+    right: 0,
     textAlign: "center",
-    marginBottom: 20,
+    color: "grey",
   },
 });
 
@@ -123,18 +174,83 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     dpi: 72,
   };
 
+  const work = resume.work?.slice().reverse();
+
   return (
     <Document {...documentData}>
       <Page {...pageData} style={styles.page}>
         {/* Header Section */}
-        <View style={styles.headerContainer}></View>
+        <View style={styles.headerContainer}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.header}>{resume.basics.name}</Text>
+            <Text style={styles.subHeader}>{resume.basics.label}</Text>
+          </View>
+          <View style={styles.contactContainer}>
+            <Text style={styles.contact}>{resume.basics.url}</Text>
+          </View>
+        </View>
 
-        {/* <View>
-          <Text>{resume.basics.name}</Text>
-          <Text>{resume.basics.label}</Text>
-          <Text>{resume.basics.url}</Text>
-          <Text>Generated {date}. For the latest updates, see LinkedIn.</Text>
-        </View> */}
+        {/* Professional Experience Section */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Professional Experience</Text>
+          {work?.map((job, index) => (
+            <View key={index} style={styles.sectionItem}>
+              <Text>
+                {job.position} at {job.name} (
+                {job.startDate?.toLocaleDateString("en-US", {
+                  month: "short",
+                  year: "numeric",
+                })}{" "}
+                -{" "}
+                {job.endDate
+                  ? job.endDate.toLocaleDateString("en-US", {
+                      month: "short",
+                      year: "numeric",
+                    })
+                  : "Present"}
+                )
+              </Text>
+              <Text>{job.summary}</Text>
+              {job.highlights && job.highlights.length > 0 && (
+                <View>
+                  {job.highlights.map((highlight, highlightIndex) => (
+                    <Text key={highlightIndex} style={styles.sectionItem}>
+                      - {highlight}
+                    </Text>
+                  ))}
+                </View>
+              )}
+            </View>
+          ))}
+        </View>
+
+        {/* Education Section */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Education</Text>
+          {resume.education?.map((edu, index) => (
+            <View key={index} style={styles.sectionItem}>
+              <Text>
+                {edu.name} - {edu.studyType} in {edu.area} (
+                {edu.startDate?.toLocaleDateString("en-US", {
+                  month: "short",
+                  year: "numeric",
+                })}{" "}
+                -{" "}
+                {edu.endDate?.toLocaleDateString("en-US", {
+                  month: "short",
+                  year: "numeric",
+                })}
+                )
+              </Text>
+            </View>
+          ))}
+        </View>
+
+        {/* Footer Section */}
+
+        <Text style={styles.disclaimer} fixed>
+          Generated {date}. For the latest updates, see LinkedIn.
+        </Text>
       </Page>
     </Document>
   );
