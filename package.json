@@ -26,7 +26,7 @@
     "@types/three": "0.169.0",
     "dotenv-cli": "7.4.2",
     "eslint-config-custom": "workspace:*",
-    "eslint": "9.11.1",
+    "eslint": "9.12.0",
     "next": "14.2.14",
     "prettier": "3.3.3",
     "turbo": "2.1.3",

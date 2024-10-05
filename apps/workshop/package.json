@@ -18,7 +18,7 @@
     "@storybook/addon-links": "8.3.5",
     "@storybook/react": "8.3.5",
     "@storybook/react-vite": "8.3.5",
-    "@storybook/testing-library": "0.2.2",
+    "@storybook/test": "8.3.5",
     "eslint-config-custom": "workspace:*",
     "serve": "14.2.3",
     "storybook": "8.3.5",

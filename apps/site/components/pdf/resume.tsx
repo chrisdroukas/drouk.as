@@ -1,5 +1,3 @@
-"use client";
-
 import React, { FC } from "react";
 import ReactPDF, {
   PageProps,
@@ -46,29 +44,6 @@ Font.register({
   ],
 });
 
-// Font.register({
-//   family: "JetBrains Mono",
-//   fonts: [
-//     {
-//       fontStyle: "normal",
-//       fontWeight: 500,
-//       src: `${fontPath}/JetBrainsMono-Medium.ttf`,
-//     },
-//   ],
-// });
-
-// const hyphenationCallback = (word: string) => {
-//   // don't hyphenate
-//   return [word];
-// };
-
-// Font.registerHyphenationCallback(hyphenationCallback);
-
-// Font.registerEmojiSource({
-//   format: "png",
-//   url: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/",
-// });
-
 const fontSizes = {
   xl: 20,
   l: 18,
@@ -90,8 +65,6 @@ const spacers = {
 const styles = StyleSheet.create({
   page: {
     alignItems: "stretch",
-    // backgroundColor: getNeutralColor(1, theme),
-    // color: getNeutralColor(12, theme),
     display: "flex",
     flexDirection: "row",
     flexWrap: "nowrap",
@@ -103,133 +76,22 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     lineHeight: 1.3,
   },
-  sidebar: {
-    alignSelf: "stretch",
-    display: "flex",
-    flexBasis: "30%",
-    flexDirection: "column",
-    flexGrow: 0,
-    flexShrink: 1,
-  },
-  sidebarContent: { padding: spacers[4] },
-  header: {
-    padding: `${spacers[6]} ${spacers[4]}`,
+  headerContainer: {
     textAlign: "center",
-  },
-  headerTitle: { fontSize: fontSizes.xl, fontWeight: 700 },
-  headerSubtitle: { fontSize: fontSizes.m, fontWeight: 700 },
-  main: {
-    alignSelf: "stretch",
-    display: "flex",
-    flexBasis: "70%",
-    flexDirection: "column",
-    flexGrow: 1,
-    flexShrink: 0,
-    padding: spacers[4],
-  },
-  section: { marginBottom: spacers[4] },
-  sectionHeading: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    fontSize: fontSizes.m,
-    fontWeight: 700,
-    gap: spacers[1],
-  },
-  sectionHeadingNonHTML: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    fontSize: fontSizes.m,
-    fontWeight: 700,
-    gap: spacers[1],
-    marginBottom: spacers[1],
-  },
-  sectionHeadingIcon: {
-    height: fontSizes.m,
-    marginRight: spacers[1],
-    width: fontSizes.m,
-  },
-  sectionHeadingStars: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-  },
-  sectionParagraph: {
-    fontWeight: 400,
-    margin: 0,
-  },
-  itemHeading: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    fontSize: fontSizes.s,
-    fontWeight: 700,
-    gap: spacers[1],
-    marginBottom: spacers[1],
-    marginTop: spacers[3],
-  },
-  itemSubheadingRow: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    gap: spacers[1],
-    marginBottom: spacers[1],
-  },
-  itemSubheading: {
-    fontSize: fontSizes.xxs,
-    fontStyle: "italic",
-  },
-  professionalTitle: {
-    borderRadius: "3px",
-    fontWeight: 700,
-    paddingHorizontal: spacers[1],
-  },
-  bold: { fontWeight: 700 },
-  flexColumn: { display: "flex", flexDirection: "column" },
-  flexRow: { alignItems: "center", display: "flex", flexDirection: "row" },
-  flexRowAlignStart: {
-    alignItems: "flex-start",
-    display: "flex",
-    flexDirection: "row",
-  },
-  a: {
-    textDecoration: "underline",
-  },
-  list: {
-    marginTop: spacers[2],
-  },
-  code: {
-    // backgroundColor: getNeutralColor(4, theme),
-    borderRadius: "3px",
-    fontFamily: "JetBrains Mono",
-    fontWeight: 500,
-    paddingHorizontal: spacers[2],
+    marginBottom: 20,
   },
 });
-
-// const htmlProps: Omit<HtmlProps, "children"> = {
-//   renderers: htmlRenderers,
-//   style: { fontSize: fontSizes.xxs },
-//   stylesheet: {
-//     a: styles.a,
-//     p: styles.sectionParagraph,
-//     ul: styles.list,
-//     ol: styles.list,
-//     code: styles.code,
-//   },
-// };
-
-// interface PDFProps {
-//   privateInformation?: PrivateField[];
-// }
 
 interface ResumeProps {
   resume: ResumeType;
 }
 
 export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
-  // const year = new Date().getFullYear();
+  const date = new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
 
   const { resume } = props;
 
@@ -240,31 +102,40 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     title: `${resume.basics.name} - Resume`,
     author: resume.basics.name,
     subject: `${resume.basics.name} - Resume`,
+    keywords: "",
     creator: resume.basics.url,
     producer: resume.basics.url,
+    language: "en-US",
+    creationDate: new Date(),
+    modificationDate: new Date(),
+    pdfVersion: "1.3",
+    pageMode: "useNone",
+    pageLayout: "singlePage",
   };
 
   /**
    * Metadata for the PDF page.
    */
   const pageData: PageProps = {
+    wrap: true,
     size: "LETTER",
+    orientation: "portrait",
+    dpi: 72,
   };
 
   return (
     <Document {...documentData}>
       <Page {...pageData} style={styles.page}>
-        <View>
+        {/* Header Section */}
+        <View style={styles.headerContainer}></View>
+
+        {/* <View>
           <Text>{resume.basics.name}</Text>
           <Text>{resume.basics.label}</Text>
-        </View>
+          <Text>{resume.basics.url}</Text>
+          <Text>Generated {date}. For the latest updates, see LinkedIn.</Text>
+        </View> */}
       </Page>
     </Document>
   );
 };
-
-export async function generateResume(resume: ResumeProps["resume"]) {
-  const DocumentStream = await ReactPDF.renderToStream(
-    <Resume resume={resume} />
-  );
-}
