@@ -76,71 +76,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     lineHeight: 1.3,
   },
-  sidebar: {
-    alignSelf: "stretch",
-    display: "flex",
-    flexBasis: "30%",
-    flexDirection: "column",
-    flexGrow: 0,
-    flexShrink: 1,
-  },
-  sidebarContent: { padding: spacers[4] },
-  header: {
-    padding: `${spacers[6]} ${spacers[4]}`,
+  headerContainer: {
     textAlign: "center",
-  },
-  headerTitle: { fontSize: fontSizes.xl, fontWeight: 700 },
-  headerSubtitle: { fontSize: fontSizes.m, fontWeight: 700 },
-  main: {
-    alignSelf: "stretch",
-    display: "flex",
-    flexBasis: "70%",
-    flexDirection: "column",
-    flexGrow: 1,
-    flexShrink: 0,
-    padding: spacers[4],
-  },
-  section: { marginBottom: spacers[4] },
-  sectionHeading: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    fontSize: fontSizes.m,
-    fontWeight: 700,
-    gap: spacers[1],
-  },
-  sectionHeadingNonHTML: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    fontSize: fontSizes.m,
-    fontWeight: 700,
-    gap: spacers[1],
-    marginBottom: spacers[1],
-  },
-  sectionHeadingIcon: {
-    height: fontSizes.m,
-    marginRight: spacers[1],
-    width: fontSizes.m,
-  },
-  sectionHeadingStars: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-  },
-  sectionParagraph: {
-    fontWeight: 400,
-    margin: 0,
-  },
-  itemHeading: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    fontSize: fontSizes.s,
-    fontWeight: 700,
-    gap: spacers[1],
-    marginBottom: spacers[1],
-    marginTop: spacers[3],
+    marginBottom: 20,
   },
 });
 
@@ -164,26 +102,39 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     title: `${resume.basics.name} - Resume`,
     author: resume.basics.name,
     subject: `${resume.basics.name} - Resume`,
+    keywords: "",
     creator: resume.basics.url,
     producer: resume.basics.url,
+    language: "en-US",
+    creationDate: new Date(),
+    modificationDate: new Date(),
+    pdfVersion: "1.3",
+    pageMode: "useNone",
+    pageLayout: "singlePage",
   };
 
   /**
    * Metadata for the PDF page.
    */
   const pageData: PageProps = {
+    wrap: true,
     size: "LETTER",
+    orientation: "portrait",
+    dpi: 72,
   };
 
   return (
     <Document {...documentData}>
       <Page {...pageData} style={styles.page}>
-        <View>
+        {/* Header Section */}
+        <View style={styles.headerContainer}></View>
+
+        {/* <View>
           <Text>{resume.basics.name}</Text>
           <Text>{resume.basics.label}</Text>
           <Text>{resume.basics.url}</Text>
           <Text>Generated {date}. For the latest updates, see LinkedIn.</Text>
-        </View>
+        </View> */}
       </Page>
     </Document>
   );
