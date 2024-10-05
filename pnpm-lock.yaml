@@ -199,9 +199,15 @@ importers:
       '@storybook/react-vite':
         specifier: 8.3.5
         version: 8.3.5(@storybook/test@8.3.5(storybook@8.3.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(storybook@8.3.5)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4)(terser@5.34.1))(webpack-sources@3.2.3)
+<<<<<<< HEAD
       '@storybook/test':
         specifier: 8.3.5
         version: 8.3.5(storybook@8.3.5)
+=======
+      '@storybook/testing-library':
+        specifier: 0.2.2
+        version: 0.2.2
+>>>>>>> main
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
@@ -3076,6 +3082,13 @@ packages:
     resolution: {integrity: sha512-1BXWsUGWk9FiKKelZZ55FDJdeoL8uRBHbjTYBRM2xJLhdNSvGzI4Tb3bkmxPpGn72Ua6AyldhlTxr2BpUFKOHA==}
     peerDependencies:
       storybook: ^8.3.5
+<<<<<<< HEAD
+=======
+
+  '@storybook/testing-library@0.2.2':
+    resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
+>>>>>>> main
 
   '@storybook/theming@8.3.4':
     resolution: {integrity: sha512-D4XVsQgTtpHEHLhwkx59aGy1GBwOedVr/mNns7hFrH8FjEpxrrWCuZQASq1ZpCl8LXlh7uvmT5sM2rOdQbGuGg==}
@@ -11951,9 +11964,19 @@ snapshots:
     dependencies:
       storybook: 8.3.5
 
+<<<<<<< HEAD
   '@storybook/theming@8.3.5(storybook@8.3.5)':
     dependencies:
       storybook: 8.3.5
+=======
+  '@storybook/theming@8.3.4(storybook@8.3.5)':
+    dependencies:
+      storybook: 8.3.5
+
+  '@storybook/theming@8.3.5(storybook@8.3.5)':
+    dependencies:
+      storybook: 8.3.5
+>>>>>>> main
 
   '@swc/core-darwin-arm64@1.7.26':
     optional: true
