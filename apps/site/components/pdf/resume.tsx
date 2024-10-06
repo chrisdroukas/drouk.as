@@ -137,20 +137,32 @@ interface ResumeProps {
   resume: ResumeType;
 }
 
+/**
+ * MARK: Component
+ */
 export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
   /**
    * MARK: Setup
    */
   const { resume } = props;
 
-  const formatDate = (date: Date): string =>
-    date.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+  const work = resume.work?.slice().reverse();
 
-  const date = new Date().toLocaleDateString("en-US", {
-    day: "numeric",
+  const dateFormattingOptions: Intl.DateTimeFormatOptions = {
     month: "short",
     year: "numeric",
+  };
+
+  const today = new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    ...dateFormattingOptions,
   });
+
+  /**
+   * MARK: Formatters
+   */
+  const formatDate = (date: Date): string =>
+    date.toLocaleDateString("en-US", { ...dateFormattingOptions });
 
   const dateRange = (startDate: Date, endDate?: Date) => {
     return `${formatDate(startDate)} – ${endDate ? formatDate(endDate) : "Present"}`;
@@ -184,8 +196,6 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     dpi: 72,
   };
 
-  const work = resume.work?.slice().reverse();
-
   /**
    * MARK: Interface
    */
@@ -211,17 +221,6 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
               <Text>
                 {job.position} at {job.name}
                 {dateRange(job.startDate, job.endDate)}
-                {job.startDate?.toLocaleDateString("en-US", {
-                  month: "short",
-                  year: "numeric",
-                })}{" "}
-                -{" "}
-                {job.endDate
-                  ? job.endDate.toLocaleDateString("en-US", {
-                      month: "short",
-                      year: "numeric",
-                    })
-                  : "Present"}
               </Text>
               <Text>{job.summary}</Text>
               {job.highlights && job.highlights.length > 0 && (
@@ -240,20 +239,11 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
         {/* Education Section */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Education</Text>
-          {resume.education?.map((edu, index) => (
+          {resume.education?.map((education, index) => (
             <View key={index} style={styles.sectionItem}>
               <Text>
-                {edu.name} - {edu.studyType} in {edu.area} (
-                {edu.startDate?.toLocaleDateString("en-US", {
-                  month: "short",
-                  year: "numeric",
-                })}{" "}
-                -{" "}
-                {edu.endDate?.toLocaleDateString("en-US", {
-                  month: "short",
-                  year: "numeric",
-                })}
-                )
+                {education.name} - {education.studyType} in {education.area}
+                {dateRange(education.startDate, education.endDate)}
               </Text>
             </View>
           ))}
@@ -262,7 +252,7 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
         {/* Footer Section */}
 
         <Text style={styles.disclaimer} fixed>
-          Generated {date}. For the latest updates, see LinkedIn.
+          Generated {today}. For the latest updates, see LinkedIn.
         </Text>
       </Page>
     </Document>
