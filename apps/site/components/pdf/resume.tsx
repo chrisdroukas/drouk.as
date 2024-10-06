@@ -94,7 +94,15 @@ const styles = StyleSheet.create({
   },
   contactContainer: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "flex-end",
+    gap: spacers[4],
+  },
+  contactContainerItem: {
+    display: "flex",
+    backgroundColor: "yellow",
+    flexDirection: "row",
   },
 
   header: {
@@ -115,7 +123,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontFamily: "Cal Sans",
     fontWeight: "semibold",
-    fontSize: fontSizes.l,
+    fontSize: fontSizes.m,
   },
   sectionItem: {
     fontFamily: "Inter",
@@ -196,45 +204,49 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     dpi: 72,
   };
 
+  const Header = () => (
+    <View style={styles.headerContainer}>
+      <View style={styles.titleContainer}>
+        <Text style={styles.header}>{resume.basics.name}</Text>
+        <Text style={styles.subHeader}>{resume.basics.label}</Text>
+      </View>
+      <View style={styles.contactContainer}>
+        <View style={styles.contactContainerItem}>
+          <Text style={styles.contact}>Mail</Text>
+          <Text style={styles.contact}>{resume.basics.email}</Text>
+        </View>
+        <View style={styles.contactContainerItem}>
+          <Text style={styles.contact}>More</Text>
+          <Text style={styles.contact}>{resume.basics.url}</Text>
+        </View>
+      </View>
+    </View>
+  );
+
+  const Work = () => (
+    <>
+      <Text style={styles.sectionTitle}>Work</Text>
+      <View style={styles.section}>
+        {work?.map((job, index) => (
+          <View key={index} style={styles.sectionItem}>
+            <Text>{job.name}</Text>
+            <Text>{dateRange(job.startDate, job.endDate)}</Text>
+            <Text>{dateRange(job.startDate, job.endDate)}</Text>
+            <Text>{job.summary}</Text>
+          </View>
+        ))}
+      </View>
+    </>
+  );
+
   /**
    * MARK: Interface
    */
   return (
     <Document {...documentData}>
       <Page {...pageData} style={styles.page}>
-        {/* Header Section */}
-        <View style={styles.headerContainer}>
-          <View style={styles.titleContainer}>
-            <Text style={styles.header}>{resume.basics.name}</Text>
-            <Text style={styles.subHeader}>{resume.basics.label}</Text>
-          </View>
-          <View style={styles.contactContainer}>
-            <Text style={styles.contact}>{resume.basics.url}</Text>
-          </View>
-        </View>
-
-        {/* Professional Experience Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Professional Experience</Text>
-          {work?.map((job, index) => (
-            <View key={index} style={styles.sectionItem}>
-              <Text>
-                {job.position} at {job.name}
-                {dateRange(job.startDate, job.endDate)}
-              </Text>
-              <Text>{job.summary}</Text>
-              {job.highlights && job.highlights.length > 0 && (
-                <View>
-                  {job.highlights.map((highlight, highlightIndex) => (
-                    <Text key={highlightIndex} style={styles.sectionItem}>
-                      - {highlight}
-                    </Text>
-                  ))}
-                </View>
-              )}
-            </View>
-          ))}
-        </View>
+        <Header />
+        <Work />
 
         {/* Education Section */}
         <View style={styles.section}>
@@ -248,9 +260,7 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
             </View>
           ))}
         </View>
-
         {/* Footer Section */}
-
         <Text style={styles.disclaimer} fixed>
           Generated {today}. For the latest updates, see LinkedIn.
         </Text>
