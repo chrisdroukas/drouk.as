@@ -138,13 +138,23 @@ interface ResumeProps {
 }
 
 export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
+  /**
+   * MARK: Setup
+   */
+  const { resume } = props;
+
+  const formatDate = (date: Date): string =>
+    date.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+
   const date = new Date().toLocaleDateString("en-US", {
     day: "numeric",
     month: "short",
     year: "numeric",
   });
 
-  const { resume } = props;
+  const dateRange = (startDate: Date, endDate?: Date) => {
+    return `${formatDate(startDate)} – ${endDate ? formatDate(endDate) : "Present"}`;
+  };
 
   /**
    * Metadata for the PDF document.
@@ -176,6 +186,9 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
 
   const work = resume.work?.slice().reverse();
 
+  /**
+   * MARK: Interface
+   */
   return (
     <Document {...documentData}>
       <Page {...pageData} style={styles.page}>
@@ -196,7 +209,8 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
           {work?.map((job, index) => (
             <View key={index} style={styles.sectionItem}>
               <Text>
-                {job.position} at {job.name} (
+                {job.position} at {job.name}
+                {dateRange(job.startDate, job.endDate)}
                 {job.startDate?.toLocaleDateString("en-US", {
                   month: "short",
                   year: "numeric",
@@ -208,7 +222,6 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
                       year: "numeric",
                     })
                   : "Present"}
-                )
               </Text>
               <Text>{job.summary}</Text>
               {job.highlights && job.highlights.length > 0 && (

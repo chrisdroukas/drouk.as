@@ -40,9 +40,4 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
   },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
-  },
 };
