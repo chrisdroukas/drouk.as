@@ -143,8 +143,8 @@ export const data: ResumeType = {
       area: "Public Communication",
       studyType: "Bachelor of Arts",
       url: "https://american.edu",
-      startDate: new Date("August 2008"),
-      endDate: new Date("May 2012"),
+      startDate: new Date(2008, 7, 1),
+      endDate: new Date(2012, 4, 1),
       location: {
         city: "Washington",
         region: "District of Columbia",
