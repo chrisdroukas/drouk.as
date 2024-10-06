@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import ReactPDF, {
+import {
   PageProps,
   DocumentProps,
   Document,
@@ -10,7 +10,7 @@ import ReactPDF, {
   View,
 } from "@react-pdf/renderer";
 
-import { ResumeType } from "#/app/api/schemas/resume";
+import { ResumeType, WorkType } from "#/app/api/schemas/resume";
 
 const domain = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
@@ -44,41 +44,113 @@ Font.register({
   ],
 });
 
+const colors = {
+  primary: "hsl(222.2 84% 4.9%)",
+  secondary: "hsl(215.3 25% 26.7%)",
+  tertiary: "hsl(215.4 16.3% 46.9%)",
+};
+
 const fontSizes = {
-  xl: 20,
-  l: 18,
-  m: 14,
-  s: 13,
-  xs: 12,
-  xxs: 10,
+  xs: 6,
+  s: 10,
+  m: 12,
+  l: 14,
 };
 
 const spacers = {
-  1: "6px",
+  1: "4px",
   2: "8px",
-  3: "10px",
-  4: "12px",
-  5: "14px",
-  6: "16px",
+  3: "12px",
+  4: "16px",
+  5: "20px",
+  6: "24px",
 };
 
 const styles = StyleSheet.create({
   page: {
     alignItems: "stretch",
     display: "flex",
-    flexDirection: "row",
-    flexWrap: "nowrap",
-    fontFamily: "Cal Sans",
-    color: "black",
+    flexDirection: "column",
+    gap: spacers[2],
+    fontFamily: "Inter",
+    fontWeight: "normal",
+    color: colors.primary,
     paddingVertical: 40,
     paddingHorizontal: 40,
-    fontSize: fontSizes.xxs,
+    fontSize: fontSizes.m,
     justifyContent: "flex-start",
-    lineHeight: 1.3,
   },
+
+  container: {
+    alignItems: "stretch",
+    display: "flex",
+    flexDirection: "row",
+    gap: spacers[4],
+  },
+  containerTitleRegion: {
+    display: "flex",
+    flexDirection: "row",
+  },
+
   headerContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingBottom: spacers[2],
+    borderBottom: `0.25px solid ${colors.tertiary}`,
+  },
+  titleContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  contactContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "flex-end",
+    gap: spacers[4],
+  },
+  contactContainerItem: {
+    display: "flex",
+    flexDirection: "row",
+  },
+
+  header: {
+    fontFamily: "Cal Sans",
+    fontSize: fontSizes.l,
+  },
+  subHeader: {
+    fontSize: fontSizes.s,
+    color: colors.secondary,
+  },
+  contact: {
+    fontSize: fontSizes.s,
+  },
+
+  section: {
+    display: "flex",
+    flex: 1,
+    overflow: "hidden",
+  },
+  sectionTitle: {
+    fontFamily: "Cal Sans",
+    fontWeight: "semibold",
+    fontSize: fontSizes.m,
+  },
+  sectionItem: {
+    display: "flex",
+    fontFamily: "Inter",
+    fontSize: fontSizes.s,
+  },
+
+  disclaimer: {
+    position: "absolute",
+    fontSize: fontSizes.xs,
+    bottom: 30,
+    left: 0,
+    right: 0,
     textAlign: "center",
-    marginBottom: 20,
+    color: "grey",
   },
 });
 
@@ -86,14 +158,36 @@ interface ResumeProps {
   resume: ResumeType;
 }
 
+/**
+ * MARK: Component
+ */
 export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
-  const date = new Date().toLocaleDateString("en-US", {
-    day: "numeric",
+  /**
+   * MARK: Setup
+   */
+  const { resume } = props;
+
+  const work = resume.work?.slice().reverse();
+
+  const dateFormattingOptions: Intl.DateTimeFormatOptions = {
     month: "short",
     year: "numeric",
+  };
+
+  const today = new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    ...dateFormattingOptions,
   });
 
-  const { resume } = props;
+  /**
+   * MARK: Formatters
+   */
+  const formatDate = (date: Date): string =>
+    date.toLocaleDateString("en-US", { ...dateFormattingOptions });
+
+  const dateRange = (startDate: Date, endDate?: Date) => {
+    return `${formatDate(startDate)} – ${endDate ? formatDate(endDate) : "Present"}`;
+  };
 
   /**
    * Metadata for the PDF document.
@@ -123,18 +217,78 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     dpi: 72,
   };
 
+  const Header = () => (
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.header}>{resume.basics.name}</Text>
+          <Text style={styles.subHeader}>{resume.basics.label}</Text>
+        </View>
+        <View style={styles.contactContainer}>
+          <View style={styles.contactContainerItem}>
+            <Text style={styles.contact}>Mail</Text>
+            <Text style={styles.contact}>{resume.basics.email}</Text>
+          </View>
+          <View style={styles.contactContainerItem}>
+            <Text style={styles.contact}>More</Text>
+            <Text style={styles.contact}>{resume.basics.url}</Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
+
+  const Work = () => (
+    <View style={styles.container}>
+      <View style={styles.containerTitleRegion}>
+        <Text style={styles.sectionTitle}>Work</Text>
+      </View>
+      <View style={styles.section}>
+        {work?.map((job, index) => (
+          <View key={index} style={styles.sectionItem}>
+            <Text>{job.name}</Text>
+            <Text>{dateRange(job.startDate, job.endDate)}</Text>
+            <Text>{job.summary}</Text>
+          </View>
+        ))}
+      </View>
+    </View>
+  );
+
+  const Education = () => (
+    <View style={styles.container}>
+      <View style={styles.containerTitleRegion}>
+        <Text style={styles.sectionTitle}>Education</Text>
+      </View>
+      <View style={styles.section}>
+        {resume.education?.map((education, index) => (
+          <View key={index} style={styles.sectionItem}>
+            <Text>
+              {education.name} - {education.studyType} in {education.area}
+              {dateRange(education.startDate, education.endDate)}
+            </Text>
+          </View>
+        ))}
+      </View>
+    </View>
+  );
+
+  const Footer = () => (
+    <Text style={styles.disclaimer} fixed>
+      Generated {today}. For the latest updates, see LinkedIn.
+    </Text>
+  );
+
+  /**
+   * MARK: Interface
+   */
   return (
     <Document {...documentData}>
       <Page {...pageData} style={styles.page}>
-        {/* Header Section */}
-        <View style={styles.headerContainer}></View>
-
-        {/* <View>
-          <Text>{resume.basics.name}</Text>
-          <Text>{resume.basics.label}</Text>
-          <Text>{resume.basics.url}</Text>
-          <Text>Generated {date}. For the latest updates, see LinkedIn.</Text>
-        </View> */}
+        <Header />
+        <Work />
+        <Education />
+        <Footer />
       </Page>
     </Document>
   );

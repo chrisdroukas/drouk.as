@@ -9,7 +9,7 @@ export const Occupation = z.object({
   /**
    * The start date of an occupation.
    */
-  startDate: z.coerce.date().optional(),
+  startDate: z.date(),
 
   /**
    * The end date of an occupation.
@@ -17,7 +17,7 @@ export const Occupation = z.object({
    * @note If an end date is not provided, implementations
    * should default to the current day.
    */
-  endDate: z.coerce.date().optional(),
+  endDate: z.date().optional(),
 });
 
 /**
