@@ -81,6 +81,17 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
 
+  container: {
+    alignItems: "stretch",
+    display: "flex",
+    flexDirection: "row",
+    gap: spacers[4],
+  },
+  containerTitleRegion: {
+    display: "flex",
+    flexDirection: "row",
+  },
+
   headerContainer: {
     display: "flex",
     flexDirection: "row",
@@ -101,7 +112,6 @@ const styles = StyleSheet.create({
   },
   contactContainerItem: {
     display: "flex",
-    backgroundColor: "yellow",
     flexDirection: "row",
   },
 
@@ -118,7 +128,9 @@ const styles = StyleSheet.create({
   },
 
   section: {
-    // backgroundColor: "yellow",
+    display: "flex",
+    flex: 1,
+    overflow: "hidden",
   },
   sectionTitle: {
     fontFamily: "Cal Sans",
@@ -126,6 +138,7 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.m,
   },
   sectionItem: {
+    display: "flex",
     fontFamily: "Inter",
     fontSize: fontSizes.s,
   },
@@ -205,38 +218,65 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
   };
 
   const Header = () => (
-    <View style={styles.headerContainer}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.header}>{resume.basics.name}</Text>
-        <Text style={styles.subHeader}>{resume.basics.label}</Text>
-      </View>
-      <View style={styles.contactContainer}>
-        <View style={styles.contactContainerItem}>
-          <Text style={styles.contact}>Mail</Text>
-          <Text style={styles.contact}>{resume.basics.email}</Text>
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.header}>{resume.basics.name}</Text>
+          <Text style={styles.subHeader}>{resume.basics.label}</Text>
         </View>
-        <View style={styles.contactContainerItem}>
-          <Text style={styles.contact}>More</Text>
-          <Text style={styles.contact}>{resume.basics.url}</Text>
+        <View style={styles.contactContainer}>
+          <View style={styles.contactContainerItem}>
+            <Text style={styles.contact}>Mail</Text>
+            <Text style={styles.contact}>{resume.basics.email}</Text>
+          </View>
+          <View style={styles.contactContainerItem}>
+            <Text style={styles.contact}>More</Text>
+            <Text style={styles.contact}>{resume.basics.url}</Text>
+          </View>
         </View>
       </View>
     </View>
   );
 
   const Work = () => (
-    <>
-      <Text style={styles.sectionTitle}>Work</Text>
+    <View style={styles.container}>
+      <View style={styles.containerTitleRegion}>
+        <Text style={styles.sectionTitle}>Work</Text>
+      </View>
       <View style={styles.section}>
         {work?.map((job, index) => (
           <View key={index} style={styles.sectionItem}>
             <Text>{job.name}</Text>
             <Text>{dateRange(job.startDate, job.endDate)}</Text>
-            <Text>{dateRange(job.startDate, job.endDate)}</Text>
             <Text>{job.summary}</Text>
           </View>
         ))}
       </View>
-    </>
+    </View>
+  );
+
+  const Education = () => (
+    <View style={styles.container}>
+      <View style={styles.containerTitleRegion}>
+        <Text style={styles.sectionTitle}>Education</Text>
+      </View>
+      <View style={styles.section}>
+        {resume.education?.map((education, index) => (
+          <View key={index} style={styles.sectionItem}>
+            <Text>
+              {education.name} - {education.studyType} in {education.area}
+              {dateRange(education.startDate, education.endDate)}
+            </Text>
+          </View>
+        ))}
+      </View>
+    </View>
+  );
+
+  const Footer = () => (
+    <Text style={styles.disclaimer} fixed>
+      Generated {today}. For the latest updates, see LinkedIn.
+    </Text>
   );
 
   /**
@@ -247,23 +287,8 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
       <Page {...pageData} style={styles.page}>
         <Header />
         <Work />
-
-        {/* Education Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Education</Text>
-          {resume.education?.map((education, index) => (
-            <View key={index} style={styles.sectionItem}>
-              <Text>
-                {education.name} - {education.studyType} in {education.area}
-                {dateRange(education.startDate, education.endDate)}
-              </Text>
-            </View>
-          ))}
-        </View>
-        {/* Footer Section */}
-        <Text style={styles.disclaimer} fixed>
-          Generated {today}. For the latest updates, see LinkedIn.
-        </Text>
+        <Education />
+        <Footer />
       </Page>
     </Document>
   );
