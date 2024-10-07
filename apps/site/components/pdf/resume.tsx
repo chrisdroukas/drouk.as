@@ -5,6 +5,7 @@ import {
   Document,
   Font,
   Page,
+  Link,
   StyleSheet,
   Text,
   View,
@@ -150,7 +151,11 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     textAlign: "center",
-    color: "grey",
+    color: colors.tertiary,
+  },
+
+  disclaimerURL: {
+    color: colors.tertiary,
   },
 });
 
@@ -178,6 +183,10 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
     day: "numeric",
     ...dateFormattingOptions,
   });
+
+  const linkedInURL = resume.basics.profiles?.find(
+    (profile) => profile.network === "LinkedIn"
+  )?.url;
 
   /**
    * MARK: Formatters
@@ -275,7 +284,11 @@ export const Resume: FC<ResumeProps> = (props: ResumeProps) => {
 
   const Footer = () => (
     <Text style={styles.disclaimer} fixed>
-      Generated {today}. For the latest updates, see LinkedIn.
+      Generated {today}. For the latest updates, see{" "}
+      <Link style={styles.disclaimerURL} src={linkedInURL}>
+        LinkedIn
+      </Link>
+      .
     </Text>
   );
 
